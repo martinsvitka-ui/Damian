@@ -1,0 +1,917 @@
+<!DOCTYPE html>
+<html lang="sk">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="robots" content="noindex, nofollow" />
+  <title>Swissôtel Damian Jasna – Ponuky</title>
+  <meta name="description" content="Editovateľný systém pre tvorbu ponúk Swissôtel Damian Jasna: MICE/event, ubytovanie, korporát, šport, svadba, newsletter. Vytlačte alebo uložte ako PDF.">
+  <meta name="author" content="Swissôtel Damian Jasna">
+  <meta name="theme-color" content="#0e0e0e">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Swissôtel Damian Jasna – Ponuky">
+  <meta property="og:description" content="Vytvorte si ponuku pre váš pobyt, event, svadbu alebo firemného klienta.">
+  <meta property="og:locale" content="sk_SK">
+  <meta property="og:locale:alternate" content="en_US">
+  <link rel="icon" href="https://www.damianjasna.sk/template/dj/img/logo-hgt.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Jost:wght@300;400;500;600&family=Sofia+Sans:wght@300;400;500;600;700&display=swap">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Jost:wght@300;400;500;600&family=Sofia+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #ffffff;
+      --ink: #1a1a1a;
+      --black: #0e0e0e;
+      --muted: #888888;
+      --mid: #4a4a4a;
+      --border: #e4e0d8;
+      --sand: #f8f6f2;
+      --gold: #b8a06a;
+      --gold-light: #e8dfc8;
+      --max: 1040px;
+      --sans: "Jost", system-ui, -apple-system, sans-serif;
+      --serif: "Cormorant Garamond", "Times New Roman", serif;
+      --sofia: "Sofia Sans", system-ui, -apple-system, sans-serif;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      background:
+        linear-gradient(180deg, rgba(248,246,242,.94) 0%, rgba(255,255,255,.97) 42%, rgba(248,246,242,.94) 100%),
+        url("https://www.damianjasna.sk/img/gallery/16-511.webp") center/cover fixed no-repeat;
+      color: var(--ink);
+      font-family: var(--sans);
+      display: flex;
+      flex-direction: column;
+    }
+
+    .wrap {
+      width: 100%;
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 28px 40px 40px;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* Header */
+    .top {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding-bottom: 22px;
+      border-bottom: 1px solid var(--gold-light);
+      opacity: 0; animation: fadeUp .7s ease forwards;
+    }
+    .logo { height: 56px; width: auto; }
+    .top-right { display: flex; align-items: center; gap: 18px; }
+    .hotel-info { text-align: right; }
+    .hotel-name {
+      font-size: 10px; font-weight: 700; letter-spacing: .14em;
+      text-transform: uppercase; color: var(--ink);
+    }
+    .hotel-addr { font-size: 10px; color: var(--muted); margin-top: 4px; line-height: 1.6; }
+
+    .lang-switch { display: inline-flex; border: 1px solid var(--border); border-radius: 20px; overflow: hidden; }
+    .lang-switch button {
+      border: none; background: #fff; padding: 5px 12px; font-family: var(--sans);
+      font-size: 10px; font-weight: 600; letter-spacing: .08em; text-transform: uppercase;
+      color: var(--muted); cursor: pointer; transition: all .2s;
+    }
+    .lang-switch button.active { background: var(--black); color: var(--gold-light); }
+
+    /* Hero copy */
+    .hero { padding: 52px 0 30px; }
+    .eyebrow {
+      display: flex; align-items: center; gap: 12px;
+      font-size: 10px; font-weight: 600; letter-spacing: .2em;
+      text-transform: uppercase; color: var(--muted); margin-bottom: 18px;
+      opacity: 0; animation: fadeUp .7s ease .1s forwards;
+    }
+    .eyebrow span { display: block; width: 44px; height: 1px; background: var(--gold); }
+    h1.title {
+      font-family: var(--serif); font-weight: 300; font-size: 54px; line-height: 1.04;
+      letter-spacing: -.02em; color: var(--black); margin: 0 0 16px; max-width: 720px;
+      opacity: 0; animation: fadeUp .7s ease .18s forwards;
+    }
+    h1.title em { font-style: italic; color: var(--gold); }
+    .lead {
+      font-size: 14px; color: var(--mid); line-height: 1.7; max-width: 620px; margin: 0;
+      opacity: 0; animation: fadeUp .7s ease .26s forwards;
+    }
+
+    /* Cards */
+    .cards {
+      display: grid; grid-template-columns: 1fr 1fr; gap: 22px; margin-top: 40px;
+    }
+    .card {
+      position: relative; display: flex; flex-direction: column;
+      background: var(--bg); border: 1px solid var(--border); border-radius: 8px;
+      padding: 30px 28px 26px; text-decoration: none; color: inherit;
+      overflow: hidden; transition: transform .25s ease, box-shadow .25s ease, border-color .25s ease;
+      opacity: 0; animation: fadeUp .7s ease forwards;
+    }
+    .card:nth-child(1) { animation-delay: .34s; }
+    .card:nth-child(2) { animation-delay: .42s; }
+    .card::before {
+      content: ""; position: absolute; inset: 0 0 auto 0; height: 3px;
+      background: linear-gradient(90deg, var(--gold), var(--gold-light));
+      transform: scaleX(0); transform-origin: left; transition: transform .3s ease;
+    }
+    .card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 18px 40px rgba(26,24,20,.13);
+      border-color: var(--gold);
+    }
+    .card:hover::before { transform: scaleX(1); }
+
+    .card-icon {
+      width: 52px; height: 52px; border-radius: 50%;
+      border: 1px solid var(--gold); color: var(--gold);
+      display: flex; align-items: center; justify-content: center; margin-bottom: 18px;
+    }
+    .card-icon svg { width: 26px; height: 26px; }
+    .card-kicker {
+      font-size: 9.5px; font-weight: 600; letter-spacing: .16em; text-transform: uppercase;
+      color: var(--muted); margin-bottom: 6px;
+    }
+    .card-title {
+      font-family: var(--sofia); font-weight: 600; font-size: 23px; color: var(--black);
+      line-height: 1.15; margin-bottom: 10px;
+    }
+    .card-desc { font-size: 12.5px; color: var(--mid); line-height: 1.65; margin: 0 0 18px; }
+    .card-tags { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 22px; }
+    .tag {
+      font-size: 9.5px; letter-spacing: .06em; text-transform: uppercase;
+      border: 1px solid var(--gold-light); background: var(--sand);
+      color: var(--mid); border-radius: 16px; padding: 3px 10px;
+    }
+    .card-cta {
+      margin-top: auto; display: inline-flex; align-items: center; gap: 8px;
+      font-size: 11px; font-weight: 600; letter-spacing: .1em; text-transform: uppercase;
+      color: var(--black);
+    }
+    .card-cta .arrow { transition: transform .25s ease; }
+    .card:hover .card-cta .arrow { transform: translateX(5px); }
+
+    .footer-strip {
+      display: flex; justify-content: space-between; align-items: center;
+      font-size: 9px; letter-spacing: .14em; text-transform: uppercase; color: var(--gold);
+      padding: 18px 40px; max-width: var(--max); margin: 0 auto; width: 100%;
+      border-top: 1px solid var(--gold-light);
+      opacity: 0; animation: fadeUp .7s ease .5s forwards;
+    }
+
+    
+    /* a11y enhancements */
+    .skip-link { position: absolute; top: -40px; left: 8px; background: #1a1a1a; color: #e8dfc8; padding: 8px 14px; border-radius: 4px; z-index: 99999; text-decoration: none; font-size: 12px; letter-spacing: .08em; text-transform: uppercase; }
+    .skip-link:focus { top: 8px; outline: 2px solid #b8a06a; outline-offset: 2px; }
+    .card:focus-visible, .lang-switch button:focus-visible { outline: 2px solid #b8a06a; outline-offset: 3px; border-radius: 8px; }
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after { animation-duration: .01ms !important; transition-duration: .01ms !important; scroll-behavior: auto !important; }
+    }
+
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(16px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      .top, .eyebrow, h1.title, .lead, .card, .footer-strip { animation: none; opacity: 1; }
+    }
+
+    @media (max-width: 760px) {
+      .wrap { padding: 22px 20px 30px; }
+      .cards { grid-template-columns: 1fr; }
+      h1.title { font-size: 40px; }
+      .hotel-info { display: none; }
+      .hero { padding: 36px 0 20px; }
+      .footer-strip { padding: 16px 20px; flex-direction: column; gap: 6px; text-align: center; }
+    }
+  </style>
+</head>
+<body>
+<a class="skip-link" href="#main-content">Preskočiť na obsah</a>
+<main id="view-selector" tabindex="-1">
+  <div class="wrap">
+    <div class="top">
+      <img class="logo" src="https://www.damianjasna.sk/template/dj/img/logo-hgt.svg" alt="Swissôtel Damian Jasna" width="180" height="56" decoding="async" loading="eager" />
+      <div class="top-right">
+        <div class="hotel-info">
+          <div class="hotel-name">Swissôtel Damian Jasna</div>
+          <div class="hotel-addr">
+            Demänovská Dolina 555, 031 01 Demänovská Dolina<br />
+            events.damianjasna@swissotel.com &nbsp;|&nbsp; +421 44 39 31 300
+          </div>
+        </div>
+        <div class="lang-switch" role="group" aria-label="Jazyk / Language">
+          <button type="button" id="langSk" class="active" aria-pressed="true" aria-label="Slovenčina" onclick="setLang('sk')">SK</button>
+          <button type="button" id="langEn" aria-pressed="false" aria-label="English" onclick="setLang('en')">EN</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="hero" id="main-content">
+      <div class="eyebrow">
+        <span></span>
+        <div data-sk="Výber ponuky" data-en="Choose an offer">Výber ponuky</div>
+      </div>
+      <h1 class="title" data-sk="Akú ponuku ideme&nbsp;<em>pripraviť</em>?" data-en="Which offer are we&nbsp;<em>creating</em>?">Akú ponuku ideme&nbsp;<em>pripraviť</em>?</h1>
+      <p class="lead" data-sk="Vyberte typ ponuky, ktorý chcete vytvoriť. Otvorí sa editovateľný dokument s kalkuláciou, ktorý môžete vytlačiť alebo uložiť ako PDF."
+         data-en="Select the type of offer you want to create. An editable document with a calculator will open, ready to print or save as PDF.">Vyberte typ ponuky, ktorý chcete vytvoriť. Otvorí sa editovateľný dokument s kalkuláciou, ktorý môžete vytlačiť alebo uložiť ako PDF.</p>
+    </div>
+
+    <nav class="cards" aria-label="Výber ponuky" role="navigation">
+      <a class="card" href="#mice" role="link" aria-label="MICE / Event ponuka" onclick="openOffer('mice');return false;">
+        <div class="card-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="3" y="4" width="18" height="12" rx="1.5"></rect>
+            <path d="M8 20h8M12 16v4"></path>
+            <path d="M7 11l3-3 2.5 2.5L17 6"></path>
+          </svg>
+        </div>
+        <div class="card-kicker" data-sk="Konferencie · Eventy" data-en="Conferences · Events">Konferencie · Eventy</div>
+        <div class="card-title" data-sk="MICE / Event ponuka" data-en="MICE / Event offer">MICE / Event ponuka</div>
+        <p class="card-desc" data-sk="Komplexná ponuka pre podujatia: konferenčné priestory a kapacity, technika, catering a coffee breaky, ubytovanie aj teambuilding – s plnou kalkuláciou."
+           data-en="A complete offer for events: conference spaces and capacities, technology, catering and coffee breaks, accommodation and team building – with a full calculation.">Komplexná ponuka pre podujatia: konferenčné priestory a kapacity, technika, catering a coffee breaky, ubytovanie aj teambuilding – s plnou kalkuláciou.</p>
+        <div class="card-tags">
+          <span class="tag" data-sk="Priestory" data-en="Spaces">Priestory</span>
+          <span class="tag" data-sk="Technika" data-en="Technology">Technika</span>
+          <span class="tag" data-sk="Catering" data-en="Catering">Catering</span>
+          <span class="tag" data-sk="Ubytovanie" data-en="Accommodation">Ubytovanie</span>
+        </div>
+        <span class="card-cta">
+          <span data-sk="Vytvoriť MICE ponuku" data-en="Create MICE offer">Vytvoriť MICE ponuku</span>
+          <span class="arrow">→</span>
+        </span>
+      </a>
+
+      <a class="card" href="#acc" role="link" aria-label="Ubytovacia ponuka" onclick="openOffer('acc');return false;">
+        <div class="card-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M3 17v-5a1 1 0 0 1 1-1h13a3 3 0 0 1 3 3v3"></path>
+            <path d="M3 17h18M3 13v6M21 17v2"></path>
+            <path d="M6 11V8.5A1.5 1.5 0 0 1 7.5 7h4A1.5 1.5 0 0 1 13 8.5V11"></path>
+          </svg>
+        </div>
+        <div class="card-kicker" data-sk="Pobyty · Skupiny" data-en="Stays · Groups">Pobyty · Skupiny</div>
+        <div class="card-title" data-sk="Ubytovacia ponuka" data-en="Accommodation offer">Ubytovacia ponuka</div>
+        <p class="card-desc" data-sk="Ponuka zameraná čisto na ubytovanie: kategórie izieb a apartmánov, obsadenosť a mestská daň, zľavy a orientačná cena – s prehľadnou kalkuláciou."
+           data-en="An offer focused purely on accommodation: room and apartment categories, occupancy and city tax, discounts and an indicative price – with a clear calculation.">Ponuka zameraná čisto na ubytovanie: kategórie izieb a apartmánov, obsadenosť a mestská daň, zľavy a orientačná cena – s prehľadnou kalkuláciou.</p>
+        <div class="card-tags">
+          <span class="tag" data-sk="Kategórie izieb" data-en="Room categories">Kategórie izieb</span>
+          <span class="tag" data-sk="Obsadenosť" data-en="Occupancy">Obsadenosť</span>
+          <span class="tag" data-sk="Mestská daň" data-en="City tax">Mestská daň</span>
+        </div>
+        <span class="card-cta">
+          <span data-sk="Vytvoriť ubytovaciu ponuku" data-en="Create accommodation offer">Vytvoriť ubytovaciu ponuku</span>
+          <span class="arrow">→</span>
+        </span>
+      </a>
+
+      <a class="card" href="#corp" role="link" aria-label="Korporátna ponuka" onclick="openOffer('corp');return false;">
+        <div class="card-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="4" y="8" width="16" height="12" rx="1"></rect>
+            <path d="M9 8V6a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v2"></path>
+            <path d="M4 13h16"></path>
+          </svg>
+        </div>
+        <div class="card-kicker" data-sk="Firmy · Dlhodobé ceny" data-en="Companies · Negotiated rates">Firmy · Dlhodobé ceny</div>
+        <div class="card-title" data-sk="Korporátna ponuka" data-en="Corporate offer">Korporátna ponuka</div>
+        <p class="card-desc" data-sk="Dohoda o korporátnych cenách (Corporate Rate Agreement): dohodnuté ceny izieb pre firmu a jej hostí, fair days, korporátny kód a podmienky – vrátane generovania zmluvy."
+           data-en="A Corporate Rate Agreement: negotiated room rates for a company and its guests, fair days, corporate code and terms – including contract generation.">Dohoda o korporátnych cenách (Corporate Rate Agreement): dohodnuté ceny izieb pre firmu a jej hostí, fair days, korporátny kód a podmienky – vrátane generovania zmluvy.</p>
+        <div class="card-tags">
+          <span class="tag" data-sk="Korporátne ceny" data-en="Corporate rates">Korporátne ceny</span>
+          <span class="tag" data-sk="Fair days" data-en="Fair days">Fair days</span>
+          <span class="tag" data-sk="PCR kód" data-en="PCR code">PCR kód</span>
+        </div>
+        <span class="card-cta">
+          <span data-sk="Vytvoriť korporátnu ponuku" data-en="Create corporate offer">Vytvoriť korporátnu ponuku</span>
+          <span class="arrow">→</span>
+        </span>
+      </a>
+      <a class="card" href="#sport" role="link" aria-label="Ponuka pre športové skupiny" onclick="openOffer('sport');return false;">
+        <div class="card-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M7 4h10v4a5 5 0 0 1-10 0V4z"></path>
+            <path d="M7 6H4v1a3 3 0 0 0 3 3M17 6h3v1a3 3 0 0 1-3 3"></path>
+            <path d="M10 14.5V17h4v-2.5M8 20h8M12 17v3"></path>
+          </svg>
+        </div>
+        <div class="card-kicker" data-sk="Sústredenia · Tímy" data-en="Training camps · Teams">Sústredenia · Tímy</div>
+        <div class="card-title" data-sk="Ponuka pre športové skupiny" data-en="Sports group offer">Ponuka pre športové skupiny</div>
+        <p class="card-desc" data-sk="Ponuka pre tímy a sústredenia: skupinové ubytovanie s pol/plnou penziou, tréningové zázemie, regenerácia a wellness, doprava a parkovanie autobusu – s prehľadnou kalkuláciou po nociach."
+           data-en="An offer for teams and training camps: group accommodation with half/full board, training facilities, recovery and wellness, transport and bus parking – with a clear per-night calculation.">Ponuka pre tímy a sústredenia: skupinové ubytovanie s pol/plnou penziou, tréningové zázemie, regenerácia a wellness, doprava a parkovanie autobusu – s prehľadnou kalkuláciou po nociach.</p>
+        <div class="card-tags">
+          <span class="tag" data-sk="Skupinové ceny" data-en="Group rates">Skupinové ceny</span>
+          <span class="tag" data-sk="Penzia" data-en="Board">Penzia</span>
+          <span class="tag" data-sk="Regenerácia" data-en="Recovery">Regenerácia</span>
+          <span class="tag" data-sk="Tréningové zázemie" data-en="Training facilities">Tréningové zázemie</span>
+        </div>
+        <span class="card-cta">
+          <span data-sk="Vytvoriť ponuku pre skupiny" data-en="Create sports group offer">Vytvoriť ponuku pre skupiny</span>
+          <span class="arrow">→</span>
+        </span>
+      </a>
+
+      <a class="card" href="#wedding" role="link" aria-label="Svadobná ponuka" onclick="openOffer('wedding');return false;">
+        <div class="card-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="9" cy="15" r="4.5"></circle>
+            <circle cx="15" cy="15" r="4.5"></circle>
+            <path d="M7.5 4l1.5 2.5H6L7.5 4zM16.5 4L18 6.5h-3L16.5 4z"></path>
+          </svg>
+        </div>
+        <div class="card-kicker" data-sk="Svadby · Oslavy" data-en="Weddings · Celebrations">Svadby · Oslavy</div>
+        <div class="card-title" data-sk="Svadobná ponuka" data-en="Wedding offer">Svadobná ponuka</div>
+        <p class="card-desc" data-sk="Ponuka na svadbu v horách: prenájom sály a obradné miesto, svadobné menu a nápoje na osobu, ubytovanie pre hostí a apartmán pre novomanželov, torta, výzdoba, koordinátor a DJ."
+           data-en="A mountain wedding offer: venue and ceremony space, per-person wedding menu and drinks, accommodation for guests and a suite for the newlyweds, cake, décor, coordinator and DJ.">Ponuka na svadbu v horách: prenájom sály a obradné miesto, svadobné menu a nápoje na osobu, ubytovanie pre hostí a apartmán pre novomanželov, torta, výzdoba, koordinátor a DJ.</p>
+        <div class="card-tags">
+          <span class="tag" data-sk="Sála & obrad" data-en="Venue & ceremony">Sála & obrad</span>
+          <span class="tag" data-sk="Menu na osobu" data-en="Per-person menu">Menu na osobu</span>
+          <span class="tag" data-sk="Ubytovanie hostí" data-en="Guest rooms">Ubytovanie hostí</span>
+          <span class="tag" data-sk="Extra & DJ" data-en="Extras & DJ">Extra & DJ</span>
+        </div>
+        <span class="card-cta">
+          <span data-sk="Vytvoriť svadobnú ponuku" data-en="Create wedding offer">Vytvoriť svadobnú ponuku</span>
+          <span class="arrow">→</span>
+        </span>
+      </a>
+      <a class="card" href="#newsletter" role="link" aria-label="Newsletter" onclick="openOffer('newsletter');return false;">
+        <div class="card-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="3" y="5" width="18" height="14" rx="2"></rect>
+            <path d="M3 7l9 6 9-6"></path>
+          </svg>
+        </div>
+        <div class="card-kicker" data-sk="Marketing · E-mail" data-en="Marketing · Email">Marketing · E-mail</div>
+        <div class="card-title" data-sk="Newsletter" data-en="Newsletter">Newsletter</div>
+        <p class="card-desc" data-sk="Vizuálny editor newsletterov: bloky, fotky, dizajn a export do obrázka alebo e-mailového HTML. Vytvorte sezónne novinky a ponuky pre klientov."
+           data-en="Visual newsletter editor: blocks, photos, design and export to an image or email HTML. Create seasonal news and offers for clients.">Vizuálny editor newsletterov: bloky, fotky, dizajn a export do obrázka alebo e-mailového HTML. Vytvorte sezónne novinky a ponuky pre klientov.</p>
+        <div class="card-tags">
+          <span class="tag" data-sk="Bloky & fotky" data-en="Blocks & photos">Bloky & fotky</span>
+          <span class="tag" data-sk="Dizajn" data-en="Design">Dizajn</span>
+          <span class="tag" data-sk="Export PNG / HTML" data-en="Export PNG / HTML">Export PNG / HTML</span>
+        </div>
+        <span class="card-cta">
+          <span data-sk="Vytvoriť newsletter" data-en="Create newsletter">Vytvoriť newsletter</span>
+          <span class="arrow">→</span>
+        </span>
+      </a>
+    </nav>
+  </div>
+
+  <div class="footer-strip">
+    <span>Swissôtel – Live it well</span>
+    <span>Crafting Pure Living in Jasná</span>
+  </div>
+
+</main><!-- /view-selector -->
+<div id="view-offer" role="region" aria-label="Ponuka" aria-hidden="true" style="display:none; position:fixed; inset:0; z-index:1000; background:#f0ede8;">
+  <iframe id="offerFrame" title="Editor ponuky" aria-label="Editor ponuky" loading="lazy" style="width:100%; height:100%; border:0; display:block;"></iframe>
+</div>
+
+
+
+
+
+
+  <script>
+    function setLang(lang) {
+      if (lang !== 'sk' && lang !== 'en') lang = 'sk';
+      document.documentElement.lang = lang;
+      document.documentElement.setAttribute('data-lang', lang);
+      document.querySelectorAll("[data-sk]").forEach(function (el) {
+        var v = el.getAttribute("data-" + lang);
+        if (v != null) el.innerHTML = v;
+      });
+      var sk = document.getElementById("langSk"), en = document.getElementById("langEn");
+      if (sk) { sk.classList.toggle("active", lang === "sk"); sk.setAttribute('aria-pressed', lang === 'sk'); }
+      if (en) { en.classList.toggle("active", lang === "en"); en.setAttribute('aria-pressed', lang === 'en'); }
+      try { localStorage.setItem('dj-lang', lang); } catch(e){}
+    }
+    (function(){
+      var saved = null;
+      try { saved = localStorage.getItem('dj-lang'); } catch(e){}
+      if (saved === 'en') {
+        document.addEventListener('DOMContentLoaded', function(){ setLang('en'); });
+      }
+    })();
+
+    var OFFER_TYPES = ['mice','acc','corp','sport','wedding','newsletter'];
+    var __current = null;
+    function openOffer(which){
+      if (OFFER_TYPES.indexOf(which) < 0) return;
+      var sel = document.getElementById('view-selector');
+      var off = document.getElementById('view-offer');
+      var f = document.getElementById('offerFrame');
+      if (__current === which) {
+        sel.style.display = 'none';
+        sel.setAttribute('aria-hidden', 'true');
+        off.style.display = 'block';
+        off.removeAttribute('aria-hidden');
+        return;
+      }
+      __current = which;
+      try { f.removeAttribute('srcdoc'); } catch(e){}
+      f.src = 'offers/' + which + '.html';
+      sel.style.display = 'none';
+      sel.setAttribute('aria-hidden', 'true');
+      off.style.display = 'block';
+      off.removeAttribute('aria-hidden');
+      if (location.hash !== ('#' + which)) location.hash = which;
+      window.scrollTo(0, 0);
+    }
+    function showSelector(){
+      __current = null;
+      var f = document.getElementById('offerFrame');
+      try { f.removeAttribute('srcdoc'); } catch(e){}
+      f.src = 'about:blank';
+      var sel = document.getElementById('view-selector');
+      var off = document.getElementById('view-offer');
+      off.style.display = 'none';
+      off.setAttribute('aria-hidden', 'true');
+      sel.style.display = 'block';
+      sel.removeAttribute('aria-hidden');
+      if (location.hash) history.replaceState(null, '', location.pathname + location.search);
+      window.scrollTo(0, 0);
+    }
+    window.showSelector = showSelector;
+    window.openOffer = openOffer;
+    window.addEventListener('hashchange', function(){
+      var h = location.hash.replace('#','');
+      if (OFFER_TYPES.indexOf(h) >= 0) openOffer(h); else showSelector();
+    });
+    (function(){ var h = location.hash.replace('#',''); if (OFFER_TYPES.indexOf(h) >= 0) openOffer(h); })();
+  </script>
+<!-- ===================== CLOUD (Supabase) – login + uloženie ponúk ===================== -->
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<link rel="stylesheet" href="cloud.css">
+
+
+
+<div id="cloudLogin">
+  <div class="box">
+    <h2>Swissôtel Damian Jasna</h2>
+    <p>SALES · PRIHLÁSENIE</p>
+    <input id="clEmail" type="email" placeholder="E-mail" autocomplete="username" />
+    <input id="clPwd" type="password" placeholder="Heslo" autocomplete="current-password" />
+    <button onclick="cloudSignIn()">Prihlásiť sa</button>
+    <div class="err" id="clErr"></div>
+  </div>
+</div>
+
+<div id="cloudBar">
+  <span class="u" id="cloudUser"></span>
+  <span class="dirty" id="cloudDirty" title="Máte neuložené zmeny">● Neuložené</span>
+  <span class="dirty saved" id="cloudSaved">Uložené ✓</span>
+  <button class="list" id="btnMenu" onclick="toggleSideNav()">☰ Menu</button>
+  <button class="save" id="cloudSaveBtn" onclick="cloudSave()" disabled>Uložiť ponuku</button>
+  <button class="out" id="btnSaveContract" onclick="saveDocFromOffer('contract')">Uložiť zmluvu</button>
+  <button class="out" id="btnSaveDeposit" onclick="saveDocFromOffer('deposit')">Uložiť depozit</button>
+  <button class="out" onclick="cloudSignOut()">Odhlásiť</button>
+</div>
+
+<div id="cloudPanel">
+  <div class="sheet">
+    <div class="hd"><h3>Moje ponuky</h3><button class="x" onclick="document.getElementById('cloudPanel').style.display='none'">✕</button></div>
+    <div class="cloudFilters">
+      <input id="cloudSearch" type="text" placeholder="Hľadať podľa názvu alebo klienta…" oninput="cloudRenderRows()" />
+      <div class="cloudFilterRow">
+        <select id="cloudFilterType" onchange="cloudRenderRows()">
+          <option value="">Všetky typy</option>
+          <option value="mice">MICE</option>
+          <option value="acc">Ubytovanie</option>
+          <option value="corp">Korporát</option>
+          <option value="sport">Šport</option>
+          <option value="wedding">Svadba</option>
+        <option value="newsletter">Newsletter</option>
+        </select>
+        <select id="cloudFilterStatus" onchange="cloudRenderRows()">
+          <option value="">Všetky stavy</option>
+          <option value="draft">Rozpracovaná</option>
+          <option value="sent">Odoslaná klientovi</option>
+          <option value="confirmed">Potvrdená</option>
+          <option value="cancelled">Zrušená</option>
+          <option value="deleted">🗑 Kôš (zmazané)</option>
+        </select>
+      </div>
+    </div>
+    <div class="rows" id="cloudRows"></div>
+  </div>
+</div>
+
+<div id="histPanel">
+  <div class="sheet">
+    <div class="hd"><h3>História verzií</h3><button class="x" onclick="document.getElementById('histPanel').style.display='none'">✕</button></div>
+    <div class="rows" id="histRows"></div>
+  </div>
+</div>
+<div id="cloudToast"></div>
+<div id="sharedBadge">Náhľad ponuky · Swissôtel Damian Jasna</div>
+
+<div id="finUpload">
+  <div class="box">
+    <h3>Nahrať vyúčtovaciu faktúru (PDF)</h3>
+    <label>PDF súbor</label>
+    <input id="fuFile" type="file" accept="application/pdf,.pdf" />
+    <label>Klient / firma</label>
+    <input id="fuClient" type="text" placeholder="napr. ABC s.r.o." />
+    <div class="two">
+      <div><label>Číslo faktúry</label><input id="fuNum" type="text" placeholder="napr. 2026-100" /></div>
+      <div><label>Suma (€)</label><input id="fuAmount" type="text" inputmode="decimal" placeholder="napr. 1450.00" /></div>
+    </div>
+    <label>Splatnosť (nepovinné)</label>
+    <input id="fuDue" type="date" />
+    <div class="msg" id="fuMsg"></div>
+    <div class="row-btns">
+      <button class="btn-cancel" onclick="document.getElementById('finUpload').classList.remove('open')">Zrušiť</button>
+      <button class="btn-save" id="fuSaveBtn" onclick="docUploadSubmit()">Nahrať</button>
+    </div>
+  </div>
+</div>
+
+<div id="docEditView">
+  <div class="detb">
+    <span class="t" id="docEditTitle">Dokument</span>
+    <button class="pri" onclick="docEditSave()">Uložiť zmeny</button>
+    <button onclick="docEditPrint()">Tlačiť / PDF</button>
+    <button onclick="docEditClose()">Zavrieť</button>
+  </div>
+  <div class="hint">Klikni priamo do polí (odberateľ, IČO/DIČ, položky, VS…) a prepíš ich. Potom „Uložiť zmeny".</div>
+  <iframe id="docEditFrame"></iframe>
+</div>
+
+<div id="fcView">
+  <div class="fctb">
+    <span class="t">Forecast – Revenue</span>
+    <label>Týždeň (pondelok):</label>
+    <input type="date" id="fcDate"/>
+    <button onclick="fcLoad()">Načítať posledný</button>
+    <button id="fcNewBtn" onclick="fcNew()">Nový týždeň</button>
+    <button class="pri" id="fcSaveBtn" onclick="fcSave()">Uložiť</button>
+    <button id="fcBudgetBtn" onclick="fcLoadBudgetAll()" title="Naplní stĺpec Plan z budgetu 2026 podľa zvolených mesiacov">↧ Plan z budgetu</button>
+    <span class="fcmsg" id="fcMsg"></span>
+    <span class="fcmsg" id="fcRoNote" style="display:none;color:#caa84e">Len na čítanie</span>
+    <button onclick="toggleSideNav()">☰ Menu</button>
+  </div>
+  <div class="fcwrap" id="fcWrap"></div>
+  <div class="fcnote">Modré polia = ručný vstup, sivé = automatický výpočet. Vzorce 1:1 podľa Excelu (INQ váhy 0,1/0,3/0,4; TENT 0,85).</div>
+</div>
+
+<div id="sideNav">
+  <div class="panel">
+    <div class="sh"><h3>Menu</h3><button class="x" onclick="toggleSideNav()">✕</button></div>
+    <div class="sb"><input id="gsearch" type="text" placeholder="Hľadať: klient, akcia, č. ponuky / VS…" oninput="gsearch()" autocomplete="off" /></div>
+    <div class="nav" id="sideNavList">
+      <div class="sec sales-only">Workflow</div>
+      <button class="sales-only" data-nav="deals" onclick="navGo('deals')">📌 Akcie</button>
+      <button class="sales-only" data-nav="dash" onclick="navGo('dash')">📊 Prehľad</button>
+      <button class="sales-only" data-nav="offers" onclick="navGo('offers')">📄 Ponuky</button>
+      <button data-nav="contracts" onclick="navGo('contracts')">📝 Zmluvy</button>
+      <button data-nav="docs" onclick="navGo('docs')">🗂️ Všetky dokumenty</button>
+      <div class="sec fin-only" id="navFinSec">Financie</div>
+      <button class="fin-only" data-nav="invoices" onclick="navGo('invoices')">💶 Zálohové faktúry</button>
+      <button class="fin-only" data-nav="final_invoices" onclick="navGo('final_invoices')">🧾 Vyúčtovacie faktúry</button>
+      <div class="sec" id="navRevSec" style="display:none">Revenue</div>
+      <button id="navForecastBtn" data-nav="forecast" style="display:none" onclick="navGo('forecast')">📈 Forecast</button>
+      <div class="sec">Organizácia</div>
+      <button data-nav="clients" onclick="navGo('clients')">📁 Klienti</button>
+      <button data-nav="calendar" onclick="navGo('calendar')">📅 Kalendár</button>
+      <button class="sales-only" data-nav="templates" onclick="navGo('templates')">🧩 Šablóny / nová ponuka</button>
+      <button class="sales-only" data-nav="newsletter" onclick="navGo('newsletter')">✉️ Newsletter</button>
+      <button class="sales-only" data-nav="ai" onclick="navGo('ai')">✨ Asistent dopytu</button>
+      <div class="sec" id="navAdminSec" style="display:none">Správa</div>
+      <button id="navAdminBtn" data-nav="admin" style="display:none" onclick="navGo('admin')">👤 Používatelia</button>
+      <div class="sec">Účet</div>
+      <button onclick="navGo('email')">📧 Zmeniť e-mail</button>
+      <button onclick="navGo('pwd')">🔑 Zmeniť heslo</button>
+      <button onclick="navGo('signout')">🚪 Odhlásiť</button>
+    </div>
+    <div class="res" id="gresults"></div>
+  </div>
+</div>
+
+<div id="dealsPanel">
+  <div class="sheet">
+    <div class="hd"><h3>Akcie</h3><button class="x" onclick="document.getElementById('dealsPanel').style.display='none'">✕</button></div>
+    <div class="tools">
+      <input id="dealSearch" type="text" placeholder="Hľadať klient / akcia…" oninput="dealsRender()" />
+      <select id="dealFilterStatus" onchange="dealsRender()">
+        <option value="">Všetky stavy</option>
+        <option value="dopyt">Dopyt</option>
+        <option value="offer_draft">Rozpracovaná ponuka</option>
+        <option value="offer_sent">Ponuka odoslaná</option>
+        <option value="approved">Schválené</option>
+        <option value="contract_signed">Zmluva podpísaná</option>
+        <option value="deposit_paid">Záloha uhradená</option>
+        <option value="realized">Realizované</option>
+        <option value="closed">Ukončené</option>
+        <option value="cancelled">Zrušené</option>
+      </select>
+      <button class="pri" onclick="newDeal()">+ Nová akcia</button>
+    </div>
+    <div class="rows" id="dealRows"></div>
+  </div>
+</div>
+
+<div id="dealView">
+  <div class="dwrap2">
+    <div class="top2">
+      <button class="back" onclick="document.getElementById('dealView').classList.remove('open');showDeals();">‹ Akcie</button>
+      <span class="dst" id="dealStatusBadge"></span>
+    </div>
+    <div class="card2">
+      <h4>Akcia</h4>
+      <label>Názov akcie</label><input id="dvTitle" onchange="dealField('title',this.value)" />
+      <div class="two2">
+        <div><label>Klient / firma</label><input id="dvClient" onchange="dealField('client',this.value)" /></div>
+        <div><label>Dátum akcie</label><input id="dvDate" type="date" onchange="dealField('event_date',this.value||null)" /></div>
+      </div>
+      <div class="two2">
+        <div><label>Zodpovedná osoba</label><input id="dvResp" onchange="dealField('responsible',this.value)" /></div>
+        <div><label>Stav (pipeline)</label>
+          <select id="dvStatus" onchange="dealField('status',this.value);dealStatusBadgeUpd();">
+            <option value="dopyt">Dopyt</option>
+            <option value="offer_draft">Rozpracovaná ponuka</option>
+            <option value="offer_sent">Ponuka odoslaná</option>
+            <option value="approved">Schválené</option>
+            <option value="contract_signed">Zmluva podpísaná</option>
+            <option value="deposit_paid">Záloha uhradená</option>
+            <option value="realized">Realizované</option>
+            <option value="closed">Ukončené</option>
+            <option value="cancelled">Zrušené</option>
+          </select>
+        </div>
+      </div>
+    </div>
+    <div class="card2"><h4>Interné poznámky <span style="font-size:11px;color:#a59b85;font-weight:400">· nejde do zmluvy</span></h4>
+      <textarea id="dvNote" placeholder="napr. VIP hosť, skorší check-in, čakáme na potvrdenie, špeciálne požiadavky…" onchange="dealField('note',this.value)"></textarea>
+    </div>
+    <div class="card2"><h4>Ponuky</h4><div id="dvOffers"></div></div>
+    <div class="card2"><h4>Dokumenty <span style="font-size:11px;color:#a59b85;font-weight:400">· zmluva, zálohová faktúra</span></h4><div id="dvDocs"></div></div>
+    <div class="card2"><h4>Rýchle akcie</h4>
+      <div class="qa">
+        <button class="pri" onclick="dealOpenOffer()">Otvoriť ponuku</button>
+        <button onclick="dealDuplicate()">Duplikovať akciu</button>
+        <button onclick="dealMarkDone()">Označiť ukončené</button>
+        <button class="danger" onclick="dealDelete()">Zmazať akciu</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="aiPanel">
+  <div class="sheet">
+    <div class="hd"><h3>Asistent dopytu</h3><button class="x" onclick="document.getElementById('aiPanel').style.display='none'">✕</button></div>
+    <div class="body">
+      <label>Dopyt klienta</label>
+      <textarea id="aiInquiry" rows="6" placeholder="Vlož sem e-mail alebo správu od klienta – napr. „Dobrý deň, máme záujem o firemný teambuilding pre 40 osôb, 2 noci v termíne 12.–14.3., ubytovanie, konferenčná miestnosť, plná penzia a večerný raut…“"></textarea>
+      <details id="aiPriceWrap">
+        <summary>Cenník hotela (nepovinné – pre presnejšiu kalkuláciu)</summary>
+        <textarea id="aiPricelist" rows="6" placeholder="Napr.&#10;Izba DBL – 120 €/noc&#10;Izba SGL – 95 €/noc&#10;Konferenčná sála – 400 €/deň&#10;Coffee break – 12 €/os&#10;Plná penzia – 45 €/os/deň&#10;Večerný raut – 38 €/os"></textarea>
+        <button class="mini" onclick="aiSavePricelist()">Uložiť cenník</button>
+      </details>
+      <button class="gen" id="aiGenBtn" onclick="aiGenerate()">✨ Vytvoriť kalkuláciu + e-mail</button>
+      <div id="aiResult"></div>
+    </div>
+  </div>
+</div>
+
+<div id="calView">
+  <div class="cwrap">
+    <div class="chead">
+      <div class="cnav">
+        <button class="arw" onclick="calPrev()">‹</button>
+        <span class="mlabel" id="calLabel">—</span>
+        <button class="arw" onclick="calNext()">›</button>
+        <button onclick="calToday()">Dnes</button>
+      </div>
+      <div class="cact">
+        <button class="pri" id="calAddBtn" onclick="evtOpen(null)">+ Pridať akciu</button>
+        <button onclick="showDashboard()">Prehľad</button>
+      </div>
+    </div>
+    <div class="legend" id="calLegend"></div>
+    <div class="wk"><div class="wd">Po</div><div class="wd">Ut</div><div class="wd">St</div><div class="wd">Št</div><div class="wd">Pi</div><div class="wd">So</div><div class="wd">Ne</div></div>
+    <div class="grid" id="calGrid"></div>
+  </div>
+</div>
+
+<div id="evtModal">
+  <div class="box">
+    <h3 id="evtTitle">Nová akcia</h3>
+    <input type="hidden" id="evtId" />
+    <label>Názov</label>
+    <input id="evtName" type="text" placeholder="napr. Valentínske menu, Letná promo akcia…" />
+    <label>Kategória</label>
+    <select id="evtCat" onchange="evtTogglePlatform()">
+      <option value="promo">Promo akcia</option>
+      <option value="guest">Akcia pre hostí</option>
+      <option value="campaign">Marketing / kampaň</option>
+      <option value="social">Social príspevok (LinkedIn / Instagram)</option>
+      <option value="internal">Interné</option>
+    </select>
+    <div id="evtPlatformRow" style="display:none;">
+      <label>Platforma</label>
+      <select id="evtPlatform">
+        <option value="linkedin">LinkedIn</option>
+        <option value="instagram">Instagram</option>
+        <option value="facebook">Facebook</option>
+        <option value="other">Iné</option>
+      </select>
+    </div>
+    <div class="two">
+      <div><label>Od</label><input id="evtStart" type="date" /></div>
+      <div><label>Do (nepovinné)</label><input id="evtEnd" type="date" /></div>
+    </div>
+    <label>Opakovanie</label>
+    <select id="evtRecur" onchange="evtToggleRecur()">
+      <option value="">Neopakovať</option>
+      <option value="daily">Každý deň</option>
+      <option value="workdays">Pracovné dni (Po–Pi)</option>
+      <option value="weekly">Každý týždeň</option>
+      <option value="monthly">Raz mesačne</option>
+      <option value="custom">Vybrané dni v týždni</option>
+    </select>
+    <div id="evtRecurDays" style="display:none;margin-top:8px;">
+      <span class="rd" data-d="1" onclick="this.classList.toggle('on')">Po</span>
+      <span class="rd" data-d="2" onclick="this.classList.toggle('on')">Ut</span>
+      <span class="rd" data-d="3" onclick="this.classList.toggle('on')">St</span>
+      <span class="rd" data-d="4" onclick="this.classList.toggle('on')">Št</span>
+      <span class="rd" data-d="5" onclick="this.classList.toggle('on')">Pi</span>
+      <span class="rd" data-d="6" onclick="this.classList.toggle('on')">So</span>
+      <span class="rd" data-d="0" onclick="this.classList.toggle('on')">Ne</span>
+    </div>
+    <div id="evtUntilRow" style="display:none;"><label>Opakovať do</label><input id="evtUntil" type="date" /></div>
+    <div class="two">
+      <div><label>Čas (nepovinné)</label><input id="evtTime" type="text" placeholder="napr. 18:00" /></div>
+      <div><label>Miesto (nepovinné)</label><input id="evtLoc" type="text" placeholder="napr. Lobby bar" /></div>
+    </div>
+    <label>Poznámka / text príspevku</label>
+    <textarea id="evtNote" placeholder="Text príspevku (caption, hashtagy, link), prípadne detaily akcie a zodpovedná osoba…"></textarea>
+    <div style="margin-top:14px;"><label style="display:inline-flex;align-items:center;gap:8px;text-transform:none;letter-spacing:0;font-size:13px;color:#333;cursor:pointer;margin:0;"><input type="checkbox" id="evtDone" style="width:auto;margin:0;" /> Zverejnené / hotové</label></div>
+    <div class="msg" id="evtMsg"></div>
+    <div class="row-btns">
+      <button class="btn-del" id="evtDelBtn" onclick="evtDelete()" style="display:none;">Zmazať</button>
+      <button class="btn-cancel" onclick="hideEvt()">Zrušiť</button>
+      <button class="btn-save" onclick="evtSave()">Uložiť</button>
+    </div>
+  </div>
+</div>
+
+<div id="dashView">
+  <div class="dwrap">
+    <div class="dhead">
+      <div><div class="greet" id="dashGreet">Prehľad</div><div class="sub" id="dashSub">Swissôtel Damian Jasna · Sales</div></div>
+      <div class="dactions">
+        <button class="pri" onclick="dashNewOffer()">+ Nová ponuka</button>
+        <button onclick="showDeals()">Akcie</button>
+        <button onclick="showInquiry()">✨ Asistent dopytu</button>
+        <button onclick="cloudList()">Moje ponuky</button>
+        <button onclick="showFolders()">Priečinky</button>
+        <button onclick="showCalendar()">Kalendár</button>
+        <button onclick="showDocs()">Dokumenty</button>
+        <button onclick="showNewsletter()">Newsletter</button>
+      </div>
+    </div>
+    <div class="kpis" id="dashKpis"></div>
+    <div class="card" id="dashAlertsCard" style="display:none;border-color:#e8c9b0;background:#fdf6f0;"><h4>Pripomienky a upozornenia</h4><div id="dashAlerts"></div></div>
+    <div class="grid2">
+      <div class="card"><h4>Nadchádzajúce podujatia</h4><div id="dashUpcoming"></div></div>
+      <div class="card"><h4>Nezaplatené depozity</h4><div id="dashDeposits"></div></div>
+    </div>
+    <div class="card"><h4>Follow-upy a úlohy</h4><div id="dashFollowups"></div></div>
+    <div class="card"><h4>Otvorené klientmi <span style="font-size:11px;color:#a59b85;font-weight:400">· kto sa pozrel na zdieľanú ponuku</span></h4><div id="dashViewed"></div></div>
+    <div class="card"><h4>Pipeline podľa stavu</h4><div class="bars" id="dashPipeline"></div></div>
+    <div class="card"><h4>Posledná aktivita</h4><div id="dashRecent"></div></div>
+  </div>
+</div>
+
+<div id="foldersPanel">
+  <div class="sheet">
+    <div class="hd"><h3>Klientske priečinky</h3><button class="x" onclick="document.getElementById('foldersPanel').style.display='none'">✕</button></div>
+    <div class="tools"><input id="folderSearch" type="text" placeholder="Hľadať klienta…" oninput="foldersRender()" /></div>
+    <div class="rows" id="folderRows"></div>
+  </div>
+</div>
+
+<div id="docsPanel">
+  <div class="sheet">
+    <div class="hd"><h3>Dokumenty</h3><button class="x" onclick="document.getElementById('docsPanel').style.display='none'">✕</button></div>
+    <div class="tools">
+      <input id="docSearch" type="text" placeholder="Hľadať podľa klienta / čísla…" oninput="docsRender()" />
+      <select id="docFilterType" onchange="docsRender()">
+        <option value="">Všetky typy</option>
+        <option value="contract">Zmluvy</option>
+        <option value="deposit_invoice">Zálohové faktúry</option>
+        <option value="final_invoice">Vyúčtovacie faktúry</option>
+      </select>
+      <select id="docFilterStatus" onchange="docsRender()">
+        <option value="">Všetky</option>
+        <option value="unpaid">Neuhradené</option>
+        <option value="paid">Uhradené</option>
+      </select>
+      <button id="docUploadBtn" onclick="docUploadFinal()" style="display:none;padding:8px 11px;border:0;border-radius:8px;background:#1a1814;color:#e8d9b5;font-size:12px;cursor:pointer;white-space:nowrap;">+ Nahrať faktúru (PDF)</button>
+    </div>
+    <div class="docsum" id="docSummary" style="display:none;"></div>
+    <div class="rows" id="docRows"></div>
+  </div>
+</div>
+
+<div id="adminPanel">
+  <div class="box">
+    <h3>Správa používateľov</h3>
+    <p class="sub">Vytvorte prístup pre kolegu a priraďte rolu. Admin = plný prístup · Sales = ponuky a dokumenty · Financie = čítanie dokumentov + úhrady · Revenue = Forecast + plné práva obchodu. Existujúcim môžete meniť rolu, resetovať heslo alebo ich zmazať nižšie.</p>
+    <label for="auEmail">E-mail</label>
+    <input id="auEmail" type="email" placeholder="kolega@swissotel.com" autocomplete="off" />
+    <label for="auPwd">Dočasné heslo</label>
+    <input id="auPwd" type="text" placeholder="min. 6 znakov" autocomplete="off" />
+    <label for="auRole">Rola</label>
+    <select id="auRole">
+      <option value="sales">Sales (obchod)</option>
+      <option value="finance">Financie (read-only + úhrady)</option>
+      <option value="revenue">Revenue (Forecast + obchod)</option>
+      <option value="admin">Administrátor</option>
+    </select>
+    <div class="msg" id="auMsg"></div>
+    <div class="row-btns">
+      <button class="btn-cancel" onclick="hideAdmin()">Zavrieť</button>
+      <button class="btn-save" id="auSaveBtn" onclick="adminCreateUser()">Vytvoriť používateľa</button>
+    </div>
+    <div class="ulist" id="auList"></div>
+  </div>
+</div>
+  <div class="sheet">
+    <div class="hd"><h3>Newsletter</h3><button class="x" onclick="document.getElementById('nlPanel').style.display='none'">✕</button></div>
+    <div class="nlTools">
+      <div class="cnt" id="nlCount"></div>
+      <input id="nlSearch" type="text" placeholder="Hľadať podľa e-mailu alebo mena…" oninput="nlRenderRows()" />
+      <div class="btns">
+        <button class="primary" onclick="nlCopyLink()">Kopírovať odkaz na prihlásenie</button>
+        <button onclick="nlExportCsv()">Export CSV</button>
+        <button onclick="nlAddManual()">Pridať kontakt</button>
+      </div>
+    </div>
+    <div class="rows" id="nlRows"></div>
+  </div>
+</div>
+
+<div id="nlPublic">
+  <div class="card">
+    <div class="eyebrow">Swissôtel Damian Jasna</div>
+    <h2>Odoberajte naše novinky</h2>
+    <p>Exkluzívne ponuky, podujatia a sezónne balíčky priamo do vašej schránky.</p>
+    <input id="nlPubName" type="text" placeholder="Meno (nepovinné)" />
+    <input id="nlPubEmail" type="email" placeholder="Váš e-mail" autocomplete="email" />
+    <button id="nlPubBtn" onclick="nlSubscribe()">Prihlásiť sa na odber</button>
+    <div class="msg" id="nlPubMsg"></div>
+    <div class="foot">Odhlásiť sa môžete kedykoľvek.</div>
+  </div>
+</div>
+
+<div id="emailModal">
+  <div class="box">
+    <h3>Zmeniť prihlasovací e-mail</h3>
+    <p class="sub">Na nový e-mail (a kvôli bezpečnosti aj na pôvodný) pošleme overovací odkaz. Zmena sa prejaví až po jeho potvrdení.</p>
+    <label for="emCurrent">Aktuálny e-mail</label>
+    <input id="emCurrent" type="email" disabled />
+    <label for="emNew">Nový e-mail</label>
+    <input id="emNew" type="email" autocomplete="email" placeholder="novy@email.sk" />
+    <div class="msg" id="emMsg"></div>
+    <div class="row-btns">
+      <button class="btn-cancel" onclick="hideEmailModal()">Zrušiť</button>
+      <button class="btn-save" id="emSaveBtn" onclick="cloudChangeEmail()">Poslať overenie</button>
+    </div>
+  </div>
+</div>
+
+<div id="pwdModal">
+  <div class="box">
+    <h3>Zmeniť heslo</h3>
+    <p class="sub">Zadajte aktuálne heslo a potom nové heslo.</p>
+    <label for="pwdCurrent">Aktuálne heslo</label>
+    <input id="pwdCurrent" type="password" autocomplete="current-password" placeholder="Aktuálne heslo" />
+    <label for="pwdNew">Nové heslo</label>
+    <input id="pwdNew" type="password" autocomplete="new-password" placeholder="Nové heslo (min. 6 znakov)" />
+    <label for="pwdConfirm">Potvrdiť nové heslo</label>
+    <input id="pwdConfirm" type="password" autocomplete="new-password" placeholder="Zopakovať nové heslo" />
+    <div class="msg" id="pwdMsg"></div>
+    <div class="row-btns">
+      <button class="btn-cancel" onclick="hidePwdModal()">Zrušiť</button>
+      <button class="btn-save" id="pwdSaveBtn" onclick="cloudChangePassword()">Uložiť heslo</button>
+    </div>
+  </div>
+</div>
+
+<script src="cloud.js" defer></script>
+<!-- =================== /CLOUD =================== -->
+
+<div id="root" hidden></div>
+</body>
+</html>

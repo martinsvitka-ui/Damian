@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="sk">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Korporátna ponuka – Swissôtel Damian Jasna</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <style>
+    :root{--ink:#1a1a1a;--muted:#888;--mid:#4a4a4a;--border:#e4e0d8;--sand:#f8f6f2;--input-bg:#fdfcfa;--gold:#b8a06a;--gold-light:#e8dfc8;--black:#0e0e0e;--sans:"Jost",system-ui,-apple-system,sans-serif;--serif:"Cormorant Garamond","Times New Roman",serif;}
+    *{box-sizing:border-box;}
+    body{margin:0;background:#f0ede8;color:var(--ink);font-family:var(--sans);-webkit-print-color-adjust:exact;print-color-adjust:exact;}
+    .no-print-screen{display:none;}
+    @media screen{
+      .no-print-screen{display:flex;position:fixed;top:0;left:0;right:0;z-index:9999;align-items:center;justify-content:space-between;padding:6px 16px;background:#fff;border-bottom:1px solid var(--border);font-size:11px;gap:8px;flex-wrap:wrap;}
+      .no-print-screen button{border-radius:16px;border:1px solid var(--border);background:#fff;padding:4px 12px;font-size:10px;text-transform:uppercase;letter-spacing:.08em;cursor:pointer;}
+      .no-print-screen button:hover{border-color:var(--ink);}
+      .doc-body{margin-top:40px;}
+    }
+    .lang-switch{display:inline-flex;border:1px solid var(--border);border-radius:16px;overflow:hidden;}
+    .lang-switch button{border:none !important;border-radius:0 !important;padding:4px 10px;}
+    .lang-switch button.lang-active{background:var(--black);color:#e8dfc8;}
+    .btn-primary{background:var(--black) !important;color:#e8dfc8 !important;border-color:var(--black) !important;}
+    .wrap{max-width:1000px;margin:0 auto;background:#fff;}
+    .pad{padding:30px 40px;}
+    @page{size:A4;margin:15mm 14mm 16mm;}
+    @media print{
+      html,body{margin:0;padding:0;background:#fff !important;}
+      .wrap{max-width:none;margin:0;}
+      .no-print{display:none !important;}
+    }
+    .cover-header{display:flex;justify-content:space-between;align-items:flex-start;gap:20px;border-bottom:1px solid var(--gold-light);padding-bottom:18px;}
+    .cover-logo{height:52px;width:auto;}
+    .cover-hotel-info{text-align:right;font-size:11px;color:var(--mid);line-height:1.7;}
+    .cover-hotel-name{font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--ink);font-size:11px;}
+    .kicker{font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);margin:26px 0 6px;display:flex;align-items:center;gap:10px;}
+    .kicker::before{content:"";width:34px;height:1px;background:var(--gold);}
+    h1.title{font-family:var(--serif);font-weight:300;font-size:40px;line-height:1.08;margin:0 0 10px;}
+    .lead{color:var(--mid);font-size:14px;max-width:640px;line-height:1.6;}
+    .meta-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:18px 24px;margin:26px 0 6px;border-top:1px solid var(--gold-light);padding-top:18px;}
+    .meta-label{font-size:9px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);margin-bottom:5px;}
+    .meta-val{font-size:14px;color:var(--ink);}
+    [contenteditable]{outline:none;border-bottom:1px solid transparent;border-radius:2px;}
+    [contenteditable]:hover{background:var(--sand);}
+    [contenteditable]:focus{background:#f3ecd9;border-bottom-color:var(--gold);}
+    .cover-sel{appearance:auto;-webkit-appearance:auto;background:transparent;border:none;border-bottom:1px solid rgba(0,0,0,.15);padding:2px 18px 2px 0;cursor:pointer;width:100%;max-width:100%;font:inherit;color:inherit;}
+    .hdr-sales-print{display:none;}
+    @media print{ #hdr-sales{display:none !important;} .hdr-sales-print{display:block !important;white-space:normal !important;line-height:1.35;} }
+    .section{margin-top:30px;}
+    .section-title{font-family:var(--serif);font-weight:500;font-size:24px;margin:0 0 4px;}
+    .section-sub{color:var(--muted);font-size:12px;margin:0 0 14px;}
+    table.rate{width:100%;border-collapse:collapse;margin-top:6px;}
+    table.rate th{background:var(--black);color:#fff;font-size:9px;letter-spacing:.06em;text-transform:uppercase;font-weight:600;padding:9px 12px;text-align:left;}
+    table.rate th.r{text-align:right;}
+    table.rate td{padding:9px 12px;border-bottom:1px solid #eee;font-size:13px;}
+    table.rate td.r{text-align:right;}
+    table.rate tr:last-child td{border-bottom:none;}
+    .conds{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:14px 26px;margin-top:8px;}
+    .cond{border:1px solid var(--border);border-radius:6px;padding:12px 14px;font-size:13px;line-height:1.55;}
+    .cond .ck{font-size:9px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--gold);margin-bottom:5px;}
+    .pill{display:inline-block;background:var(--sand);border:1px solid var(--border);border-radius:14px;padding:2px 10px;font-size:11px;}
+    .sign-grid{display:grid;grid-template-columns:1fr 1fr;gap:40px;margin-top:30px;}
+    .sign .line{border-top:1px solid var(--ink);padding-top:6px;font-size:11px;color:var(--mid);}
+    .actions{display:flex;gap:8px;flex-wrap:wrap;margin-top:26px;}
+    .actions button{border-radius:6px;border:1px solid var(--black);background:var(--black);color:#e8dfc8;padding:9px 16px;font-size:10px;font-weight:600;text-transform:uppercase;letter-spacing:.08em;cursor:pointer;}
+    .actions button.ghost{background:#fff;color:var(--ink);border-color:var(--border);}
+    .foot-strip{display:flex;justify-content:space-between;font-size:10px;color:var(--muted);border-top:1px solid var(--gold-light);margin-top:30px;padding-top:12px;letter-spacing:.04em;text-transform:uppercase;}
+    .note{font-size:11px;color:var(--muted);margin-top:6px;}
+  </style>
+</head>
+<body>
+  <div class="no-print-screen">
+    <div style="display:flex;align-items:center;gap:12px;">
+      <a href="#" onclick="parent.showSelector();return false;" style="display:inline-flex;align-items:center;gap:5px;text-decoration:none;border:1px solid var(--border);border-radius:16px;padding:4px 12px;font-size:10px;text-transform:uppercase;letter-spacing:.08em;color:var(--ink);">← Výber ponuky</a>
+      <span>Swissôtel Damian Jasna – Korporátna ponuka (náhľad pre tlač)</span>
+    </div>
+    <div style="display:flex;gap:6px;align-items:center;">
+      <div class="lang-switch">
+        <button type="button" id="langSk" class="lang-active" onclick="setLang('sk')">SK</button>
+        <button type="button" id="langEn" onclick="setLang('en')">EN</button>
+      </div>
+      <button class="btn-primary" onclick="generateContract()" data-sk="Vytvoriť zmluvu" data-en="Create contract">Vytvoriť zmluvu</button>
+      <button onclick="saveOfferHTML()" data-sk="💾 Uložiť (.html)" data-en="💾 Save (.html)">💾 Uložiť (.html)</button>
+      <button onclick="window.print()" data-sk="Tlačiť / Uložiť ako PDF" data-en="Print / Save as PDF">Tlačiť / Uložiť ako PDF</button>
+    </div>
+  </div>
+
+  <div class="doc-body">
+  <div class="wrap">
+  <div class="pad">
+
+    <div class="cover-header">
+      <img src="https://www.damianjasna.sk/template/dj/img/logo-hgt.svg" alt="Swissôtel Damian Jasna" class="cover-logo">
+      <div class="cover-hotel-info">
+        <div class="cover-hotel-name">Swissôtel Damian Jasna</div>
+        <div>Demänovská Dolina 555</div>
+        <div>031 01 Demänovská Dolina, Slovenská republika</div>
+        <div>events.damianjasna@swissotel.com&nbsp; |&nbsp; +421 44 39 31 300</div>
+        <div>www.damianjasna.sk</div>
+      </div>
+    </div>
+
+    <div class="kicker"><span data-sk="Korporátna spolupráca · Firemné ceny" data-en="Corporate partnership · Negotiated rates">Korporátna spolupráca · Firemné ceny</span></div>
+    <h1 class="title" data-sk="Korporátna dohoda o cenách" data-en="Corporate Rate Agreement">Korporátna dohoda o cenách</h1>
+    <p class="lead" data-sk="Korporátne ceny ubytovania pre vašu spoločnosť a jej hostí formou dynamickej zľavy z aktuálnej najlepšej dostupnej ceny (BAR). Raňajky aj internet sú zahrnuté v cene; ceny sú vrátane DPH."
+       data-en="Corporate room rates for your company and its guests as a dynamic discount off the current Best Available Rate (BAR). Breakfast and internet are included; rates include VAT.">Korporátne ceny ubytovania pre vašu spoločnosť a jej hostí formou dynamickej zľavy z aktuálnej najlepšej dostupnej ceny (BAR). Raňajky aj internet sú zahrnuté v cene; ceny sú vrátane DPH.</p>
+    <style>@media print{.corp-hero{height:60mm !important;border-radius:6px !important;box-shadow:none !important;margin:10px 0 14px !important;break-inside:avoid;}}</style>
+    <img class="corp-hero" src="https://www.damianjasna.sk/img/system/ogimg.jpg" alt="Swissôtel Damian Jasna" loading="lazy" onerror="this.style.display='none'" style="display:block;width:100%;height:280px;object-fit:cover;object-position:center 45%;border-radius:16px;margin:16px 0 22px;box-shadow:0 24px 52px -30px rgba(0,0,0,.55);" />
+
+    <div class="meta-grid">
+      <div>
+        <div class="meta-label" data-sk="Spoločnosť" data-en="Company">Spoločnosť</div>
+        <div class="meta-val" id="coName" contenteditable="true">Názov spoločnosti, s.r.o.</div>
+      </div>
+      <div>
+        <div class="meta-label" data-sk="IČO" data-en="Reg. No.">IČO</div>
+        <div class="meta-val" id="coReg" contenteditable="true">00000000</div>
+      </div>
+      <div>
+        <div class="meta-label" data-sk="Sídlo" data-en="Registered office">Sídlo</div>
+        <div class="meta-val" id="coAddr" contenteditable="true">Ulica 1, 000 00 Mesto</div>
+      </div>
+      <div>
+        <div class="meta-label" data-sk="Platnosť od – do" data-en="Validity from – to">Platnosť od – do</div>
+        <div class="meta-val"><span id="corpFrom" contenteditable="true">01.01.2026</span> – <span id="corpTo" contenteditable="true">31.12.2026</span></div>
+      </div>
+      <div>
+        <div class="meta-label" data-sk="Korporátny kód (PCR)" data-en="Corporate rate code (PCR)">Korporátny kód (PCR)</div>
+        <div class="meta-val" id="corpPCR" contenteditable="true">DOPLŇ</div>
+      </div>
+      <div>
+        <div class="meta-label" data-sk="Váš kontakt" data-en="Your contact">Váš kontakt</div>
+        <select id="hdr-sales" class="cover-sel" onchange="syncSignatory(this.value)">
+          <option value="martin" selected>Martin Svitka — Senior Sales &amp; Marketing Manager</option>
+          <option value="renata">Renáta Vanková — Event Manager</option>
+          <option value="roman">Roman Chaloupka — Deputy General Manager</option>
+        </select>
+        <div id="hdrSalesPrint" class="meta-val hdr-sales-print"></div>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="section-title" data-sk="Dynamická cena &amp; firemný benefit" data-en="Dynamic rate &amp; corporate benefit">Dynamická cena &amp; firemný benefit</div>
+      <div class="conds">
+        <div class="cond"><div class="ck" data-sk="Dynamická cena (zľava)" data-en="Dynamic rate (discount)">Dynamická cena (zľava)</div><span><span data-sk="Zľava z najlepšej dostupnej ceny (BAR) podľa sezóny, dĺžky a typu pobytu. Základná zľava" data-en="Discount off the Best Available Rate (BAR) by season, length and type of stay. Base discount">Zľava z najlepšej dostupnej ceny (BAR) podľa sezóny, dĺžky a typu pobytu. Základná zľava</span> <strong><span id="corpDisc" contenteditable="true">10</span> %</strong>. <span data-sk="Úplný sezónny rozpis zliav je súčasťou zmluvy." data-en="The full seasonal discount schedule is part of the contract.">Úplný sezónny rozpis zliav je súčasťou zmluvy.</span></span></div>
+        <div class="cond"><div class="ck" data-sk="Firemné aj súkromné pobyty" data-en="Business &amp; private stays">Firemné aj súkromné pobyty</div><span data-sk="Zľava platí na pracovné cesty zamestnancov, ako aj na ich súkromné pobyty ako zamestnanecký benefit." data-en="The discount applies to employees' business trips as well as their private stays as an employee benefit.">Zľava platí na pracovné cesty zamestnancov, ako aj na ich súkromné pobyty ako zamestnanecký benefit.</span></div>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="section-title" data-sk="Podmienky ponuky" data-en="Offer conditions">Podmienky ponuky</div>
+      <div class="conds">
+        <div class="cond"><div class="ck" data-sk="Raňajky" data-en="Breakfast">Raňajky</div><span data-sk="V cene všetkých kategórií." data-en="Included in all categories.">V cene všetkých kategórií.</span></div>
+        <div class="cond"><div class="ck" data-sk="Internet" data-en="Internet">Internet</div><span data-sk="Wi-Fi v cene pre všetky kategórie." data-en="Wi-Fi included for all categories.">Wi-Fi v cene pre všetky kategórie.</span></div>
+        <div class="cond"><div class="ck" data-sk="Parkovanie" data-en="Parking">Parkovanie</div><span data-sk="20 € / auto / noc." data-en="€20 / car / night.">20 € / auto / noc.</span></div>
+        <div class="cond"><div class="ck" data-sk="Wellness" data-en="Wellness">Wellness</div><span data-sk="Vstup do Pürovel Spa &amp; Sport (fitness, bazén, sauny) pre všetky kategórie." data-en="Access to Pürovel Spa &amp; Sport (fitness, pool, saunas) for all categories.">Vstup do Pürovel Spa &amp; Sport (fitness, bazén, sauny) pre všetky kategórie.</span></div>
+        <div class="cond"><div class="ck" data-sk="DPH" data-en="VAT">DPH</div><span data-sk="5 % ubytovanie, 5 % stravovanie. Iné poplatky: žiadne." data-en="5% accommodation, 5% food &amp; beverage. Other charges: none.">5 % ubytovanie, 5 % stravovanie. Iné poplatky: žiadne.</span></div>
+        <div class="cond"><div class="ck" data-sk="Provízia" data-en="Commission">Provízia</div><span data-sk="Ceny sú nekomisionovateľné (non-commissionable)." data-en="Rates are non-commissionable.">Ceny sú nekomisionovateľné (non-commissionable).</span></div>
+        <div class="cond"><div class="ck" data-sk="Dostupnosť" data-en="Availability">Dostupnosť</div><span data-sk="Všetky rezervácie podliehajú dostupnosti; skorý check-in / neskorý check-out podľa dostupnosti." data-en="All reservations subject to availability; early check-in / late check-out subject to availability.">Všetky rezervácie podliehajú dostupnosti; skorý check-in / neskorý check-out podľa dostupnosti.</span></div>
+        <div class="cond"><div class="ck" data-sk="Rozsah cien" data-en="Rate scope">Rozsah cien</div><span data-sk="Cena platí do maximálne 10 izieb / noc; nevzťahuje sa na skupinové rezervácie." data-en="The rate applies to up to 10 rooms / night; not valid for group reservations.">Cena platí do maximálne 10 izieb / noc; nevzťahuje sa na skupinové rezervácie.</span></div>
+        <div class="cond"><div class="ck" data-sk="Dĺžka pobytu" data-en="Length of stay">Dĺžka pobytu</div><span data-sk="Ceny platia pre rezervácie od jednej (1) noci." data-en="Rates are valid for reservations from one (1) night.">Ceny platia pre rezervácie od jednej (1) noci.</span></div>
+        <div class="cond"><div class="ck" data-sk="Rezervácie" data-en="Reservations">Rezervácie</div><span data-sk="Musia byť vytvorené priamo cez web alebo zaslané z pracovného (firemného) e-mailu spoločnosti." data-en="Must be created directly via the website or sent from a corporate (work) e-mail of the company.">Musia byť vytvorené priamo cez web alebo zaslané z pracovného (firemného) e-mailu spoločnosti.</span></div>
+        <div class="cond"><div class="ck" data-sk="Úhrada" data-en="Payment">Úhrada</div><span data-sk="Za pobyt prostredníctvom zálohovej faktúry; spôsob úhrady musí byť vopred dohodnutý." data-en="For the stay via a deposit (advance) invoice; the payment method must be agreed in advance.">Za pobyt prostredníctvom zálohovej faktúry; spôsob úhrady musí byť vopred dohodnutý.</span></div>
+        <div class="cond"><div class="ck" data-sk="Zrušenie" data-en="Cancellation">Zrušenie</div><span data-sk="Bezplatné zrušenie rezervácie najneskôr 5 dní pred príchodom." data-en="Free cancellation no later than 5 days before arrival.">Bezplatné zrušenie rezervácie najneskôr 5 dní pred príchodom.</span></div>
+        <div class="cond"><div class="ck" data-sk="Sezóny" data-en="Seasons">Sezóny</div><span data-sk="Mimo sezóny: 19. marec – 15. november · Sezóna: 16. november – 18. marec" data-en="Off-season: 19 March – 15 November · Season: 16 November – 18 March">Mimo sezóny: 19. marec – 15. november · Sezóna: 16. november – 18. marec</span></div>
+        <div class="cond"><div class="ck" data-sk="Predpokladaná produkcia" data-en="Projected production">Predpokladaná produkcia</div><span><span id="corpProd" contenteditable="true">50</span> <span data-sk="izbo-nocí počas platnosti. Pri poklese pod 30 % je hotel oprávnený ceny upraviť." data-en="room nights during the term. Below 30% the hotel may revise the rates.">izbo-nocí počas platnosti. Pri poklese pod 30 % je hotel oprávnený ceny upraviť.</span></span></div>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="section-title" data-sk="Kontakt &amp; podpisy" data-en="Contact &amp; signatures">Kontakt &amp; podpisy</div>
+      <div class="sign-grid">
+        <div class="sign"><div class="line"><span data-sk="Za spoločnosť" data-en="For the company">Za spoločnosť</span><br><span contenteditable="true">Meno a priezvisko, funkcia</span></div></div>
+        <div class="sign"><div class="line"><span data-sk="Za Swissôtel Damian Jasna" data-en="For Swissôtel Damian Jasna">Za Swissôtel Damian Jasna</span><br><strong contenteditable="true">Patrik Krivák</strong>, <span contenteditable="true">General Manager</span></div></div>
+      </div>
+      <div class="actions no-print">
+        <button class="btn-primary" onclick="generateContract()" data-sk="Vytvoriť zmluvu (Corporate Rate Agreement)" data-en="Create contract (Corporate Rate Agreement)">Vytvoriť zmluvu (Corporate Rate Agreement)</button>
+        <button class="ghost" onclick="window.print()" data-sk="Tlačiť ponuku (PDF)" data-en="Print offer (PDF)">Tlačiť ponuku (PDF)</button>
+      </div>
+    </div>
+
+    <div class="foot-strip"><span>Swissôtel – Live it well</span><span>Crafting Pure Living in Jasná</span></div>
+
+  </div></div></div>
+
+  <script>
+    var LANG = "sk";
+    function setLang(lang){
+      LANG = lang;
+      document.documentElement.lang = lang;
+      document.querySelectorAll("[data-sk]").forEach(function(el){
+        var v = el.getAttribute("data-" + lang);
+        if(v != null) el.innerHTML = v;
+      });
+      var sk=document.getElementById("langSk"), en=document.getElementById("langEn");
+      if(sk) sk.classList.toggle("lang-active", lang==="sk");
+      if(en) en.classList.toggle("lang-active", lang==="en");
+    }
+
+    var PREPARERS = {
+      renata: { name:"Renáta Vanková", title:"Event Manager", tel:"+421 911 423 383", email:"renata.vankova@swissotel.com" },
+      martin: { name:"Martin Svitka", title:"Senior Sales & Marketing Manager", tel:"+421 903 601 022", email:"martin.svitka@swissotel.com" },
+      roman: { name:"Roman Chaloupka", title:"Deputy General Manager", tel:"+421 910 919 312", email:"Roman.CHALOUPKA@swissotel.com" }
+    };
+    function syncSignatory(val){
+      var p = PREPARERS[val] || PREPARERS.martin;
+      var sel = document.getElementById("hdr-sales");
+      var pr = document.getElementById("hdrSalesPrint");
+      if(pr){ pr.textContent = (sel && sel.options && sel.options[sel.selectedIndex]) ? sel.options[sel.selectedIndex].text : (p.name + " — " + p.title); }
+      var sc = document.getElementById("sigContact");
+      if(sc){ sc.textContent = p.title + " · tel. " + p.tel + (p.email ? (" · " + p.email) : ""); }
+    }
+
+    function addRateRow(tbodyId){
+      var tb = document.getElementById(tbodyId); if(!tb) return;
+      var tr = document.createElement("tr");
+      tr.innerHTML = '<td contenteditable="true">Nová kategória</td><td class="r" contenteditable="true">0</td><td class="r" contenteditable="true">0</td>';
+      tb.appendChild(tr);
+    }
+
+    function gv(id){ var el=document.getElementById(id); if(!el) return ""; return (el.textContent||"").trim(); }
+    function esc(s){ return String(s==null?"":s).replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;"); }
+
+    function generateContract(forceLang, targetWin){ var __svLang=(typeof LANG!=="undefined")?LANG:"sk"; if(forceLang){ LANG=forceLang; } try{ return __contractImpl(targetWin); } finally{ LANG=__svLang; if(forceLang && typeof recalc==="function"){ try{ recalc(); }catch(e){} } } }
+    function __contractImpl(targetWin){
+      var EN = (LANG === "en");
+      var ce = 'contenteditable="true" spellcheck="false"';
+      var co = { name:gv("coName"), reg:gv("coReg"), addr:gv("coAddr") };
+      var pcr = gv("corpPCR") || "DOPLŇ";
+      var from = gv("corpFrom"), to = gv("corpTo");
+      var prod = gv("corpProd") || "50";
+      var disc = gv("corpDisc") || "15";
+      var who = (document.getElementById("hdr-sales")||{}).value || "martin";
+      var prep = PREPARERS[who] || PREPARERS.martin;
+
+      function rows(id){
+        var out=[];
+        document.querySelectorAll("#"+id+" tr").forEach(function(tr){
+          var td=tr.querySelectorAll("td"); if(td.length<3) return;
+          var nm=(td[0].textContent||"").trim(), s=(td[1].textContent||"").trim(), d=(td[2].textContent||"").trim();
+          if(nm) out.push([nm,s,d]);
+        });
+        return out;
+      }
+      var rateRows = rows("corpRates"), fairRows = rows("corpFair");
+      function rateTable(arr){
+        return '<table class="t"><thead><tr><th>'+(EN?"Room category":"Kategória izby")+'</th><th class="r">Single (€)</th><th class="r">Double (€)</th></tr></thead><tbody>'+
+          arr.map(function(r){return '<tr><td '+ce+'>'+esc(r[0])+'</td><td class="r" '+ce+'>'+esc(r[1])+'</td><td class="r" '+ce+'>'+esc(r[2])+'</td></tr>';}).join('')+
+          '</tbody></table>';
+      }
+
+      var dt=new Date(), y=dt.getFullYear(), m=("0"+(dt.getMonth()+1)).slice(-2), da=("0"+dt.getDate()).slice(-2);
+      var cNo = "CRA"+y+m+da;
+      var title = EN ? "Corporate Rate Agreement" : "Korporátna dohoda o cenách (Corporate Rate Agreement)";
+
+      var L = EN ? {
+        parties:"Between", hotel:"HOTEL", company:"COMPANY",
+        rates:"Rates", fair:"Fair days (high-demand days)",
+        cond:"Conditions, taxes & fees", pcrh:"Corporate rate code (PCR)",
+        validity:"Validity of the Agreement",
+        tnc:"Terms and conditions"
+      } : {
+        parties:"Zmluvné strany", hotel:"HOTEL (Poskytovateľ)", company:"SPOLOČNOSŤ (Objednávateľ)",
+        rates:"Ceny", fair:"Fair days (dni vysokého dopytu)",
+        cond:"Podmienky, dane a poplatky", pcrh:"Korporátny kód (PCR)",
+        validity:"Platnosť dohody",
+        tnc:"Zmluvné podmienky"
+      };
+
+      var intro = EN
+        ? "The Corporate Rates are based on a projected production of <strong "+ce+">"+esc(prod)+"</strong> room nights at the Hotel during the term of this Agreement. If at any time after the first three (3) months the room-night production is less than 30% of the projected production, the Hotel may revise the Corporate Rates at its discretion, subject to prior notice to the Company. Room nights are counted as consumed by the Company, its affiliates and their employees, consultants, suppliers and guests."
+        : "Korporátne ceny vychádzajú z predpokladanej produkcie <strong "+ce+">"+esc(prod)+"</strong> izbo-nocí v hoteli počas platnosti tejto dohody. Ak kedykoľvek po prvých troch (3) mesiacoch klesne produkcia pod 30 % predpokladu, hotel je oprávnený upraviť korporátne ceny podľa vlastného uváženia po predchádzajúcom oznámení spoločnosti. Izbo-noci sa počítajú ako spotrebované spoločnosťou, jej pridruženými osobami a ich zamestnancami, konzultantmi, dodávateľmi a hosťami.";
+
+      var tncEN = [
+        ["Reservation procedure","Reservations must be made directly via the hotel/brand website or sent from a corporate (work) e-mail of the Company, and shall refer to the PCR code. The Company shall keep the PCR confidential and instruct its employees and affiliates accordingly. The Hotel provides a confirmation number for each reservation subject to availability. Guaranteed reservations are held until 18:00 local time on the arrival day. Check-in is from 15:00, check-out by 12:00 local time. The Hotel's general terms and conditions for hotel services apply; payment for the stay is made via a deposit (advance) invoice and the payment method must be agreed in advance."],
+        ["Cancellation procedure","A reservation may be cancelled free of charge no later than 5 days before arrival, unless stated otherwise in the confirmation. For a later cancellation or a no-show, the Company or the Guest shall pay a penalty equal to 100% of the first night. The Hotel may amend guarantee, cancellation and payment terms during special events (trade fairs, summits, etc.) subject to prior notice."],
+        ["Changes to taxes or other charges","If government or local taxes and/or service charges included in the Corporate Rates change during the term, the Corporate Rates change accordingly; the revised rates apply from the date specified in the Hotel's written notice to existing and future reservations."],
+        ["Liability","Each Party is fully liable for its non-performance or undue performance. The Hotel is liable only in case of gross negligence or wilful default and only for direct loss and damage. The Company is jointly and severally liable with the Guest for the fulfilment of any payment obligation related to use of the PCR."],
+        ["Duty of care","The Hotel complies with applicable fire and safety regulations and pursues regular controls to ensure high safety and hygiene standards. The Hotel will give the Company reasonable advance notice of any refurbishment that may impact the guest experience."],
+        ["Force majeure","In the event of circumstances beyond a Party's control (act of God, fire, flood, disease, war, terrorism, strike, governmental action, etc.), the affected Party may suspend the Agreement until such circumstances end. Confirmed reservations within that period may be cancelled by the Hotel by written notice. Each Party shall use reasonable endeavours to mitigate the effects and shall notify the other without delay."],
+        ["Intellectual property","The Company obtains no rights to the Hotel's or its brand licensor's materials, trademarks, brand names, logos or signs without the Hotel's prior written approval, and shall not use them in any marketing or advertising. Any breach entitles the Hotel to terminate the Agreement immediately."],
+        ["Indemnity","Each Party shall hold harmless and indemnify the other in respect of direct loss or damage (including penalties, fines, expenses and legal fees) caused by its wrong performance under this Agreement, save where caused by the other Party's gross negligence, wilful misconduct or bad faith."]
+      ];
+      var tncSK = [
+        ["Postup rezervácie","Rezervácie musia byť vytvorené priamo cez web hotela/značky alebo zaslané z pracovného (firemného) e-mailu spoločnosti, s uvedením kódu PCR. Spoločnosť je povinná zachovávať PCR ako dôverný a poučiť svojich zamestnancov a pridružené osoby. Hotel poskytne potvrdzovacie číslo ku každej rezervácii podľa dostupnosti. Garantované rezervácie sú držané do 18:00 miestneho času v deň príchodu. Check-in od 15:00, check-out do 12:00 miestneho času. Platia všeobecné obchodné podmienky hotela; úhrada za pobyt prebieha prostredníctvom zálohovej faktúry a spôsob úhrady musí byť vopred dohodnutý."],
+        ["Postup zrušenia (storno)","Rezerváciu možno bezplatne zrušiť najneskôr 5 dní pred príchodom, ak v potvrdení nie je uvedené inak. Pri neskoršom zrušení alebo no-show uhradí spoločnosť alebo hosť pokutu vo výške 100 % prvej noci. Hotel môže upraviť podmienky garancie, storna a platby počas mimoriadnych podujatí (veľtrhy, summity a pod.) po predchádzajúcom oznámení."],
+        ["Zmeny daní alebo iných poplatkov","Ak sa počas platnosti zmenia štátne alebo miestne dane a/alebo servisné poplatky zahrnuté v korporátnych cenách, korporátne ceny sa zodpovedajúco zmenia; upravené ceny platia odo dňa uvedeného v písomnom oznámení hotela pre existujúce aj budúce rezervácie."],
+        ["Zodpovednosť","Každá strana plne zodpovedá za svoje neplnenie alebo nesprávne plnenie. Hotel zodpovedá len v prípade hrubej nedbanlivosti alebo úmyselného porušenia a iba za priamu škodu. Spoločnosť zodpovedá spoločne a nerozdielne s hosťom za splnenie platobných povinností súvisiacich s použitím PCR."],
+        ["Náležitá starostlivosť","Hotel dodržiava platné protipožiarne a bezpečnostné predpisy a vykonáva pravidelné kontroly na zaistenie vysokých štandardov bezpečnosti a hygieny. Hotel vopred v primeranom čase informuje spoločnosť o rekonštrukciách, ktoré môžu ovplyvniť pobyt hostí."],
+        ["Vyššia moc","V prípade okolností mimo kontroly strany (živelná pohroma, požiar, povodeň, choroba, vojna, terorizmus, štrajk, zásah orgánov a pod.) môže dotknutá strana pozastaviť dohodu do skončenia takýchto okolností. Potvrdené rezervácie v danom období môže hotel zrušiť písomným oznámením. Každá strana vyvinie primerané úsilie na zmiernenie následkov a bezodkladne informuje druhú stranu."],
+        ["Duševné vlastníctvo","Spoločnosť nezískava žiadne práva k materiálom, ochranným známkam, obchodným názvom, logám a označeniam hotela ani jeho poskytovateľa značky bez predchádzajúceho písomného súhlasu hotela a nesmie ich použiť v marketingu či reklame. Akékoľvek porušenie oprávňuje hotel okamžite ukončiť dohodu."],
+        ["Odškodnenie","Každá strana odškodní druhú stranu za priamu škodu (vrátane pokút, sankcií, nákladov a právnych poplatkov) spôsobenú jej nesprávnym plnením tejto dohody, okrem prípadov spôsobených hrubou nedbanlivosťou, úmyselným pochybením alebo zlou vierou druhej strany."]
+      ];
+      var tnc = EN ? tncEN : tncSK;
+      var validityTxt = EN
+        ? "This Agreement takes effect on the date of signature by both Parties and remains effective until <strong "+ce+">"+esc(to||"—")+"</strong>. Either Party may terminate early for breach upon written notice and an appropriate remedial deadline. Amendments are valid only in writing signed by both Parties. The Agreement and its content shall be kept confidential, except that the Company may share the PCR and Corporate Rates with prospective Guests. This Agreement is governed by the laws of the Slovak Republic; disputes shall be settled amicably, failing which by the competent court at the Hotel's domicile."
+        : "Táto dohoda nadobúda účinnosť dňom podpisu oboma stranami a zostáva v platnosti do <strong "+ce+">"+esc(to||"—")+"</strong>. Ktorákoľvek strana ju môže predčasne ukončiť pre porušenie na základe písomného oznámenia a primeranej lehoty na nápravu. Zmeny sú platné len písomne a podpísané oboma stranami. Dohoda a jej obsah sú dôverné, pričom spoločnosť je oprávnená zdieľať PCR a korporátne ceny s potenciálnymi hosťami. Dohoda sa riadi právom Slovenskej republiky; spory sa riešia zmierom, inak na príslušnom súde v sídle hotela.";
+
+      function ol(arr){ var i=0; return '<ol>'+arr.map(function(x){i++;return '<li><strong>'+esc(x[0])+'.</strong> <span '+ce+'>'+esc(x[1])+'</span></li>';}).join('')+'</ol>'; }
+
+      var css = '*{box-sizing:border-box}'+'@media print{tr,li,.party,.price,.sig,.grand{break-inside:avoid;page-break-inside:avoid}h1,h2,h3{break-after:avoid;page-break-after:avoid}.head{break-inside:avoid;page-break-inside:avoid}}'+
+        'body{margin:0;background:#f0ede8;color:#1a1a1a;font-family:"Jost",system-ui,sans-serif;font-size:12.5px;-webkit-print-color-adjust:exact;print-color-adjust:exact}'+
+        '.bar{position:sticky;top:0;display:flex;justify-content:space-between;align-items:center;gap:8px;padding:8px 16px;background:#fff;border-bottom:1px solid #e4e0d8;font-size:11px}'+
+        '.bar button{border:1px solid #1a1814;background:#1a1814;color:#e8dfc8;border-radius:4px;padding:6px 14px;font-size:10px;font-weight:600;text-transform:uppercase;letter-spacing:.08em;cursor:pointer}'+
+        '.bar button.ghost{background:#fff;color:#1a1a1a;border-color:#e4e0d8}'+
+        '.sheet{max-width:830px;margin:18px auto;background:#fff;padding:40px 46px;box-shadow:0 1px 8px rgba(0,0,0,.08);line-height:1.6}'+
+        '.head{display:flex;justify-content:space-between;align-items:flex-start;border-bottom:1px solid #e8dfc8;padding-bottom:16px;margin-bottom:18px}'+
+        '.logo{height:46px}'+
+        '.doc-title{text-align:right}.doc-title h1{font-family:"Cormorant Garamond",serif;font-weight:300;font-size:24px;margin:0}'+
+        '.doc-no{font-size:12px;font-weight:600;margin-top:2px}'+
+        '.parties{display:grid;grid-template-columns:1fr 1fr;gap:22px;margin:16px 0}'+
+        '.pl{font-size:9px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#888;margin-bottom:6px}'+
+        '.party{border:1px solid #e4e0d8;border-radius:5px;padding:12px 14px;font-size:12px;line-height:1.6}.party .nm{font-weight:600}'+
+        '[contenteditable]{outline:none;border-radius:2px}[contenteditable]:hover{background:#faf7ef}[contenteditable]:focus{background:#f3ecd9}'+
+        'h2{font-family:"Cormorant Garamond",serif;font-weight:500;font-size:18px;margin:20px 0 6px;border-bottom:1px solid #efece5;padding-bottom:4px}'+
+        'ol{margin:6px 0 6px 18px;padding:0}li{margin:6px 0}p{margin:6px 0}'+
+        'table.t{width:100%;border-collapse:collapse;margin:6px 0}'+
+        'table.t th{font-size:8.5px;text-transform:uppercase;letter-spacing:.06em;color:#fff;background:#1a1814;padding:7px 9px;text-align:left}'+
+        'table.t th.r{text-align:right}table.t td{padding:6px 9px;border-bottom:1px solid #eee;font-size:12px}table.t td.r{text-align:right}'+
+        '.sig{display:grid;grid-template-columns:1fr 1fr;gap:44px;margin-top:48px}.sig .line{border-top:1px solid #1a1a1a;padding-top:6px;font-size:11px;color:#555}'+
+        '.foot{margin-top:24px;display:flex;justify-content:space-between;font-size:10px;color:#999;border-top:1px solid #e8dfc8;padding-top:10px}'+
+        '@media print{.bar{display:none}body{background:#fff}tr{break-inside:avoid;page-break-inside:avoid;}thead{display:table-header-group;}h1,h2{break-after:avoid;page-break-after:avoid;}.party,.price,.sig>div,ol li,.it tr{break-inside:avoid;}.sheet{box-shadow:none;margin:0;max-width:none;padding:0}@page{size:A4;margin:15mm}}';
+
+      var sc = 'window.__pr=function(){window.print();};'+
+        'window.__undo=function(){try{document.execCommand("undo",false,null);}catch(e){}};window.__redo=function(){try{document.execCommand("redo",false,null);}catch(e){}};window.__setLang=function(l){try{if(window.opener&&window.opener.generateContract)window.opener.generateContract(l,window);}catch(e){}};'+
+        'window.__dl=function(){var h="<!DOCTYPE html>\\n"+document.documentElement.outerHTML;var b=new Blob([h],{type:"text/html;charset=utf-8"});var a=document.createElement("a");var el=document.getElementById("cNo");var no=(el?el.textContent.trim():"corporate-rate-agreement");a.href=URL.createObjectURL(b);a.download=no.replace(/[^A-Za-z0-9_\-]+/g,"_")+".html";document.body.appendChild(a);a.click();setTimeout(function(){a.remove();},100);};';
+
+      var doc = '<!DOCTYPE html><html lang="'+(EN?"en":"sk")+'"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>'+title+' '+cNo+'</title>'+
+        '<link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">'+
+        '<style>'+css+'</style></head><body>'+
+        '<div class="bar"><div>'+title+' '+cNo+(EN?' — edit the highlighted fields':' — upravte zvýraznené polia')+'</div><div><button class="ghost" onclick="__undo()" title="'+(EN?"Undo":"Späť")+'">↺</button><button class="ghost" onclick="__redo()" title="'+(EN?"Redo":"Znovu")+'">↻</button><button class="ghost" onclick="__setLang(\'sk\')">SK</button><button class="ghost" onclick="__setLang(\'en\')">EN</button><button class="ghost" onclick="__dl()">'+(EN?"Download .html":"Stiahnuť .html")+'</button><button onclick="__pr()">'+(EN?"Print / Save as PDF":"Tlačiť / Uložiť ako PDF")+'</button></div></div>'+
+        '<div class="sheet">'+
+        '<div class="head"><img class="logo" src="https://www.damianjasna.sk/template/dj/img/logo-hgt.svg" alt="Swissôtel Damian Jasna"><div class="doc-title"><h1>'+title+'</h1><div class="doc-no">'+(EN?"No.":"č.")+' <span id="cNo" '+ce+'>'+cNo+'</span></div></div></div>'+
+        '<div class="parties">'+
+        '<div><div class="pl">'+L.hotel+'</div><div class="party"><div class="nm">DAMIAN JASNA HOTEL RESORT &amp; RESIDENCES s.r.o.</div>'+(EN?"operating as ":"prevádzkujúci ")+'Swissôtel Damian Jasna<br>Demänovská Dolina 555, 031 01 Demänovská Dolina<br>'+(EN?"Company ID":"IČO")+': 54998778 · '+(EN?"Tax ID":"DIČ")+': 2121855637 · '+(EN?"VAT ID":"IČ DPH")+': SK2121855637</div></div>'+
+        '<div><div class="pl">'+L.company+'</div><div class="party"><div class="nm" '+ce+'>'+esc(co.name)+'</div>'+(EN?"Company ID":"IČO")+': <span '+ce+'>'+esc(co.reg)+'</span><br><span '+ce+'>'+esc(co.addr)+'</span></div></div>'+
+        '</div>'+
+        '<p>'+intro+'</p>'+
+        '<h2>'+L.rates+'</h2>'+
+        '<p>'+(EN?"Corporate rates are provided as a dynamic discount off the current Best Available Rate (BAR) of the Hotel, depending on the season and length of stay (see the matrix below); the same discounts apply equally to corporate (business) stays and to private stays of the Company’s employees. Breakfast and internet (Wi-Fi) are included; rates incl. VAT (5%). Currency: EUR. Validity: ":"Korporátne ceny sú poskytované formou dynamickej zľavy z aktuálnej najlepšej dostupnej ceny (BAR) hotela v závislosti od sezóny a dĺžky pobytu (pozri maticu nižšie); rovnaké zľavy platia pre firemné (pracovné) pobyty aj súkromné pobyty zamestnancov spoločnosti. Raňajky a internet (Wi-Fi) v cene; ceny vrátane DPH (5 %). Mena: EUR. Platnosť: ")+'<strong '+ce+'>'+esc(from||"—")+'</strong> – <strong '+ce+'>'+esc(to||"—")+'</strong>.</p>'+'<h3 style="margin:13px 0 3px;font-size:12.5px;">'+(EN?"1. Season definition":"1. Definícia sezóny")+'</h3>'+'<table style="width:100%;border-collapse:collapse;margin:6px 0 3px;font-size:12px;">'+'<tr><th style="text-align:left;padding:5px 8px;border:1px solid #d9d4c8;background:#f3efe6;font-weight:700;font-size:10.5px;">'+(EN?"Category":"Kategória")+'</th><th style="text-align:left;padding:5px 8px;border:1px solid #d9d4c8;background:#f3efe6;font-weight:700;font-size:10.5px;">'+(EN?"Dates":"Dátumy")+'</th></tr>'+'<tr><td style="padding:5px 8px;border:1px solid #e3dfd5;">'+(EN?"Off-season":"Mimo sezóny")+'</td><td style="padding:5px 8px;border:1px solid #e3dfd5;">'+(EN?"19 March – 15 November":"19. marec – 15. november")+'</td></tr>'+'<tr><td style="padding:5px 8px;border:1px solid #e3dfd5;">'+(EN?"Season":"Sezóna")+'</td><td style="padding:5px 8px;border:1px solid #e3dfd5;">'+(EN?"16 November – 18 March":"16. november – 18. marec")+'</td></tr>'+'</table>'+'<h3 style="margin:13px 0 3px;font-size:12.5px;">'+(EN?"2. Dynamic discounts — corporate stays and employees’ private stays":"2. Dynamické zľavy — firemné pobyty aj súkromné pobyty zamestnancov")+'</h3>'+'<table style="width:100%;border-collapse:collapse;margin:6px 0 3px;font-size:12px;">'+'<tr><th style="text-align:left;padding:5px 8px;border:1px solid #d9d4c8;background:#f3efe6;font-weight:700;font-size:10.5px;">'+(EN?"Condition":"Podmienka")+'</th><th style="text-align:center;padding:5px 8px;border:1px solid #d9d4c8;background:#f3efe6;font-weight:700;font-size:10.5px;">'+(EN?"Off-season":"Mimo sezóny")+'</th><th style="text-align:center;padding:5px 8px;border:1px solid #d9d4c8;background:#f3efe6;font-weight:700;font-size:10.5px;">'+(EN?"Season":"Sezóna")+'</th></tr>'+'<tr><td style="padding:5px 8px;border:1px solid #e3dfd5;">'+(EN?"Base corporate discount":"Základná korporátna zľava")+'</td><td style="padding:5px 8px;border:1px solid #e3dfd5;text-align:center;font-weight:600;">10 %</td><td style="padding:5px 8px;border:1px solid #e3dfd5;text-align:center;font-weight:600;">10 %</td></tr>'+'<tr><td style="padding:5px 8px;border:1px solid #e3dfd5;">'+(EN?"Low-demand date (low occupancy)":"Slabý termín (nízka obsadenosť)")+'</td><td style="padding:5px 8px;border:1px solid #e3dfd5;text-align:center;font-weight:600;">15 %</td><td style="padding:5px 8px;border:1px solid #e3dfd5;text-align:center;font-weight:600;">15 %</td></tr>'+'<tr><td style="padding:5px 8px;border:1px solid #e3dfd5;">'+(EN?"Stay ≥ 3 nights":"Pobyt ≥ 3 noci")+'</td><td style="padding:5px 8px;border:1px solid #e3dfd5;text-align:center;font-weight:600;">15 %</td><td style="padding:5px 8px;border:1px solid #e3dfd5;text-align:center;font-weight:600;">12 %</td></tr>'+'<tr><td style="padding:5px 8px;border:1px solid #e3dfd5;">'+(EN?"Stay ≥ 5 nights or group ≥ 10 persons":"Pobyt ≥ 5 nocí alebo skupina ≥ 10 osôb")+'</td><td style="padding:5px 8px;border:1px solid #e3dfd5;text-align:center;font-weight:600;">20 %</td><td style="padding:5px 8px;border:1px solid #e3dfd5;text-align:center;font-weight:600;">15 %</td></tr>'+'<tr><td style="padding:5px 8px;border:1px solid #e3dfd5;">'+(EN?"Need-date fill — limited dates":"Mapa na plnenie (need-date fill) — limitované termíny")+'</td><td style="padding:5px 8px;border:1px solid #e3dfd5;text-align:center;font-weight:600;">20–25 %</td><td style="padding:5px 8px;border:1px solid #e3dfd5;text-align:center;font-weight:600;">15–20 %</td></tr>'+'</table>'+'<p style="font-size:10.5px;color:#666;margin:2px 0 8px;">'+(EN?"All discounts above 20% require General Manager approval and are tied to a specific date.":"Všetky zľavy nad 20 % vyžadujú schválenie General Managera a sú viazané na konkrétny dátum.")+'</p>'+
+        '<h2>'+L.cond+'</h2>'+
+        '<ul>'+'<li>'+(EN?"Discounts are applied to the BAR per the seasonal table above, based on length of stay; the matrix below gives a quick overview.":"Zľavy sa uplatňujú z ceny BAR podľa sezónnej tabuľky vyššie, podľa dĺžky pobytu; matica nižšie poskytuje rýchly prehľad.")+'</li>'+'<li>'+(EN?"The Corporate Rates and the dynamic discount apply to corporate (business) stays as well as private stays of the Company\u2019s employees as an employee benefit.":"Korporátne ceny aj dynamická zľava platia na firemné (pracovné) pobyty, ako aj na súkromné pobyty zamestnancov spoločnosti ako pracovný benefit.")+'</li>'+'<li>'+(EN?"Breakfast included in all categories; internet (Wi-Fi) included.":"Raňajky v cene všetkých kategórií; internet (Wi-Fi) v cene.")+'</li>'+
+        '<li>'+(EN?"Parking: €20 / car / night.":"Parkovanie: 20 € / auto / noc.")+'</li>'+
+        '<li>'+(EN?"Access to Pürovel Spa & Sport (fitness, pool, saunas) for all categories.":"Vstup do Pürovel Spa & Sport (fitness, bazén, sauny) pre všetky kategórie.")+'</li>'+
+        '<li>'+(EN?"VAT 5% accommodation, 5% food & beverage; no other additional charges. Rates are non-commissionable.":"DPH 5 % ubytovanie, 5 % stravovanie; žiadne ďalšie poplatky. Ceny sú nekomisionovateľné.")+'</li>'+
+        '<li>'+(EN?"All reservations subject to availability; early check-in / late check-out subject to availability.":"Všetky rezervácie podliehajú dostupnosti; skorý check-in / neskorý check-out podľa dostupnosti.")+'</li>'+'<li>'+(EN?"The Corporate Rate applies to up to 10 rooms per night and does not apply to group reservations.":"Cena platí do maximálne 10 izieb na noc a nevzťahuje sa na skupinové rezervácie.")+'</li>'+'<li>'+(EN?"Rates are valid for reservations from one (1) night.":"Ceny platia pre rezervácie od jednej (1) noci.")+'</li>'+'<li>'+(EN?"Payment for the stay is made via a deposit (advance) invoice; the payment method must be agreed in advance.":"Úhrada za pobyt prebieha prostredníctvom zálohovej faktúry; spôsob úhrady musí byť vopred dohodnutý.")+'</li>'+'<li>'+(EN?"Discounts apply only to reservations made directly with the Hotel, not via OTAs (online travel agencies).":"Zľavy sa poskytujú len na rezervácie priamo cez hotel, nie cez OTA (online cestovné agentúry).")+'</li>'+'<li>'+(EN?"Discounts cannot be combined with other promotions unless explicitly stated.":"Zľavy sa nekombinujú s inými promo akciami, pokiaľ nie je výslovne uvedené inak.")+'</li>'+'<li>'+(EN?"Discounts are valid only for contracted corporate clients.":"Zľavy platia len pre zmluvných korporátnych klientov.")+'</li>'+'<li>'+(EN?"Discounts apply only to the accommodation rate, not to other services (F&B, spa, event spaces).":"Zľavy sa vzťahujú len na sadzbu ubytovania, nie na ďalšie služby (F&B, spa, eventové priestory).")+'</li>'+'<li>'+(EN?"Dates with a discount of 20% or more are limited and subject to availability verification.":"Termíny so zľavou 20 % a viac sú limitované a podliehajú overeniu dostupnosti.")+'</li>'+'</ul>'+
+        '<h2>'+(EN?"Discount matrix — quick overview":"Cenová matica — rýchly prehľad")+'</h2>'+'<p>'+(EN?"How length of stay works: the discount is based on the total number of nights of a single reservation — the longer the stay, the higher the discount — and it differs by season. A stay of 1–2 nights gets the base discount; from 3–4 nights and from 5 or more nights (or a group of 10+ persons) the discount increases according to the table below.":"Ako funguje dĺžka pobytu: zľava sa určuje podľa celkového počtu nocí jednej rezervácie — čím dlhší pobyt, tým vyššia zľava — a líši sa podľa sezóny. Pobyt na 1–2 noci má základnú zľavu; od 3–4 nocí a od 5 a viac nocí (alebo pri skupine od 10 osôb) sa zľava zvyšuje podľa nasledujúcej tabuľky.")+'</p>'+'<table style="width:100%;border-collapse:collapse;margin:6px 0 3px;font-size:12px;">'+'<tr><th style="text-align:left;padding:5px 8px;border:1px solid #d9d4c8;background:#f3efe6;font-weight:700;font-size:10.5px;">'+(EN?"Category":"Kategória")+'</th><th style="text-align:center;padding:5px 8px;border:1px solid #d9d4c8;background:#f3efe6;font-weight:700;font-size:10.5px;">'+(EN?"Nights":"Noci")+'</th><th style="text-align:center;padding:5px 8px;border:1px solid #d9d4c8;background:#f3efe6;font-weight:700;font-size:10.5px;">'+(EN?"Off-season":"Mimo sezóny")+'</th><th style="text-align:center;padding:5px 8px;border:1px solid #d9d4c8;background:#f3efe6;font-weight:700;font-size:10.5px;">'+(EN?"Season":"Sezóna")+'</th></tr>'+'<tr><td style="padding:5px 8px;border:1px solid #e3dfd5;">'+(EN?"Short stay":"Krátky pobyt")+'</td><td style="padding:5px 8px;border:1px solid #e3dfd5;text-align:center;font-weight:600;">1–2</td><td style="padding:5px 8px;border:1px solid #e3dfd5;text-align:center;font-weight:600;">10 %</td><td style="padding:5px 8px;border:1px solid #e3dfd5;text-align:center;font-weight:600;">10 %</td></tr>'+'<tr><td style="padding:5px 8px;border:1px solid #e3dfd5;">'+(EN?"Longer stay":"Dlhší pobyt")+'</td><td style="padding:5px 8px;border:1px solid #e3dfd5;text-align:center;font-weight:600;">3–4</td><td style="padding:5px 8px;border:1px solid #e3dfd5;text-align:center;font-weight:600;">15 %</td><td style="padding:5px 8px;border:1px solid #e3dfd5;text-align:center;font-weight:600;">12 %</td></tr>'+'<tr><td style="padding:5px 8px;border:1px solid #e3dfd5;">'+(EN?"Long stay / group":"Dlhý pobyt / skupina")+'</td><td style="padding:5px 8px;border:1px solid #e3dfd5;text-align:center;font-weight:600;">5+</td><td style="padding:5px 8px;border:1px solid #e3dfd5;text-align:center;font-weight:600;">20 %</td><td style="padding:5px 8px;border:1px solid #e3dfd5;text-align:center;font-weight:600;">15 %</td></tr>'+'</table>'+'<h2>'+L.pcrh+'</h2>'+
+        '<p>'+(EN?"The Hotel assigns the following preferred corporate rate code (PCR) to the Company: ":"Hotel prideľuje spoločnosti nasledujúci korporátny kód (PCR): ")+'<strong '+ce+'>'+esc(pcr)+'</strong>. '+(EN?"Guests must quote the PCR upon reservation; it shall be used solely by Guests travelling on behalf of or as a guest of the Company and kept confidential.":"Hostia musia PCR uviesť pri rezervácii; používať ho smú výlučne hostia cestujúci v mene alebo ako hosť spoločnosti a sú povinní ho zachovávať dôverným.")+'</p>'+
+        '<h2>'+L.tnc+'</h2>'+ ol(tnc)+
+        '<h2>'+L.validity+'</h2><p>'+validityTxt+'</p>'+
+        '<div class="sig"><div><div class="line">'+(EN?"For the Company":"Za spoločnosť")+'<br><strong '+ce+'>'+esc(co.name)+'</strong><br><span '+ce+'>'+(EN?"Name and title":"Meno a funkcia")+'</span></div></div>'+
+        '<div><div class="line">'+(EN?"For the Hotel — Swissôtel Damian Jasna":"Za hotel — Swissôtel Damian Jasna")+'<br><strong '+ce+'>Patrik Krivák</strong>, <span '+ce+'>General Manager</span></div></div></div>'+
+        '<div class="foot"><span>'+(EN?"Prepared by: ":"Vypracoval: ")+esc(prep.name)+', '+esc(prep.title)+' · '+esc(prep.tel)+(prep.email?(' · '+esc(prep.email)):'')+'</span><span>www.damianjasna.sk</span></div>'+
+        '</div><script>'+sc+'<\/script></body></html>';
+
+      var w = targetWin || window.open("", "_blank");
+      if(!w){ alert(EN?"Pop-up blocked. Please allow pop-ups and try again.":"Prehliadač zablokoval okno. Povoľte vyskakovacie okná a skúste znova."); return; }
+      w.document.open(); w.document.write(doc); w.document.close();
+    }
+
+    function isRestored(){ try{ return document.documentElement.getAttribute('data-restored')==='1' || !!window.__SAVED_STATE__; }catch(e){ return false; } }
+    function restoreGlobals(){
+      var st = window.__SAVED_STATE__ || {};
+      try{ if(typeof LANG!=='undefined' && st.lang){ LANG = st.lang; } }catch(e){}
+      try{ if(typeof CUST_COUNTRY!=='undefined' && st.custCountry){ CUST_COUNTRY = st.custCountry; } }catch(e){}
+      try{ if(typeof SELECTED_COMPANY!=='undefined' && st.selectedCompany){ SELECTED_COMPANY = st.selectedCompany; } }catch(e){}
+      try{ if(typeof lastDate!=='undefined' && st.lastDate){ lastDate = st.lastDate; } }catch(e){}
+      try{ if(st.lang && typeof setLang==='function'){ setLang(st.lang); } }catch(e){}
+    }
+    function __pushLiveToDOM(){
+      document.querySelectorAll('input').forEach(function(el){
+        if(el.type==='checkbox'||el.type==='radio'){ if(el.checked){ el.setAttribute('checked','checked'); } else { el.removeAttribute('checked'); } }
+        else { el.setAttribute('value', el.value==null?'':el.value); }
+      });
+      document.querySelectorAll('select').forEach(function(sel){
+        Array.prototype.forEach.call(sel.options, function(o){ if(o.selected){ o.setAttribute('selected','selected'); } else { o.removeAttribute('selected'); } });
+      });
+      document.querySelectorAll('textarea').forEach(function(el){ el.textContent = el.value; });
+    }
+    function saveOfferHTML(){
+      try{
+        __pushLiveToDOM();
+        document.documentElement.setAttribute('data-restored','1');
+        var st = { lang:(typeof LANG!=='undefined'?LANG:'sk'), custCountry:(typeof CUST_COUNTRY!=='undefined'?CUST_COUNTRY:'sk'), selectedCompany:(typeof SELECTED_COMPANY!=='undefined'?SELECTED_COMPANY:null), lastDate:(typeof lastDate!=='undefined'?lastDate:'') };
+        var old=document.getElementById('__savedState__'); if(old){ old.remove(); }
+        var sc=document.createElement('script'); sc.id='__savedState__'; sc.textContent='window.__SAVED_STATE__='+JSON.stringify(st)+';';
+        document.body.appendChild(sc);
+        var html='<!DOCTYPE html>\n'+document.documentElement.outerHTML;
+        document.documentElement.removeAttribute('data-restored'); sc.remove();
+        var blob=new Blob([html],{type:'text/html;charset=utf-8'});
+        var cl=document.getElementById('hdr-client'); var nm=(cl?((cl.textContent||cl.value||'')+'').trim():'')||'ponuka';
+        var a=document.createElement('a'); a.href=URL.createObjectURL(blob); a.download=(nm==='ponuka'?'ponuka':(nm.replace(/[^A-Za-z0-9_\-]+/g,'_')+'_ponuka'))+'.html';
+        document.body.appendChild(a); a.click(); setTimeout(function(){ a.remove(); },120);
+      }catch(e){ alert('Uloženie zlyhalo: '+e.message); }
+    }
+    document.addEventListener("DOMContentLoaded", function(){
+      if(isRestored()){ restoreGlobals(); }
+      try{ syncSignatory((document.getElementById("hdr-sales")||{}).value); }catch(e){}
+    });
+    if(!isRestored()){ syncSignatory("martin"); }
+  </script>
+</body>
+</html>

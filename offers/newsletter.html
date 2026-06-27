@@ -1,0 +1,2455 @@
+<!DOCTYPE html>
+<html lang="sk"><head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Swissôtel Damian Jasna – Newsletter · Leto 2026</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&amp;family=Jost:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#1a1a1a; --muted:#888; --mid:#4a4a4a;
+    --border:#e4e0d8; --sand:#f8f6f2;
+    --gold:#b8a06a; --gold-light:#e8dfc8; --black:#0e0e0e;
+    --sans:"Jost",system-ui,-apple-system,sans-serif;
+    --serif:"Cormorant Garamond","Times New Roman",serif;
+  }
+  *{box-sizing:border-box;}
+  body{margin:0;background:#edeae3;font-family:var(--sans);color:var(--ink);-webkit-font-smoothing:antialiased;}
+
+  /* ===== Toolbar (nezobrazuje sa pri tlači) ===== */
+  .toolbar{position:sticky;top:0;z-index:50;background:#fff;border-bottom:1px solid var(--border);
+    display:flex;justify-content:space-between;align-items:center;gap:10px;padding:9px 18px;flex-wrap:wrap;}
+  .toolbar .tl{font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--mid);}
+  .toolbar .tr{display:flex;gap:6px;flex-wrap:wrap;}
+  .toolbar button{font-family:var(--sans);font-size:11px;font-weight:600;letter-spacing:.05em;
+    border:1px solid var(--border);background:#fff;color:var(--ink);border-radius:7px;padding:7px 13px;cursor:pointer;}
+  .toolbar button:hover{border-color:var(--gold);color:var(--gold);}
+  .toolbar button.primary{background:var(--black);color:#fff;border-color:var(--black);}
+  .toolbar button.primary:hover{background:var(--gold);border-color:var(--gold);color:#fff;}
+  .edit-hint{background:var(--gold-light);color:#6e5a26;font-size:11.5px;padding:8px 18px;text-align:center;}
+  .edit-hint b{font-weight:600;}
+  body.editing [contenteditable]{outline:1px dashed rgba(184,160,106,.55);outline-offset:2px;min-height:1em;}
+  body.editing [contenteditable]:hover{outline-color:var(--gold);background:rgba(232,223,200,.25);}
+  body.editing img.swappable{cursor:pointer;}
+  body.editing img.swappable:hover{outline:2px solid var(--gold);outline-offset:-2px;opacity:.92;}
+  @media print{.toolbar,.edit-hint{display:none !important;} body{background:#fff;} .mail{box-shadow:none !important;margin:0 auto !important;}}
+
+  /* ===== Newsletter ===== */
+  .mail{max-width:660px;margin:26px auto 50px;background:#fff;box-shadow:0 8px 40px rgba(20,16,8,.12);}
+
+  .infobar{background:var(--black);color:#e8dfc8;font-size:10.5px;letter-spacing:.08em;text-align:center;padding:8px 16px;line-height:1.5;}
+
+  .nl-header{display:flex;justify-content:space-between;align-items:center;gap:14px;padding:26px 36px 20px;border-bottom:1px solid var(--gold-light);}
+  .nl-header img.logo{height:54px;width:auto;display:block;}
+  .nl-header .hinfo{text-align:right;font-size:10px;line-height:1.55;color:var(--muted);letter-spacing:.03em;}
+  .nl-header .hname{font-weight:600;color:var(--ink);font-size:11px;letter-spacing:.1em;text-transform:uppercase;margin-bottom:2px;}
+
+  .eyebrow{display:flex;align-items:center;gap:10px;font-size:10px;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);font-weight:600;}
+  .eyebrow span.line{display:inline-block;width:34px;height:1px;background:var(--gold);}
+
+  .hero{padding:34px 36px 0;}
+  .hero h1{font-family:var(--serif);font-weight:500;font-size:42px;line-height:1.08;margin:14px 0 14px;color:var(--ink);}
+  .hero h1 em{font-style:italic;color:var(--gold);}
+  .hero .lead{font-size:14px;line-height:1.75;color:var(--mid);margin:0 0 22px;font-weight:300;}
+  .hero-img{width:100%;height:300px;object-fit:cover;display:block;}
+  .hero-cap{font-size:9.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);padding:9px 36px 0;text-align:right;}
+
+  .section{padding:34px 36px 8px;}
+  .section-title{font-family:var(--serif);font-size:27px;font-weight:500;margin:12px 0 6px;}
+  .section-sub{font-size:12.5px;color:var(--muted);margin:0 0 18px;font-weight:300;line-height:1.6;}
+
+  /* hlavná akcia */
+  .feature{margin:30px 36px 6px;background:var(--sand);border:1px solid var(--gold-light);}
+  .feature img{width:100%;height:230px;object-fit:cover;display:block;}
+  .feature .fbody{padding:24px 26px 26px;}
+  .ftag{display:inline-block;background:var(--gold);color:#fff;font-size:9.5px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;padding:5px 12px;margin-bottom:12px;}
+  .feature h2{font-family:var(--serif);font-size:30px;font-weight:500;margin:0 0 10px;line-height:1.12;}
+  .feature p{font-size:13px;line-height:1.7;color:var(--mid);margin:0 0 14px;font-weight:300;}
+  .flist{margin:0 0 18px;padding:0;list-style:none;}
+  .flist li{font-size:12.5px;color:var(--mid);padding:5px 0 5px 20px;position:relative;font-weight:300;}
+  .flist li::before{content:"";position:absolute;left:0;top:12px;width:9px;height:1px;background:var(--gold);}
+  .btn{display:inline-block;background:var(--black);color:#fff !important;text-decoration:none;font-size:11px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;padding:13px 26px;}
+  .btn:hover{background:var(--gold);}
+  .btn.ghost{background:transparent;color:var(--gold) !important;border:1px solid var(--gold);padding:12px 25px;}
+  .btn.ghost:hover{background:var(--gold);color:#fff !important;}
+
+  /* karty ponúk */
+  .cards{display:grid;grid-template-columns:1fr 1fr;gap:20px;padding:8px 36px 10px;}
+  .card{border:1px solid var(--border);background:#fff;display:flex;flex-direction:column;}
+  .card img{width:100%;height:150px;object-fit:cover;display:block;}
+  .card .cbody{padding:18px 18px 20px;display:flex;flex-direction:column;flex:1;}
+  .ctag{font-size:9px;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);font-weight:700;margin-bottom:7px;}
+  .card h3{font-family:var(--serif);font-size:21px;font-weight:500;margin:0 0 8px;line-height:1.15;}
+  .card p{font-size:12px;line-height:1.65;color:var(--mid);margin:0 0 14px;font-weight:300;flex:1;}
+  .card a.clink{font-size:10.5px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);text-decoration:none;border-bottom:1px solid var(--gold-light);padding-bottom:3px;align-self:flex-start;}
+  .card a.clink:hover{border-color:var(--gold);}
+
+  .gold-divider{border:none;height:1px;background:linear-gradient(90deg,transparent,var(--gold-light) 18%,var(--gold-light) 82%,transparent);margin:30px 36px;}
+
+  /* badges */
+  .badges{display:flex;flex-wrap:wrap;gap:8px;padding:0 36px 6px;}
+  .badge{border:1px solid var(--gold-light);background:var(--sand);font-size:10.5px;letter-spacing:.07em;text-transform:uppercase;color:var(--mid);padding:8px 14px;font-weight:500;}
+  .badge.hl{background:var(--gold);border-color:var(--gold);color:#fff;font-weight:600;}
+
+  /* spa strip */
+  .strip{display:grid;grid-template-columns:1fr 1fr;margin:30px 0 0;}
+  .strip img{width:100%;height:100%;min-height:230px;object-fit:cover;display:block;}
+  .strip .sbody{background:var(--black);color:#fff;padding:32px 30px;display:flex;flex-direction:column;justify-content:center;}
+  .strip .eyebrow{color:var(--gold);}
+  .strip h3{font-family:var(--serif);font-weight:500;font-size:26px;margin:12px 0 10px;line-height:1.15;color:#fff;}
+  .strip p{font-size:12px;line-height:1.7;color:#cfc9bb;font-weight:300;margin:0 0 18px;}
+
+  /* CTA */
+  .cta{background:var(--sand);border-top:1px solid var(--gold-light);border-bottom:1px solid var(--gold-light);text-align:center;padding:40px 36px;margin-top:34px;}
+  .cta h2{font-family:var(--serif);font-size:30px;font-weight:500;margin:12px 0 8px;}
+  .cta h2 em{font-style:italic;color:var(--gold);}
+  .cta p{font-size:13px;color:var(--mid);font-weight:300;margin:0 0 22px;line-height:1.7;}
+  .cta .btn-row{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;}
+  .cta .eyebrow{justify-content:center;}
+
+  /* footer */
+  .footer{padding:30px 36px 14px;text-align:center;}
+  .footer img.flogo{height:40px;opacity:.92;margin-bottom:14px;}
+  .footer .fline{font-size:11px;color:var(--muted);line-height:1.8;}
+  .footer .fline a{color:var(--gold);text-decoration:none;}
+  .socials{display:flex;gap:14px;justify-content:center;margin:16px 0 4px;font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;}
+  .socials a{color:var(--mid);text-decoration:none;border-bottom:1px solid var(--border);padding-bottom:2px;}
+  .socials a:hover{color:var(--gold);border-color:var(--gold);}
+  .footer-strip{display:flex;justify-content:space-between;align-items:center;font-size:9px;letter-spacing:.16em;text-transform:uppercase;color:var(--gold);padding:16px 36px;border-top:1px solid var(--gold-light);margin-top:18px;}
+  .legal{font-size:9.5px;color:#b9b3a6;padding:0 36px 26px;text-align:center;line-height:1.7;}
+  .legal a{color:#b9b3a6;}
+
+  @media (max-width:680px){
+    .mail{margin:0;}
+    .hero{padding:26px 22px 0;} .hero h1{font-size:32px;}
+    .nl-header,.section{padding-left:22px;padding-right:22px;}
+    .feature{margin-left:22px;margin-right:22px;}
+    .cards{grid-template-columns:1fr;padding-left:22px;padding-right:22px;}
+    .badges{padding-left:22px;padding-right:22px;}
+    .gold-divider{margin-left:22px;margin-right:22px;}
+    .strip{grid-template-columns:1fr;}
+    .hero-cap{padding-right:22px;}
+    .footer,.footer-strip,.legal{padding-left:22px;padding-right:22px;}
+  }
+
+  /* ===== Galéria – výber fotky (len editor, netlačí sa) ===== */
+  .picker-overlay{position:fixed;inset:0;background:rgba(14,14,14,.72);z-index:100;display:none;align-items:center;justify-content:center;padding:20px;}
+  .picker-overlay.open{display:flex;}
+  .picker{background:#fff;max-width:920px;width:100%;max-height:90vh;display:flex;flex-direction:column;border-top:3px solid var(--gold);border-radius:6px;overflow:hidden;}
+  .picker-head{display:flex;justify-content:space-between;align-items:center;padding:16px 22px;border-bottom:1px solid var(--border);}
+  .picker-head .pt{font-family:var(--serif);font-size:22px;}
+  .picker-head button{border:1px solid var(--border);background:#fff;border-radius:7px;font-size:12px;padding:6px 12px;cursor:pointer;font-family:var(--sans);}
+  .picker-tabs{display:flex;gap:6px;padding:12px 22px 0;flex-wrap:wrap;}
+  .picker-tabs button{border:1px solid var(--border);background:#fff;border-radius:16px;font-size:10.5px;letter-spacing:.06em;text-transform:uppercase;padding:6px 14px;cursor:pointer;font-family:var(--sans);font-weight:600;color:var(--mid);}
+  .picker-tabs button.on{background:var(--black);color:#fff;border-color:var(--black);}
+  .picker-tabs .tab-count{font-size:9px;margin-left:5px;color:var(--muted);}
+  .picker-tabs button.on .tab-count{color:rgba(255,255,255,.6);}
+  .picker-search{padding:8px 22px 0;}
+  .picker-search input{width:100%;border:1px solid var(--border);border-radius:7px;padding:8px 11px;font-size:12px;font-family:var(--sans);}
+  .picker-search input:focus{outline:none;border-color:var(--gold);}
+  .picker-grid{overflow:auto;padding:14px 22px 20px;display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:10px;min-height:180px;align-content:start;}
+  .picker-grid .ph{position:relative;cursor:pointer;border:2px solid transparent;background:var(--sand);min-height:104px;overflow:hidden;border-radius:4px;}
+  .picker-grid .ph:hover{border-color:var(--gold);transform:translateY(-1px);transition:transform .15s;}
+  .picker-grid .ph img{width:100%;height:104px;object-fit:cover;display:block;opacity:0;transition:opacity .25s;}
+  .picker-grid .ph.loaded img{opacity:1;}
+  .picker-grid .ph.error{opacity:.45;cursor:not-allowed;background:repeating-linear-gradient(45deg,#f4f1ea,#f4f1ea 6px,#eee8d8 6px,#eee8d8 12px);}
+  .picker-grid .ph.error::after{content:"⚠ Nedostupné";position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-family:var(--sans);font-size:10px;color:var(--mid);letter-spacing:.06em;text-transform:uppercase;font-weight:600;}
+  .picker-grid .ph .skeleton{position:absolute;inset:0;background:linear-gradient(90deg,#f4f1ea 0%,#eee6d2 50%,#f4f1ea 100%);background-size:200% 100%;animation:shimmer 1.2s infinite;}
+  .picker-grid .ph.loaded .skeleton,.picker-grid .ph.error .skeleton{display:none;}
+  @keyframes shimmer{0%{background-position:200% 0;}100%{background-position:-200% 0;}}
+  .picker-grid .ph .pl{position:absolute;left:0;right:0;bottom:0;background:linear-gradient(0deg,rgba(14,14,14,.78),rgba(14,14,14,0));color:#fff;font-size:8.5px;letter-spacing:.08em;text-transform:uppercase;padding:14px 8px 6px;line-height:1.3;}
+  .picker-grid .ph .star{position:absolute;top:5px;right:5px;background:rgba(14,14,14,.65);color:var(--gold);width:22px;height:22px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:12px;opacity:0;transition:opacity .15s;}
+  .picker-grid .ph:hover .star{opacity:1;}
+  .picker-grid .ph .star.on{opacity:1;background:var(--gold);color:#fff;}
+  .picker-grid .empty{grid-column:1/-1;text-align:center;padding:28px 12px;color:var(--muted);font-size:13px;font-family:var(--sans);}
+  /* URL row + drop zone */
+  .picker-foot{display:flex;flex-direction:column;gap:8px;padding:12px 22px 16px;border-top:1px solid var(--border);background:#fafaf7;}
+  .pf-row{display:flex;gap:8px;align-items:stretch;flex-wrap:wrap;}
+  .picker-foot input[type=url],.picker-foot input[type=text]{flex:1;min-width:200px;border:1px solid var(--border);border-radius:7px;padding:9px 12px;font-size:12px;font-family:var(--sans);background:#fff;}
+  .picker-foot input[type=url]:focus{outline:none;border-color:var(--gold);box-shadow:0 0 0 3px rgba(184,160,106,.15);}
+  .picker-foot button{border:none;background:var(--black);color:#fff;border-radius:7px;font-size:11px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;padding:10px 16px;cursor:pointer;font-family:var(--sans);white-space:nowrap;}
+  .picker-foot button:hover{background:var(--gold);}
+  .picker-foot button:disabled{opacity:.5;cursor:not-allowed;}
+  .picker-foot button.gold{background:var(--gold);}
+  .picker-foot button.gold:hover{background:#a68f5c;}
+  .url-preview{display:flex;align-items:center;gap:10px;padding:8px 11px;background:#fff;border:1px solid var(--border);border-radius:7px;font-family:var(--sans);font-size:12px;color:var(--mid);}
+  .url-preview .thumb{width:44px;height:44px;border-radius:5px;background:var(--sand);background-size:cover;background-position:center;flex:0 0 auto;border:1px solid var(--border);overflow:hidden;position:relative;}
+  .url-preview .thumb.loading::after{content:"";position:absolute;inset:0;border:2px solid var(--gold-light);border-top-color:var(--gold);border-radius:50%;animation:spin .8s linear infinite;width:18px;height:18px;margin:auto;top:50%;left:50%;transform:translate(-50%,-50%);}
+  .url-preview .msg{flex:1;line-height:1.4;}
+  .url-preview .msg b{display:block;font-weight:600;color:var(--ink);}
+  .url-preview.ok{border-color:#a8c19a;background:#f4f8ef;}
+  .url-preview.ok .msg b{color:#3d6730;}
+  .url-preview.err{border-color:#e0b3a8;background:#fbf2ef;}
+  .url-preview.err .msg b{color:#a83a1f;}
+  .url-preview .miniact{border:1px solid var(--border);background:#fff;color:var(--ink);font-size:10.5px;padding:6px 10px;border-radius:6px;cursor:pointer;font-family:var(--sans);font-weight:600;letter-spacing:.05em;text-transform:uppercase;}
+  .url-preview .miniact:hover{border-color:var(--gold);color:var(--gold);}
+  @keyframes spin{to{transform:translate(-50%,-50%) rotate(360deg);}}
+  /* Drop overlay */
+  .picker.dragover::after{content:"⬇ Pustite obrázok sem";position:absolute;inset:0;background:rgba(184,160,106,.92);color:#fff;display:flex;align-items:center;justify-content:center;font-family:var(--serif);font-size:30px;z-index:5;pointer-events:none;letter-spacing:.04em;}
+  .picker{position:relative;}
+  @media print{.picker-overlay{display:none !important;}}
+  /* ===== Návod: odoslanie z Outlooku (len editor) ===== */
+  .send-overlay{position:fixed;inset:0;background:rgba(14,14,14,.72);z-index:110;display:none;align-items:center;justify-content:center;padding:20px;}
+  .send-overlay.open{display:flex;}
+  .send-box{background:#fff;max-width:640px;width:100%;max-height:88vh;overflow:auto;border-top:3px solid var(--gold);padding:30px 34px 34px;}
+  .send-box h2{font-family:var(--serif);font-size:26px;font-weight:500;margin:0 0 4px;}
+  .send-box .sd-sub{font-size:12px;color:var(--muted);margin:0 0 22px;}
+  .send-box h3{font-family:var(--sans);font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--gold);font-weight:700;margin:22px 0 8px;}
+  .send-box ol{margin:0;padding-left:20px;}
+  .send-box li{font-size:13px;line-height:1.75;color:var(--mid);margin-bottom:6px;}
+  .send-box .tip{background:var(--sand);border:1px solid var(--gold-light);padding:12px 14px;font-size:12px;color:var(--mid);line-height:1.6;margin-top:10px;}
+  .send-box .closebtn{float:right;border:1px solid var(--border);background:#fff;border-radius:7px;font-size:12px;padding:6px 12px;cursor:pointer;font-family:var(--sans);}
+  @media print{.send-overlay{display:none !important;}}
+
+  /* ===== Napasovanie obrázka v picker okne ===== */
+  .adjust{padding:14px 22px 4px;border-bottom:1px solid var(--border);}
+  .adjust-row{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin-bottom:10px;}
+  .adjust-lbl{font-family:var(--sans);font-size:10px;letter-spacing:.08em;text-transform:uppercase;color:var(--mid);font-weight:600;}
+  .fit-btn{font-family:var(--sans);font-size:11px;border:1px solid var(--border);background:#fff;border-radius:16px;padding:6px 13px;cursor:pointer;color:var(--mid);font-weight:600;}
+  .fit-btn.on{background:var(--black);color:#fff;border-color:var(--black);}
+  .adjust input[type=range]{flex:1;min-width:90px;accent-color:var(--gold);}
+  .toolbar button:disabled{opacity:.35;cursor:default;}
+  .toolbar button:disabled:hover{border-color:var(--border);color:var(--ink);}
+
+  /* ===== Plávajúci panel na formátovanie textu ===== */
+  .rtbar{position:fixed;z-index:120;background:var(--black);border-radius:9px;padding:5px;display:none;gap:2px;box-shadow:0 8px 26px rgba(0,0,0,.32);}
+  .rtbar.show{display:flex;flex-wrap:wrap;align-items:center;max-width:330px;}
+  .rtbar button{background:transparent;border:none;color:#eee;font-family:var(--sans);font-size:13px;width:30px;height:30px;border-radius:6px;cursor:pointer;line-height:1;}
+  .rtbar button:hover{background:rgba(255,255,255,.16);color:#fff;}
+  .rtbar .sep{width:1px;height:20px;background:rgba(255,255,255,.22);margin:0 3px;}
+  .rtbar input[type=color]{width:26px;height:26px;border:none;background:none;padding:0;cursor:pointer;}
+  .rtbar .sw{display:flex;gap:2px;}
+  .rtbar .sw span{width:18px;height:18px;border-radius:50%;cursor:pointer;border:1px solid rgba(255,255,255,.3);}
+
+  /* ===== Bočný panel Dizajn ===== */
+  .drawer{position:fixed;top:0;right:-340px;width:320px;height:100%;background:#fff;z-index:115;box-shadow:-8px 0 30px rgba(0,0,0,.16);transition:right .25s;overflow-y:auto;padding:0 0 30px;}
+  .drawer.open{right:0;}
+  .drawer-head{position:sticky;top:0;background:var(--black);color:#fff;padding:16px 20px;display:flex;justify-content:space-between;align-items:center;}
+  .drawer-head .dt{font-family:var(--serif);font-size:20px;}
+  .drawer-head button{background:none;border:none;color:#fff;font-size:16px;cursor:pointer;}
+  .drawer section{padding:16px 20px;border-bottom:1px solid var(--border);}
+  .drawer h4{font-family:var(--sans);font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--gold);margin:0 0 12px;font-weight:700;}
+  .drow{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-bottom:11px;font-family:var(--sans);font-size:12.5px;color:var(--mid);}
+  .drow input[type=color]{width:34px;height:24px;border:1px solid var(--border);border-radius:5px;padding:0;cursor:pointer;background:none;}
+  .drow select{font-family:var(--sans);font-size:12px;border:1px solid var(--border);border-radius:6px;padding:5px 8px;background:#fff;max-width:150px;}
+  .drow.toggle{cursor:pointer;}
+  .switch{width:38px;height:21px;border-radius:11px;background:var(--border);position:relative;transition:background .2s;flex:0 0 auto;}
+  .switch.on{background:var(--gold);}
+  .switch::after{content:"";position:absolute;top:2px;left:2px;width:17px;height:17px;border-radius:50%;background:#fff;transition:left .2s;}
+  .switch.on::after{left:19px;}
+  .brandbtn{width:100%;border:1px solid var(--gold);background:var(--gold);color:#fff;font-family:var(--sans);font-size:12px;font-weight:600;letter-spacing:.05em;padding:11px;border-radius:8px;cursor:pointer;}
+  .brandbtn:hover{background:#a68f5c;border-color:#a68f5c;}
+  .preset-row{display:flex;gap:8px;flex-wrap:wrap;}
+  .preset{flex:1 1 calc(50% - 4px);display:flex;align-items:center;gap:3px;border:1px solid var(--border);background:#fff;border-radius:8px;padding:7px 8px;cursor:pointer;font-family:var(--sans);font-size:11px;color:var(--mid);font-weight:600;}
+  .preset:hover{border-color:var(--gold);}
+  .preset span{width:13px;height:13px;border-radius:50%;display:inline-block;border:1px solid rgba(0,0,0,.08);}
+  .preset span:last-of-type{margin-right:5px;}
+  .snip-row{display:flex;flex-direction:column;gap:6px;}
+  .snip{text-align:left;border:1px solid var(--border);background:var(--sand);border-radius:7px;padding:8px 11px;cursor:pointer;font-family:var(--serif);font-size:14px;color:var(--ink);}
+  .snip:hover{border-color:var(--gold);color:var(--gold);}
+  /* ===== Dvojjazyčné EN podriadky ===== */
+  .en{display:block;font-family:var(--sans);font-weight:400;font-style:normal;letter-spacing:.01em;color:var(--muted);margin-top:3px;font-size:0.7em;line-height:1.45;}
+  .hero h1 .en{font-size:19px;color:var(--mid);}
+  .cta h2 .en{font-size:15px;}
+  .feature h2 .en,.card h3 .en,.strip h3 .en{font-size:13px;}
+  .strip h3 .en,.strip .en{color:#cfc9bb;}
+  .lead .en,.feature p .en,.card p .en,.section-sub .en,.strip p .en,.cta p .en{font-size:12.5px;}
+  /* ===== Horná lišta verzií (program) ===== */
+  .verbar{position:static;z-index:46;background:linear-gradient(180deg,#1a1a1a,#0e0e0e);color:#e8dfc8;display:flex;gap:22px;align-items:center;flex-wrap:wrap;padding:10px 18px;border-bottom:1px solid #2a2a2a;}
+  .verbar .grp{display:flex;align-items:center;gap:8px;}
+  .verbar .lbl{font-family:var(--sans);font-size:9.5px;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);font-weight:700;}
+  .verbar .seg{display:flex;gap:4px;background:rgba(255,255,255,.06);padding:3px;border-radius:9px;}
+  .verbar .seg button{border:none;background:transparent;color:#cfc9bb;font-family:var(--sans);font-size:11.5px;font-weight:600;padding:7px 13px;border-radius:7px;cursor:pointer;letter-spacing:.02em;}
+  .verbar .seg button.on{background:var(--gold);color:#1a1a1a;}
+  .verbar .seg button:hover:not(.on){color:#fff;}
+  .verbar .spacer{flex:1;}
+  .verbar .brandtag{font-family:var(--serif);font-size:15px;color:#fff;opacity:.9;}
+  @media print{.verbar{display:none !important;}}
+  body.editing .card{position:relative;}
+  .card-ctrls{position:absolute;top:6px;right:6px;display:none;gap:4px;z-index:5;}
+  body.editing .card:hover .card-ctrls{display:flex;}
+  .card-ctrls button{width:26px;height:26px;border:none;border-radius:6px;background:rgba(14,14,14,.82);color:#fff;font-size:12px;cursor:pointer;line-height:1;}
+  .card-ctrls button:hover{background:var(--gold);}
+  .add-card{margin:10px 36px 0;}
+  .add-card button{width:100%;border:1px dashed var(--gold);background:var(--sand);color:var(--gold);font-family:var(--sans);font-size:12px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;padding:13px;border-radius:8px;cursor:pointer;}
+  .add-card button:hover{background:var(--gold-light);}
+  .nl-hidden{display:none !important;}
+  @media print{.rtbar,.drawer,.card-ctrls,.add-card{display:none !important;}}
+
+  /* ===== Studio: metabar, bloky, modály, náhľad ===== */
+  .metabar{display:flex;align-items:center;gap:10px;flex-wrap:wrap;background:#15140f;padding:8px 18px;border-bottom:1px solid #2a2a2a;}
+  .metabar .mlbl{font-family:var(--sans);font-size:9px;letter-spacing:.16em;text-transform:uppercase;color:var(--gold);font-weight:700;}
+  .metabar input{flex:1;min-width:160px;background:#1f1d16;border:1px solid #33302a;border-radius:7px;color:#efe8d6;font-family:var(--sans);font-size:12px;padding:7px 10px;}
+  .metabar input:focus{outline:none;border-color:var(--gold);}
+  .emoji-row{display:flex;flex-wrap:wrap;gap:5px;}
+  .emoji-row button{width:32px;height:32px;border:1px solid var(--border);background:#fff;border-radius:7px;cursor:pointer;font-size:15px;}
+  .emoji-row button:hover{border-color:var(--gold);}
+  /* vlastné bloky */
+  #extraBlocks .xblock{position:relative;}
+  body.editing #extraBlocks .xblock{outline:1px dashed rgba(184,160,106,.4);outline-offset:3px;margin:4px 0;}
+  .xctrls{position:absolute;top:2px;right:8px;display:none;gap:4px;z-index:6;}
+  body.editing #extraBlocks .xblock:hover .xctrls{display:flex;}
+  .xctrls button{width:24px;height:24px;border:none;border-radius:6px;background:rgba(14,14,14,.82);color:#fff;font-size:11px;cursor:pointer;}
+  .xctrls button:hover{background:var(--gold);}
+  .xb-heading{font-family:var(--serif);font-size:26px;color:var(--ink);padding:8px 36px 0;margin:10px 0 4px;}
+  .xb-text{font-family:var(--sans);font-size:14px;line-height:1.7;color:var(--mid);padding:4px 36px;}
+  .xb-img{width:100%;height:auto;display:block;}
+  .xb-btnwrap{text-align:center;padding:12px 36px;}
+  .xb-divider{height:1px;background:var(--gold-light);margin:12px 36px;}
+  .xb-spacer{height:28px;}
+  body.paragraph-bg .xb-text{background:var(--sand);border-radius:8px;}
+  /* štýly tlačidiel */
+  body.btn-round .btn,body.btn-round .xb-btnwrap a{border-radius:8px;}
+  body.btn-pill .btn,body.btn-pill .xb-btnwrap a{border-radius:999px;}
+  /* náhľad mobil */
+  body.preview-mobile .mail{max-width:390px;}
+  /* univerzálny modál */
+  .umodal{position:fixed;inset:0;background:rgba(14,14,14,.72);z-index:130;display:none;align-items:center;justify-content:center;padding:20px;}
+  .umodal.open{display:flex;}
+  .ubox{background:#fff;max-width:620px;width:100%;max-height:86vh;overflow:auto;border-top:3px solid var(--gold);padding:26px 30px 30px;}
+  .ubox h2{font-family:var(--serif);font-size:24px;margin:0 0 4px;}
+  .ubox h2 .x{float:right;cursor:pointer;border:1px solid var(--border);border-radius:7px;font-size:13px;padding:4px 10px;font-family:var(--sans);}
+  .ubox .row{display:flex;gap:8px;align-items:center;margin:10px 0;font-family:var(--sans);font-size:13px;color:var(--mid);}
+  .ubox input[type=text],.ubox input[type=url]{flex:1;border:1px solid var(--border);border-radius:7px;padding:8px 11px;font-family:var(--sans);font-size:12px;}
+  .ubox button.act{border:none;background:var(--black);color:#fff;border-radius:7px;font-size:12px;font-weight:600;padding:9px 14px;cursor:pointer;font-family:var(--sans);}
+  .ubox button.act:hover{background:var(--gold);}
+  .ubox kbd{background:var(--sand);border:1px solid var(--border);border-radius:5px;padding:2px 7px;font-family:monospace;font-size:12px;}
+  .ubox table{width:100%;border-collapse:collapse;}
+  .ubox td{padding:5px 4px;border-bottom:1px solid var(--border);font-size:12px;}
+  /* blok menu popover */
+  .blkmenu{position:fixed;z-index:140;background:#fff;border:1px solid var(--border);border-radius:10px;box-shadow:0 10px 30px rgba(0,0,0,.18);padding:6px;display:none;width:190px;}
+  .blkmenu.open{display:block;}
+  .blkmenu button{display:flex;width:100%;align-items:center;gap:9px;border:none;background:none;font-family:var(--sans);font-size:13px;color:var(--ink);padding:9px 11px;border-radius:7px;cursor:pointer;text-align:left;}
+  .blkmenu button:hover{background:var(--sand);color:var(--gold);}
+  .xb-2col{display:grid;grid-template-columns:1fr 1fr;gap:14px;padding:6px 36px;}
+  .xb-list{padding:4px 36px 4px 56px;font-family:var(--sans);font-size:14px;line-height:1.7;color:var(--mid);}
+  .xb-quote{margin:10px 36px;padding:6px 0 6px 16px;border-left:3px solid var(--gold);}
+  .xb-quote>div{font-family:var(--serif);font-style:italic;font-size:20px;line-height:1.4;color:var(--ink);}
+  .xb-quote cite{display:block;font-family:var(--sans);font-style:normal;font-size:11px;letter-spacing:1px;text-transform:uppercase;color:var(--muted);margin-top:8px;}
+  .xb-social{text-align:center;padding:10px 36px;font-family:var(--sans);font-size:12px;letter-spacing:1px;text-transform:uppercase;}
+  .xb-social a{color:var(--gold);text-decoration:none;}
+  .xb-offer{margin:10px 36px;background:var(--sand);border:1px solid var(--gold-light);padding:22px 24px;}
+  .xb-offer .xb-otag{display:inline-block;background:var(--gold);color:#fff;font-family:var(--sans);font-size:10px;font-weight:700;letter-spacing:2px;text-transform:uppercase;padding:5px 12px;}
+  .xb-offer .xb-otitle{font-family:var(--serif);font-size:26px;color:var(--ink);margin:12px 0 8px;}
+  .xb-offer .xb-otext{font-family:var(--sans);font-size:13px;line-height:1.7;color:var(--mid);margin-bottom:14px;}
+  .xb-video{position:relative;}
+  .xb-video .xb-play{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:60px;height:60px;border-radius:50%;background:rgba(14,14,14,.55);color:#fff;display:flex;align-items:center;justify-content:center;font-size:22px;pointer-events:none;}
+  @media print{.metabar,.umodal,.blkmenu,.xctrls{display:none !important;}}
+
+</style>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+</head>
+<body class="editing">
+
+<!-- ===== OVLÁDACÍ PANEL (nevytlačí sa / neukladá sa do e-mailu) ===== -->
+<div class="toolbar">
+  <div class="tl"><a href="#" onclick="parent.showSelector&&parent.showSelector();return false;" style="text-decoration:none;color:inherit;margin-right:12px;border:1px solid rgba(255,255,255,.35);padding:3px 10px;border-radius:12px;font-size:11px;white-space:nowrap;">← Výber ponuky</a>Swissôtel Damian Jasna · Newsletter — editor</div>
+  <div class="tr">
+    <button onclick="toggleEdit()" id="editBtn">✏️ Režim úprav: ZAP</button>
+    <button onclick="undo()" id="undoBtn" title="Späť (Ctrl+Z)">↶ Späť</button>
+    <button onclick="redo()" id="redoBtn" title="Dopredu (Ctrl+Y)">↷ Dopredu</button>
+    <button onclick="toggleDrawer()" id="designBtn">🎨 Dizajn</button>
+    <button class="primary" onclick="exportPNG()" id="pngBtn">🖼 Stiahnuť ako obrázok (pre Outlook)</button>
+    <button onclick="copyImage()" id="copyImgBtn">📋 Kopírovať obrázok</button>
+    <button onclick="openSend()">✉️ Ako poslať z Outlooku?</button>
+    <button onclick="generateEmailHTML()" id="emailBtn">📧 Generovať e-mailové HTML</button>
+    <button onclick="copyForPostcards()" id="postcardsBtn">📋 Kopírovať pre Postcards</button>
+    <button onclick="saveHTML()">💾 Uložiť (.html)</button>
+    <button onclick="window.print()">PDF</button>
+    <button onclick="downloadEML()">📨 .eml</button>
+    <button onclick="toggleBlockMenu(event)" id="blkBtn">➕ Blok</button>
+    <button onclick="togglePreview()" id="prevBtn">📱 Náhľad</button>
+    <button onclick="openDrafts()">🗂 Koncepty</button>
+    <button onclick="preflight()">✅ Kontrola</button>
+    <button onclick="openFind()">🔎 Nájsť</button>
+    <button onclick="copyPlainText()">📄 Plain text</button>
+    <button onclick="exportProject()">⬇ Projekt</button>
+    <button onclick="document.getElementById('impProj').click()">⬆ Import</button>
+    <input type="file" id="impProj" accept="application/json,.json" style="display:none" onchange="importProject(this)">
+    <button onclick="zoomStep(-1)">🔍−</button><button onclick="zoomStep(1)">🔍+</button>
+    <button onclick="toggleDark()" id="darkBtn">🌙 Dark</button>
+    <button onclick="toggleSample()" id="sampleBtn">👤 Ukážka</button>
+    <button onclick="openHelp()">⌨︎ Skratky</button>
+  </div>
+</div>
+<div class="verbar">
+  <span class="brandtag">Swissôtel Newsletter Studio</span>
+  <div class="grp"><span class="lbl">Segment</span>
+    <div class="seg" id="segSeg">
+      <button data-seg="general" class="on" onclick="setSeg('general')">Všeobecný</button>
+      <button data-seg="leisure" onclick="setSeg('leisure')">Leisure · agentúry &amp; skupiny</button>
+      <button data-seg="mice" onclick="setSeg('mice')">Corporate &amp; MICE</button>
+    </div>
+  </div>
+  <div class="grp"><span class="lbl">Jazyk</span>
+    <div class="seg" id="segLang">
+      <button data-lang="sk" class="on" onclick="setLang('sk')">SK</button>
+      <button data-lang="en" onclick="setLang('en')">EN</button>
+      <button data-lang="bi" onclick="setLang('bi')">SK + EN</button>
+    </div>
+  </div>
+  <span class="spacer"></span>
+  <span id="statline" class="lbl" style="color:#cfc9bb;letter-spacing:.04em;text-transform:none;font-weight:500;"></span>
+</div>
+<div class="metabar">
+  <span class="mlbl">Predmet e-mailu</span>
+  <input id="emailSubject" type="text" value="Swissôtel Damian Jasna – aktuálne ponuky" oninput="updateStats()">
+  <span class="mlbl">Preheader</span>
+  <input id="emailPreheader" type="text" placeholder="Krátky text v náhľade schránky…">
+</div>
+<div class="edit-hint" id="editHint" style="">✏️ <b>Označte text</b> pre formátovanie (tučné, farba, odkaz…). <b>Kliknite na fotku</b> pre výmenu a napasovanie. <b>🎨 Dizajn</b> mení farby, fonty a sekcie. <b>↶ Späť</b> vráti zmeny.</div>
+
+<!-- Plávajúci panel na formátovanie textu -->
+<div class="rtbar" id="rtbar">
+  <button onmousedown="fmt(event,'bold')" title="Tučné"><b>B</b></button>
+  <button onmousedown="fmt(event,'italic')" title="Kurzíva"><i>I</i></button>
+  <button onmousedown="fmt(event,'underline')" title="Podčiarknuté"><u>U</u></button>
+  <span class="sep"></span>
+  <button onmousedown="fmt(event,'fontup')" title="Väčšie písmo">A▴</button>
+  <button onmousedown="fmt(event,'fontdown')" title="Menšie písmo">A▾</button>
+  <span class="sep"></span>
+  <button onmousedown="fmt(event,'justifyLeft')" title="Vľavo">⇤</button>
+  <button onmousedown="fmt(event,'justifyCenter')" title="Na stred">↔</button>
+  <button onmousedown="fmt(event,'justifyRight')" title="Vpravo">⇥</button>
+  <span class="sep"></span>
+  <span class="sw" title="Farba textu">
+    <span style="background:#1a1a1a" onmousedown="fmt(event,'color','#1a1a1a')"></span>
+    <span style="background:#b8a06a" onmousedown="fmt(event,'color','#b8a06a')"></span>
+    <span style="background:#ffffff" onmousedown="fmt(event,'color','#ffffff')"></span>
+    <span style="background:#c0392b" onmousedown="fmt(event,'color','#c0392b')"></span>
+  </span>
+  <input type="color" title="Vlastná farba" onmousedown="event.stopPropagation()" oninput="fmt(event,'color',this.value)">
+  <span class="sep"></span>
+  <button onmousedown="fmt(event,'link')" title="Vložiť odkaz">🔗</button>
+  <button onmousedown="fmt(event,'unlink')" title="Zrušiť odkaz">⛓</button>
+  <button onmousedown="fmt(event,'removeFormat')" title="Vyčistiť formát">✕</button>
+</div>
+
+<!-- Bočný panel: Dizajn -->
+<div class="drawer" id="drawer">
+  <div class="drawer-head"><span class="dt">Dizajn newslettera</span><button onclick="toggleDrawer()">✕</button></div>
+  <section>
+    <h4>Farby</h4>
+    <div class="drow">Akcentová (zlatá) <input type="color" value="#b8a06a" oninput="setVar('--gold',this.value)"></div>
+    <div class="drow">Svetlý akcent <input type="color" value="#e8dfc8" oninput="setVar('--gold-light',this.value)"></div>
+    <div class="drow">Pozadie panelov <input type="color" value="#f8f6f2" oninput="setVar('--sand',this.value)"></div>
+    <div class="drow">Tmavé bloky / tlačidlá <input type="color" value="#0e0e0e" oninput="setVar('--black',this.value)"></div>
+    <div class="drow">Text <input type="color" value="#1a1a1a" oninput="setVar('--ink',this.value)"></div>
+  </section>
+  <section>
+    <h4>Typografia</h4>
+    <div class="drow">Nadpisy
+      <select oninput="setFont('--serif',this.value)">
+        <option value='"Cormorant Garamond","Times New Roman",serif'>Cormorant (elegantné)</option>
+        <option value='Georgia,serif'>Georgia</option>
+        <option value='"Playfair Display",serif'>Playfair Display</option>
+        <option value='"Jost",sans-serif'>Jost (bezpätkové)</option>
+        <option value='Arial,sans-serif'>Arial</option>
+      </select>
+    </div>
+    <div class="drow">Text
+      <select oninput="setFont('--sans',this.value)">
+        <option value='"Jost",system-ui,sans-serif'>Jost (moderné)</option>
+        <option value='Arial,Helvetica,sans-serif'>Arial</option>
+        <option value='"Helvetica Neue",sans-serif'>Helvetica</option>
+        <option value='Verdana,sans-serif'>Verdana</option>
+        <option value='Georgia,serif'>Georgia</option>
+      </select>
+    </div>
+  </section>
+  <section>
+    <h4>Zobrazené sekcie</h4>
+    <div class="drow toggle" onclick="toggleSection(this,'infobar')">Horný oznam (infobar) <span class="switch on"></span></div>
+    <div class="drow toggle" onclick="toggleSection(this,'heroimg')">Úvodná fotka <span class="switch on"></span></div>
+    <div class="drow toggle" onclick="toggleSection(this,'badges')">Prečo k nám (štítky) <span class="switch on"></span></div>
+    <div class="drow toggle" onclick="toggleSection(this,'strip')">Pürovel Spa pás <span class="switch on"></span></div>
+    <div class="drow toggle" onclick="toggleSection(this,'cta')">Výzva na rezerváciu <span class="switch on"></span></div>
+    <div class="drow toggle" onclick="toggleSection(this,'footer')">Pätička <span class="switch on"></span></div>
+  </section>
+  <section>
+    <h4>Globálne štýly</h4>
+    <div class="drow">Pozadie stránky <input type="color" value="#edeae3" oninput="setPageBg(this.value)"></div>
+    <div class="drow">Pozadie obsahu <input type="color" value="#ffffff" oninput="setContentBg(this.value)"></div>
+    <div class="drow">Farba odkazov <input type="color" value="#b8a06a" oninput="setVar('--gold',this.value)"></div>
+    <div class="drow">Zaoblenie rohov <select oninput="setRadius(this.value)"><option value="0">Ostré</option><option value="6">Jemné</option><option value="14">Výrazné</option></select></div>
+  </section>
+  <section>
+    <h4>Štandardy značky (Brand book)</h4>
+    <div style="font-size:11.5px;color:#8a8478;line-height:1.55;margin-bottom:10px;">Brand book vyžaduje vždy <b>Swissôtel</b> (circumflex nad o) a <b>Pürovel</b> (umlaut nad u). Pürovel sa neprekladá.</div>
+    <button class="brandbtn" onclick="scanBrand(true)">✓ Skontrolovať pravopis značky</button>
+    <div class="drow toggle" onclick="toggleBrandGuard(this)" style="margin-top:12px;">Automaticky opravovať počas písania <span class="switch on" id="guardSwitch"></span></div>
+    <h4 style="margin-top:18px;">Brandové farebné palety</h4>
+    <div class="preset-row">
+      <button class="preset" onclick="applyPreset('gold')" title="Swissôtel zlatá"><span style="background:#b8a06a"></span><span style="background:#f8f6f2"></span><span style="background:#0e0e0e"></span>Zlatá</button>
+      <button class="preset" onclick="applyPreset('clay')" title="Slow Luxury – pieskovec"><span style="background:#b08968"></span><span style="background:#efe7dd"></span><span style="background:#3a3027"></span>Pieskovec</button>
+      <button class="preset" onclick="applyPreset('spa')" title="Pürovel Spa"><span style="background:#8c9a7b"></span><span style="background:#f1f0ea"></span><span style="background:#2f3a33"></span>Pürovel</button>
+      <button class="preset" onclick="applyPreset('noir')" title="Čierno-zlatá elegancia"><span style="background:#c8a96a"></span><span style="background:#f4f1ea"></span><span style="background:#111111"></span>Noir</button>
+    </div>
+    <h4 style="margin-top:18px;">Vložiť text značky</h4>
+    <div class="snip-row">
+      <button class="snip" onclick="insertBrand('Live it well')">Live it well</button>
+      <button class="snip" onclick="insertBrand('Life is a journey. Live it well.')">Life is a journey…</button>
+      <button class="snip" onclick="insertBrand('Crafting Pure Living')">Crafting Pure Living</button>
+      <button class="snip" onclick="insertBrand('Vitality for Body, Mind &amp; Spirit')">Vitality for Body, Mind &amp; Spirit</button>
+      <button class="snip" onclick="insertBrand('The Art of Good Living')">The Art of Good Living</button>
+      <button class="snip" onclick="insertBrand('Pürovel Spa &amp; Sport')">Pürovel Spa &amp; Sport</button>
+    </div>
+  </section>
+  <section>
+    <h4>Rozloženie a tlačidlá</h4>
+    <div class="drow">Šírka obsahu <select oninput="setWidth(this.value)"><option value="660">660 px (štandard)</option><option value="600">600 px (užšie)</option><option value="720">720 px (širšie)</option></select></div>
+    <div class="drow">Veľkosť písma <select oninput="setScale(this.value)"><option value="1">Štandard</option><option value="1.08">Väčšie</option><option value="0.94">Menšie</option></select></div>
+    <div class="drow">Štýl tlačidiel <select oninput="setBtnStyle(this.value)"><option value="square">Hranaté</option><option value="round">Zaoblené</option><option value="pill">Pill</option></select></div>
+    <div class="drow toggle" onclick="toggleParagraphBg(this)">Pozadie textových blokov <span class="switch"></span></div>
+  </section>
+  <section>
+    <h4>Personalizácia (merge tagy)</h4>
+    <div class="snip-row">
+      <button class="snip" onclick="insertBrand('{{first_name}}')">Meno · {{first_name}}</button>
+      <button class="snip" onclick="insertBrand('{{last_name}}')">Priezvisko · {{last_name}}</button>
+      <button class="snip" onclick="insertBrand('{{hotel}}')">Hotel · {{hotel}}</button>
+      <button class="snip" onclick="insertBrand('{{offer}}')">Ponuka · {{offer}}</button>
+    </div>
+    <h4 style="margin-top:16px;">Rýchle symboly</h4>
+    <div class="emoji-row">
+      <button onclick="insertBrand('★')">★</button><button onclick="insertBrand('✓')">✓</button>
+      <button onclick="insertBrand('→')">→</button><button onclick="insertBrand('•')">•</button>
+      <button onclick="insertBrand('—')">—</button><button onclick="insertBrand('❄')">❄</button>
+      <button onclick="insertBrand('☀')">☀</button><button onclick="insertBrand('🏔')">🏔</button>
+      <button onclick="insertBrand('🧖')">🧖</button><button onclick="insertBrand('🎈')">🎈</button>
+    </div>
+    <h4 style="margin-top:16px;">Odkazy v newsletteri</h4>
+    <button class="brandbtn" onclick="openLinks()">🔗 Spravovať odkazy</button>
+  </section>
+</div>
+
+
+<!-- ===== NEWSLETTER ===== -->
+<div class="mail" id="newsletter">
+
+  <div class="infobar" contenteditable="true">UPOZORNENIE · 14. 6. od 12:00 do 16. 6. do 12:00 budú všetky hotelové prevádzky uzavreté</div>
+
+  <div class="nl-header">
+    <img class="logo swappable" src="https://www.damianjasna.sk/template/dj/img/logo-hgt.svg" alt="Swissôtel Damian Jasna">
+    <div class="hinfo" contenteditable="true">
+      <div class="hname">Swissôtel Damian Jasna</div>
+      Demänovská Dolina 555, 031 01 Demänovská Dolina<br>
+      reservations.damianjasna@swissotel.com · +421 44 39 31 300
+    </div>
+  </div>
+
+  <div class="hero">
+    <div class="eyebrow"><span class="line"></span><span contenteditable="true">Newsletter · Leto 2026</span></div>
+    <h1 contenteditable="true">Leto v srdci hôr, <em>na úrovni Swissôtel.</em></h1>
+    <p class="lead" contenteditable="true">Vitajte v unikátnom horskom rezorte v srdci Nízkych Tatier, kde sa wellness, gurmánske zážitky a zábava spájajú pod jednou strechou. Letný program je už v ponuke – pripravili sme pre vás akcie, vďaka ktorým bude váš pobyt pod Chopkom ešte výhodnejší. Deti do 12 rokov majú ubytovanie zadarmo.</p>
+  </div>
+  <img class="hero-img swappable" src="https://www.ahstatic.com/photos/c2f3_ho_02_p_1024x768.jpg" alt="Swissôtel Damian Jasna – rezort pod Chopkom">
+  <div class="hero-cap" contenteditable="true">Demänovská Dolina · Jasná · Nízke Tatry</div>
+
+  <!-- ===== HLAVNÁ AKCIA ===== -->
+  <div class="section" style="padding-bottom:0;">
+    <div class="eyebrow"><span class="line"></span><span contenteditable="true">Akcia mesiaca</span></div>
+  </div>
+  <div class="feature">
+    <img class="swappable" src="https://www.ahstatic.com/photos/c2f3_ho_04_p_1024x768.jpg" alt="Letná ponuka 3+1 noc zadarmo">
+    <div class="fbody">
+      <span class="ftag" contenteditable="true">3 + 1 noc zadarmo</span>
+      <h2 contenteditable="true">Letná ponuka: 3+1 noc zadarmo</h2>
+      <p contenteditable="true">Predĺžte si letný oddych pod Chopkom – pri pobyte na tri noci vám štvrtú noc darujeme. Viac času na panoramatické Pürovel Spa &amp; Sport, turistiku, gastronomické zážitky aj večery s rodinou.</p>
+      <ul class="flist">
+        <li contenteditable="true">4. noc pobytu úplne zadarmo</li>
+        <li contenteditable="true">Raňajky formou bohatého bufetu v cene</li>
+        <li contenteditable="true">Neobmedzený vstup do dvojpodlažného Pürovel Spa &amp; Sport</li>
+        <li contenteditable="true">Deti do 12 rokov majú ubytovanie zadarmo</li>
+        <li contenteditable="true">Počet izieb v akcii je limitovaný</li>
+      </ul>
+      <a class="btn" href="https://www.damianjasna.sk/letna-ponuka-3-1-noc-zdarma/" contenteditable="true">Zobraziť ponuku</a>
+    </div>
+  </div>
+
+  <hr class="gold-divider">
+
+  <!-- ===== ĎALŠIE AKCIE ===== -->
+  <div class="section" style="padding-top:0;padding-bottom:0;">
+    <div class="eyebrow"><span class="line"></span><span contenteditable="true">Aktuálne pobytové balíčky</span></div>
+    <div class="section-title" contenteditable="true">Vyberte si svoj zážitok</div>
+    <p class="section-sub" contenteditable="true">Tri ďalšie akcie z našej aktuálnej ponuky – od jogy s výhľadom na hrebene Nízkych Tatier až po romantiku vysoko nad Liptovom.</p>
+  </div>
+
+  <div class="cards">
+    <div class="card">
+      <img class="swappable" src="https://www.damianjasna.sk/upload/images/Yoga%20grafika%20%281%29.png" alt="Joga na horách">
+      <div class="cbody">
+        <div class="ctag" contenteditable="true">Vitality · Pohyb</div>
+        <h3 contenteditable="true">Joga na horách</h3>
+        <p contenteditable="true">Lekcie jogy v inšpiratívnom prostredí Jasnej, čerstvý horský vzduch a regenerácia v Pürovel Spa. Dokonalá rovnováha tela a mysle v duchu filozofie Swissôtel Vitality.</p>
+        <a class="clink" href="https://www.damianjasna.sk/joga-na-horach/" contenteditable="true">Viac info →</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <img class="swappable" src="https://www.damianjasna.sk/img/rs/90.png" alt="Wellness balíček pre dvoch">
+      <div class="cbody">
+        <div class="ctag" contenteditable="true">Wellness · Pre dvoch</div>
+        <h3 contenteditable="true">Wellness balíček pre dvoch</h3>
+        <p contenteditable="true">Oddych vo dvojici – elegantná izba s výhľadom, neobmedzený vstup do panoramatického spa s vnútornými aj vonkajšími bazénmi a chvíle len pre vás dvoch.</p>
+        <a class="clink" href="https://www.damianjasna.sk/wellness-balicek-pre-dvoch/" contenteditable="true">Viac info →</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <img class="swappable" src="https://www.damianjasna.sk/upload/images/bal%C3%B3n%20-%20hotel%20%281%29.png" alt="Víkendový pobyt s preletom v balóne">
+      <div class="cbody">
+        <div class="ctag" contenteditable="true">Zážitok · Víkend</div>
+        <h3 contenteditable="true">Víkendový pobyt s preletom v balóne</h3>
+        <p contenteditable="true">Nezabudnuteľný víkend zavŕšený letom balónom nad Liptovom – Nízke Tatry, Demänovská dolina a Liptovská Mara z vtáčej perspektívy. Ideálny darček aj romantické prekvapenie.</p>
+        <a class="clink" href="https://www.damianjasna.sk/vikendovy-pobyt-s-preletom-v-balone/" contenteditable="true">Viac info →</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <img class="swappable" src="https://www.damianjasna.sk/img/voucher/3000003.jpg" alt="Darčekové poukazy">
+      <div class="cbody">
+        <div class="ctag" contenteditable="true">Darček · Poukazy</div>
+        <h3 contenteditable="true">Darčekové poukazy</h3>
+        <p contenteditable="true">Darujte zážitok, ktorý si vyberú sami – pobyt, wellness alebo gastronómiu v Swissôtel Damian Jasna. Elegantný darček na každú príležitosť.</p>
+        <a class="clink" href="https://www.damianjasna.sk/darcekove-poukazy/" contenteditable="true">Viac info →</a>
+      </div>
+    </div>
+  </div>
+  <div class="add-card"><button onclick="addCard()">➕ Pridať akciu / kartu</button></div>
+
+  <!-- ===== PREČO K NÁM ===== -->
+  <div class="section" style="padding-bottom:0;">
+    <div class="eyebrow"><span class="line"></span><span contenteditable="true">Prečo Swissôtel Damian Jasna</span></div>
+  </div>
+  <div class="badges">
+    <div class="badge hl" contenteditable="true">Crafting Pure Living</div>
+    <div class="badge" contenteditable="true">Priame napojenie na svahy Jasnej</div>
+    <div class="badge" contenteditable="true">Panoramatický Pürovel Spa &amp; Sport</div>
+    <div class="badge" contenteditable="true">164 izieb, štúdií a apartmánov</div>
+    <div class="badge" contenteditable="true">Energetický certifikát A0+ · ESG</div>
+    <div class="badge" contenteditable="true">Deti do 12 rokov zadarmo</div>
+  </div>
+
+  <!-- ===== SPA / GASTRO STRIP ===== -->
+  <div class="strip">
+    <img class="swappable" src="https://www.damianjasna.sk/img/gallery/14-340.jpg" alt="Pürovel Spa &amp; Sport">
+    <div class="sbody">
+      <div class="eyebrow"><span class="line"></span><span contenteditable="true">Pürovel Spa &amp; Sport</span></div>
+      <h3 contenteditable="true">Wellness s výhľadom na Chopok</h3>
+      <p contenteditable="true">Dvojpodlažné panoramatické wellness s vnútornými aj vonkajšími bazénmi, saunovým svetom a moderným fitness. K tomu zážitkový fine dining, degustačné večere s wine pairingom a 24/7 ponuka, ktorá vás nikdy nenechá hladných.</p>
+      <a class="btn ghost" href="https://www.damianjasna.sk/purovel-spa-sport/" contenteditable="true">Objaviť viac</a>
+    </div>
+  </div>
+
+  <div id="extraBlocks"></div>
+
+  <!-- ===== CTA ===== -->
+  <div class="cta">
+    <div class="eyebrow"><span class="line"></span><span contenteditable="true">Rezervácia</span><span class="line"></span></div>
+    <h2 contenteditable="true">Rezervujte si leto <em>ešte dnes.</em></h2>
+    <p contenteditable="true">Najnižšiu cenu garantujeme pri rezervácii online priamo u nás. Členovia Accor ALL získavajú dodatočné výhody. Akcie platia pre limitovaný počet izieb.</p>
+    <div class="btn-row">
+      <a class="btn" href="https://www.damianjasna.sk/booking/" contenteditable="true">Rezervovať pobyt</a>
+      <a class="btn ghost" href="https://www.damianjasna.sk/nezavazny-dopyt/" contenteditable="true">Nezáväzný dopyt</a>
+    </div>
+  </div>
+
+  <!-- ===== PÄTIČKA ===== -->
+  <div class="footer">
+    <img class="flogo swappable" src="https://www.damianjasna.sk/template/dj/img/logo-hgt.svg" alt="Swissôtel Damian Jasna">
+    <div class="fline" contenteditable="true">
+      <strong>Swissôtel Damian Jasna</strong> · Demänovská Dolina 555, 031 01 Demänovská Dolina, Slovenská republika<br>
+      <a href="tel:+421443931300">+421 44 39 31 300</a> · <a href="mailto:reservations.damianjasna@swissotel.com">reservations.damianjasna@swissotel.com</a> · <a href="https://www.damianjasna.sk">www.damianjasna.sk</a><br>
+      Check-in 15:00 · Check-out 11:00 · Recepcia 24/7
+    </div>
+    <div class="socials">
+      <a href="https://www.facebook.com/damianjasna">Facebook</a>
+      <a href="https://www.instagram.com/swissoteldamianjasna/">Instagram</a>
+      <a href="https://www.linkedin.com/company/swissotel-damian-jasna/">LinkedIn</a>
+    </div>
+  </div>
+  <div class="footer-strip">
+    <span contenteditable="true">Swissôtel – Live it well</span>
+    <span contenteditable="true">Crafting Pure Living in Jasná</span>
+  </div>
+  <div class="legal" contenteditable="true">
+    Tento e-mail ste dostali, pretože ste sa prihlásili na odber noviniek Swissôtel Damian Jasna.<br>
+    <a href="#">Odhlásiť sa z odberu</a> · <a href="https://www.damianjasna.sk/gdpr/">Ochrana osobných údajov (GDPR)</a> · © 2026 DAMIAN JASNA HOTEL RESORT &amp; RESIDENCES s.r.o.
+  </div>
+
+</div>
+
+<!-- ===== GALÉRIA – VÝBER FOTKY (len v editore) ===== -->
+<div class="picker-overlay" id="picker">
+  <div class="picker">
+    <div class="picker-head">
+      <div class="pt">Fotografia – výber a napasovanie</div>
+      <button onclick="closePicker()">✕ Zavrieť</button>
+    </div>
+
+    <!-- Napasovanie aktuálnej fotky -->
+    <div class="adjust" id="adjustBox">
+      <div class="adjust-row">
+        <span class="adjust-lbl">Napasovanie</span>
+        <button type="button" class="fit-btn on" id="fitCover" onclick="setFit('cover')">Vyplniť (orezať)</button>
+        <button type="button" class="fit-btn" id="fitContain" onclick="setFit('contain')">Zmestiť celé</button>
+        <button type="button" class="fit-btn" onclick="resetFit()" style="margin-left:auto;">↺ Predvolené</button>
+      </div>
+      <div class="adjust-row">
+        <span class="adjust-lbl">Posun ↔</span>
+        <input type="range" id="posX" min="0" max="100" value="50" oninput="setPos()">
+        <span class="adjust-lbl">Posun ↕</span>
+        <input type="range" id="posY" min="0" max="100" value="50" oninput="setPos()">
+      </div>
+      <div class="adjust-row">
+        <span class="adjust-lbl">Jas</span><input type="range" id="fxBri" min="50" max="150" value="100" oninput="setFx()">
+        <span class="adjust-lbl">Kontrast</span><input type="range" id="fxCon" min="50" max="150" value="100" oninput="setFx()">
+      </div>
+      <div class="adjust-row">
+        <span class="adjust-lbl">Sýtosť</span><input type="range" id="fxSat" min="0" max="200" value="100" oninput="setFx()">
+        <span class="adjust-lbl">ČB</span><input type="range" id="fxGray" min="0" max="100" value="0" oninput="setFx()">
+        <button type="button" class="fit-btn" onclick="resetFx()">↺</button>
+      </div>
+      <div class="adjust-row">
+        <span class="adjust-lbl">Alt text</span><input type="text" id="imgAlt" placeholder="popis obrázka pre prístupnosť" oninput="setAlt()" style="flex:1;border:1px solid var(--border);border-radius:6px;padding:6px 9px;font-size:12px;font-family:var(--sans);">
+      </div>
+    </div>
+
+    <div class="picker-tabs" id="pickerTabs"></div>
+    <div class="picker-search"><input type="text" id="pickerSearch" placeholder="🔎 Hľadať v galérii (napr. spa, izba, hrebene…)" oninput="filterPicker(this.value)"></div>
+    <div class="picker-grid" id="pickerGrid"></div>
+    <div class="picker-foot">
+      <div class="pf-row">
+        <button class="gold" onclick="document.getElementById('uplImg').click()" title="Nahrať obrázok zo zariadenia">⬆ Nahrať</button>
+        <input type="file" id="uplImg" accept="image/*" style="display:none" onchange="uploadImg(this)">
+        <input type="url" id="customUrl" placeholder="…alebo vložte URL fotografie (https://… / .jpg .png .webp)" oninput="onUrlInput(this.value)" onkeydown="if(event.key==='Enter'){event.preventDefault();useCustomUrl();}">
+        <button id="useUrlBtn" onclick="useCustomUrl()" disabled>Použiť URL</button>
+      </div>
+      <div id="urlPreview" class="url-preview" style="display:none;">
+        <div class="thumb" id="urlPreviewThumb"></div>
+        <div class="msg" id="urlPreviewMsg"><b>Skontrolujem fotografiu…</b>Načítavam náhľad z URL</div>
+        <button class="miniact" id="urlPreviewRetry" onclick="useProxiedUrl()" style="display:none;">Skúsiť cez proxy</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  // ===== Fotobanka =====
+  // Oficiálne fotky hotela z Accor CDN (c2f3 = Swissôtel Damian Jasna).
+  // Pred zobrazením v galérii sa každá fotka načíta – nedostupné sa
+  // automaticky označia ako „Nedostupné" miesto tichého odstránenia.
+  var ACCOR = [];
+  for (var i = 0; i < 80; i++) {
+    var n = ('0' + i).slice(-2);
+    ACCOR.push({u: 'https://www.ahstatic.com/photos/c2f3_ho_' + n + '_p_1024x768.jpg', l: 'Hotel · fotka ' + n});
+  }
+  var GALLERIES = {
+    'Oficiálne fotky hotela (Accor)': ACCOR,
+    'Web hotela': [
+      {u:'https://www.damianjasna.sk/img/system/ogimg.jpg', l:'Hlavná hero fotka'},
+      {u:'https://www.damianjasna.sk/img/gallery/16-511.webp', l:'Interiér'},
+      {u:'https://www.damianjasna.sk/img/gallery/13-498.webp', l:'Galéria 13-498'},
+      {u:'https://www.damianjasna.sk/img/gallery/14-340.jpg', l:'Pürovel Spa pohľad'},
+      {u:'https://damianjasna.sk/img/gallery/4-32.webp', l:'Grand Ballroom'},
+      {u:'https://damianjasna.sk/img/gallery/5-37.webp', l:'Meeting Rooms'},
+      {u:'https://damianjasna.sk/img/gallery/6-39.jpg', l:'Kongresové služby'},
+      {u:'https://www.damianjasna.sk/upload/images/Yoga%20grafika%20%281%29.png', l:'Joga'},
+      {u:'https://www.damianjasna.sk/upload/images/bal%C3%B3n%20-%20hotel%20%281%29.png', l:'Balón nad Liptovom'},
+      {u:'https://www.damianjasna.sk/img/rs/90.png', l:'Wellness pre dvoch'},
+      {u:'https://www.damianjasna.sk/img/voucher/3000003.jpg', l:'Darčekové poukazy'}
+    ],
+    'Pürovel Spa': [
+      {u:'https://www.visitliptov.sk/wp-content/uploads/2025/09/Damian-Jasna_z-facebooku_wellness.jpg', l:'Wellness · Visit Liptov'}
+    ]
+  };
+
+  // Naposledy použité (localStorage) – pridáva sa po výbere fotky
+  var RECENT_KEY = 'swissotel_recent_imgs_v1';
+  function loadRecent(){
+    try { return JSON.parse(localStorage.getItem(RECENT_KEY) || '[]'); }
+    catch(e){ return []; }
+  }
+  function saveRecent(url){
+    if(!url || url.indexOf('data:') === 0) return;
+    var r = loadRecent().filter(function(x){ return x !== url; });
+    r.unshift(url);
+    if(r.length > 24) r = r.slice(0, 24);
+    try { localStorage.setItem(RECENT_KEY, JSON.stringify(r)); } catch(e){}
+  }
+  function recentGallery(){
+    return loadRecent().map(function(u){ return {u:u, l:'Nedávno použité'}; });
+  }
+
+  // Proxy cez images.weserv.nl – pre URL chránené pred hotlinkom alebo bez CORS
+  function imgProxy(url){
+    var clean = (url||'').replace(/^https?:\/\//, '');
+    return 'https://images.weserv.nl/?url=' + encodeURIComponent(clean) + '&output=jpg&n=-1';
+  }
+
+  var targetImg = null;
+  var currentTabName = null;
+
+  function openPicker(img){
+    targetImg = img;
+    renderTabs();
+    document.getElementById('pickerSearch').value = '';
+    document.getElementById('customUrl').value = '';
+    document.getElementById('urlPreview').style.display = 'none';
+    document.getElementById('useUrlBtn').disabled = true;
+    // načítaj aktuálne napasovanie do ovládačov
+    var fit = img.style.objectFit || 'cover';
+    document.getElementById('fitCover').classList.toggle('on', fit==='cover');
+    document.getElementById('fitContain').classList.toggle('on', fit==='contain');
+    var pos = (img.style.objectPosition || '50% 50%').split(/\s+/);
+    document.getElementById('posX').value = parseInt(pos[0]) || 50;
+    document.getElementById('posY').value = parseInt(pos[1]!==undefined?pos[1]:pos[0]) || 50;
+    var fx=parseFilter(img.style.filter||'');
+    document.getElementById('fxBri').value=fx.bri; document.getElementById('fxCon').value=fx.con;
+    document.getElementById('fxSat').value=fx.sat; document.getElementById('fxGray').value=fx.gray;
+    document.getElementById('imgAlt').value=img.getAttribute('alt')||'';
+    document.getElementById('picker').classList.add('open');
+  }
+  function renderTabs(){
+    var tabs = document.getElementById('pickerTabs');
+    tabs.innerHTML = '';
+    var names = Object.keys(GALLERIES);
+    var recents = loadRecent();
+    if (recents.length){
+      // Pridaj Recents na začiatok
+      var rb = document.createElement('button');
+      rb.innerHTML = '★ Nedávno použité <span class="tab-count">'+recents.length+'</span>';
+      rb.onclick = function(){ showTab('__recent', rb); };
+      tabs.appendChild(rb);
+    }
+    names.forEach(function(name){
+      var b = document.createElement('button');
+      b.innerHTML = name + ' <span class="tab-count">'+GALLERIES[name].length+'</span>';
+      b.onclick = function(){ showTab(name, b); };
+      tabs.appendChild(b);
+    });
+    // Default tab: prvý v poradí
+    var first = tabs.querySelector('button');
+    if (first) {
+      if (recents.length) showTab('__recent', first);
+      else showTab(names[0], first);
+    }
+  }
+  function setFit(mode){
+    if(!targetImg) return;
+    targetImg.style.objectFit = mode;
+    document.getElementById('fitCover').classList.toggle('on', mode==='cover');
+    document.getElementById('fitContain').classList.toggle('on', mode==='contain');
+    snapshot();
+  }
+  function setPos(){
+    if(!targetImg) return;
+    var x=document.getElementById('posX').value, y=document.getElementById('posY').value;
+    targetImg.style.objectPosition = x+'% '+y+'%';
+    snapshotDebounced();
+  }
+  function parseFilter(f){ var o={bri:100,con:100,sat:100,gray:0}; var m;
+    if((m=/brightness\(([0-9.]+)%?\)/.exec(f))) o.bri=Math.round(parseFloat(m[1])>3?parseFloat(m[1]):parseFloat(m[1])*100);
+    if((m=/contrast\(([0-9.]+)%?\)/.exec(f))) o.con=Math.round(parseFloat(m[1])>3?parseFloat(m[1]):parseFloat(m[1])*100);
+    if((m=/saturate\(([0-9.]+)%?\)/.exec(f))) o.sat=Math.round(parseFloat(m[1])>3?parseFloat(m[1]):parseFloat(m[1])*100);
+    if((m=/grayscale\(([0-9.]+)%?\)/.exec(f))) o.gray=Math.round(parseFloat(m[1])>3?parseFloat(m[1]):parseFloat(m[1])*100);
+    return o; }
+  function setFx(){ if(!targetImg) return; var b=val('fxBri'),c=val('fxCon'),s=val('fxSat'),g=val('fxGray');
+    targetImg.style.filter='brightness('+b+'%) contrast('+c+'%) saturate('+s+'%) grayscale('+g+'%)'; snapshotDebounced&&snapshotDebounced(); }
+  function resetFx(){ if(!targetImg) return; ['fxBri','fxCon','fxSat'].forEach(function(id){document.getElementById(id).value=100;}); document.getElementById('fxGray').value=0; targetImg.style.filter=''; snapshot&&snapshot(); }
+  function setAlt(){ if(!targetImg) return; targetImg.setAttribute('alt', document.getElementById('imgAlt').value); snapshotDebounced&&snapshotDebounced(); }
+  function val(id){ return document.getElementById(id).value; }
+  function resetFit(){
+    if(!targetImg) return;
+    targetImg.style.objectFit='cover';
+    targetImg.style.objectPosition='50% 50%';
+    document.getElementById('posX').value=50;
+    document.getElementById('posY').value=50;
+    document.getElementById('fitCover').classList.add('on');
+    document.getElementById('fitContain').classList.remove('on');
+    snapshot();
+  }
+  function showTab(name, btn){
+    currentTabName = name;
+    document.querySelectorAll('#pickerTabs button').forEach(function(b){ b.classList.remove('on'); });
+    if (btn) btn.classList.add('on');
+    var grid = document.getElementById('pickerGrid');
+    grid.innerHTML = '';
+    var list = (name === '__recent') ? recentGallery() : (GALLERIES[name] || []);
+    if (!list.length){
+      grid.innerHTML = '<div class="empty">Žiadne položky. Nahrajte fotku alebo vložte URL nižšie.</div>';
+      return;
+    }
+    list.forEach(function(ph){
+      var d = document.createElement('div');
+      d.className = 'ph';
+      d.setAttribute('data-label', (ph.l || '').toLowerCase());
+      d.innerHTML = '<div class="skeleton"></div>' +
+                    '<img loading="lazy" alt="">' +
+                    '<div class="pl">' + (ph.l || '') + '</div>';
+      var imgEl = d.querySelector('img');
+      imgEl.onload = function(){ d.classList.add('loaded'); };
+      imgEl.onerror = function(){
+        // Skús proxy ako fallback
+        if(!d._triedProxy){
+          d._triedProxy = true;
+          imgEl.src = imgProxy(ph.u);
+        } else {
+          d.classList.add('error');
+        }
+      };
+      imgEl.src = ph.u;
+      d.onclick = function(){
+        if(d.classList.contains('error')) return;
+        // Ak sa náhľad načítal cez proxy, použijeme proxy URL aj v newsletteri
+        var finalUrl = d._triedProxy ? imgProxy(ph.u) : ph.u;
+        applyPhoto(finalUrl);
+      };
+      grid.appendChild(d);
+    });
+    // znovu aplikuj filter podľa search inputu
+    filterPicker(document.getElementById('pickerSearch').value);
+  }
+  function filterPicker(q){
+    q = (q || '').toLowerCase().trim();
+    var items = document.querySelectorAll('#pickerGrid .ph');
+    var visible = 0;
+    items.forEach(function(d){
+      var lbl = d.getAttribute('data-label') || '';
+      var show = !q || lbl.indexOf(q) !== -1;
+      d.style.display = show ? '' : 'none';
+      if(show) visible++;
+    });
+    var empty = document.querySelector('#pickerGrid .empty');
+    if(empty) empty.style.display = visible ? 'none' : '';
+  }
+  function applyPhoto(url){
+    if (targetImg) {
+      targetImg.setAttribute('data-edited','1');
+      targetImg.src = url;
+      saveRecent(url);
+    }
+    closePicker();
+    snapshot();
+  }
+
+  // ===== URL náhľad: live validácia =====
+  var urlCheckTimer = null;
+  var lastCheckedUrl = '';
+  function onUrlInput(v){
+    clearTimeout(urlCheckTimer);
+    v = (v||'').trim();
+    var prev = document.getElementById('urlPreview');
+    var btn = document.getElementById('useUrlBtn');
+    if(!v){
+      prev.style.display = 'none';
+      btn.disabled = true;
+      return;
+    }
+    btn.disabled = true;
+    urlCheckTimer = setTimeout(function(){ checkUrlPreview(v); }, 350);
+  }
+  function checkUrlPreview(url){
+    // Auto-fix: doplň https:// ak chýba
+    if(!/^https?:\/\//i.test(url) && !/^data:/i.test(url)){
+      url = 'https://' + url.replace(/^\/+/, '');
+      document.getElementById('customUrl').value = url;
+    }
+    lastCheckedUrl = url;
+    var box = document.getElementById('urlPreview');
+    var thumb = document.getElementById('urlPreviewThumb');
+    var msg = document.getElementById('urlPreviewMsg');
+    var retry = document.getElementById('urlPreviewRetry');
+    box.style.display = 'flex';
+    box.className = 'url-preview';
+    retry.style.display = 'none';
+    thumb.className = 'thumb loading';
+    thumb.style.backgroundImage = '';
+    msg.innerHTML = '<b>Skontrolujem fotografiu…</b>Načítavam náhľad z URL';
+    document.getElementById('useUrlBtn').disabled = true;
+
+    var im = new Image();
+    var settled = false;
+    var timeoutId = setTimeout(function(){
+      if(settled) return;
+      settled = true;
+      im.src = '';
+      showUrlError(url, true);
+    }, 8000);
+
+    im.onload = function(){
+      if(settled) return; settled = true;
+      clearTimeout(timeoutId);
+      if(lastCheckedUrl !== url) return; // medzitým sa input zmenil
+      thumb.className = 'thumb';
+      thumb.style.backgroundImage = 'url("'+url.replace(/"/g,'\\"')+'")';
+      box.className = 'url-preview ok';
+      var dim = im.naturalWidth + ' × ' + im.naturalHeight + ' px';
+      msg.innerHTML = '<b>✓ Fotka je v poriadku</b>'+dim+'. Kliknite na <i>Použiť URL</i> alebo stlačte Enter.';
+      document.getElementById('useUrlBtn').disabled = false;
+    };
+    im.onerror = function(){
+      if(settled) return; settled = true;
+      clearTimeout(timeoutId);
+      showUrlError(url, false);
+    };
+    im.src = url;
+  }
+  function showUrlError(url, isTimeout){
+    if(lastCheckedUrl !== url) return;
+    var box = document.getElementById('urlPreview');
+    var thumb = document.getElementById('urlPreviewThumb');
+    var msg = document.getElementById('urlPreviewMsg');
+    var retry = document.getElementById('urlPreviewRetry');
+    thumb.className = 'thumb';
+    thumb.style.backgroundImage = '';
+    thumb.innerHTML = '';
+    box.className = 'url-preview err';
+    msg.innerHTML = '<b>✕ Fotku sa nepodarilo načítať</b>' +
+      (isTimeout ? 'Server neodpovedal do 8 s. ' : 'URL je nedostupná alebo blokuje hotlinking. ') +
+      'Skúsime ju načítať cez proxy.';
+    retry.style.display = '';
+    document.getElementById('useUrlBtn').disabled = true;
+  }
+  function useProxiedUrl(){
+    var u = document.getElementById('customUrl').value.trim();
+    if(!u) return;
+    var prox = imgProxy(u);
+    document.getElementById('customUrl').value = prox;
+    onUrlInput(prox);
+  }
+  function useCustomUrl(){
+    var u = document.getElementById('customUrl').value.trim();
+    if (!u) return;
+    // Ak prebehla validácia úspešne, použijeme priamo. Inak skúsime aj tak.
+    applyPhoto(u);
+  }
+
+  // ===== Drag & drop upload =====
+  (function initDragDrop(){
+    var pk = document.querySelector('.picker');
+    if(!pk) return;
+    ['dragenter','dragover'].forEach(function(ev){
+      pk.addEventListener(ev, function(e){ e.preventDefault(); pk.classList.add('dragover'); });
+    });
+    ['dragleave','drop'].forEach(function(ev){
+      pk.addEventListener(ev, function(e){ e.preventDefault(); if(ev==='drop' || e.target===pk) pk.classList.remove('dragover'); });
+    });
+    pk.addEventListener('drop', function(e){
+      e.preventDefault();
+      pk.classList.remove('dragover');
+      var dt = e.dataTransfer;
+      if(!dt) return;
+      // 1) Súbor
+      if(dt.files && dt.files.length){
+        var f = dt.files[0];
+        if(/^image\//.test(f.type)){
+          var fr = new FileReader();
+          fr.onload = function(){ applyPhoto(fr.result); };
+          fr.readAsDataURL(f);
+          return;
+        }
+      }
+      // 2) URL / text
+      var txt = dt.getData('text/uri-list') || dt.getData('text/plain');
+      if(txt){
+        document.getElementById('customUrl').value = txt.trim();
+        onUrlInput(txt.trim());
+      }
+    });
+  })();
+
+  function closePicker(){
+    document.getElementById('picker').classList.remove('open');
+    targetImg = null;
+  }
+  document.getElementById('picker').addEventListener('click', function(e){
+    if (e.target === this) closePicker();
+  });
+  // ESC zatvorí picker
+  document.addEventListener('keydown', function(e){
+    if(e.key === 'Escape' && document.getElementById('picker').classList.contains('open')){
+      closePicker();
+    }
+  });
+
+  // Klik na fotku v newsletteri otvorí galériu + napasovanie (len v režime úprav)
+  function bindImages(){
+    document.querySelectorAll('#newsletter img.swappable').forEach(function(img){
+      if (img._bound) return;
+      img._bound = true;
+      img.addEventListener('click', function(e){
+        if(!document.body.classList.contains('editing')) return;
+        e.preventDefault();
+        openPicker(img);
+      });
+    });
+  }
+  bindImages();
+
+  function toggleEdit(){
+    var on = document.body.classList.toggle('editing');
+    document.getElementById('editBtn').textContent = on ? '✏️ Režim úprav: ZAP' : '👁 Režim úprav: VYP';
+    document.getElementById('editHint').style.display = on ? '' : 'none';
+    document.querySelectorAll('[contenteditable]').forEach(function(el){
+      el.setAttribute('contenteditable', on ? 'true' : 'false');
+    });
+  }
+
+  // ===== História: Späť / Dopredu =====
+  var nlEl = document.getElementById('newsletter');
+  var histStack = [], hi = -1, restoring = false, snapTimer = null;
+  function updateHistButtons(){
+    var u=document.getElementById('undoBtn'), r=document.getElementById('redoBtn');
+    if(u) u.disabled = hi<=0;
+    if(r) r.disabled = hi>=histStack.length-1;
+  }
+  function snapshot(){
+    if(restoring) return;
+    var html = nlEl.innerHTML;
+    if(hi>=0 && histStack[hi]===html) return;     // nič sa nezmenilo
+    histStack = histStack.slice(0, hi+1);            // zahoď „dopredu" vetvu
+    histStack.push(html);
+    if(histStack.length>60){ histStack.shift(); }    // limit pamäte
+    hi = histStack.length-1;
+    updateHistButtons();
+  }
+  function snapshotDebounced(){
+    clearTimeout(snapTimer);
+    snapTimer = setTimeout(snapshot, 450);
+  }
+  function restore(html){
+    restoring = true;
+    nlEl.innerHTML = html;
+    // znova naviaž kliky na obrázky a editovateľnosť podľa režimu
+    document.querySelectorAll('#newsletter img.swappable').forEach(function(img){ img._bound=false; });
+    bindImages();
+    var on = document.body.classList.contains('editing');
+    nlEl.querySelectorAll('[contenteditable]').forEach(function(el){ el.setAttribute('contenteditable', on?'true':'false'); });
+    if(window.addCardControls) addCardControls();
+    restoring = false;
+    updateHistButtons();
+  }
+  function undo(){ if(hi>0){ hi--; restore(histStack[hi]); } }
+  function redo(){ if(hi<histStack.length-1){ hi++; restore(histStack[hi]); } }
+
+  // text edity → snímka (debounced)
+  nlEl.addEventListener('input', function(){ if(!restoring) snapshotDebounced(); });
+  // klávesové skratky
+  document.addEventListener('keydown', function(e){
+    var k = e.key.toLowerCase();
+    if((e.ctrlKey||e.metaKey) && k==='z' && !e.shiftKey){ e.preventDefault(); undo(); }
+    else if((e.ctrlKey||e.metaKey) && (k==='y' || (k==='z' && e.shiftKey))){ e.preventDefault(); redo(); }
+  });
+  // počiatočná snímka
+  snapshot();
+  updateHistButtons();
+
+  // Uloží celý dokument vrátane vykonaných úprav
+  function saveHTML(){
+    if(window.scanBrand) scanBrand(false);
+    var clone = document.documentElement.cloneNode(true);
+    var html = '<!DOCTYPE html>\n' + clone.outerHTML;
+    var blob = new Blob([html], {type:'text/html;charset=utf-8'});
+    var a = document.createElement('a');
+    a.href = URL.createObjectURL(blob);
+    a.download = 'Swissotel_Damian_Jasna_Newsletter.html';
+    document.body.appendChild(a); a.click(); a.remove();
+  }
+
+  // ===== Návod: ako poslať z Outlooku =====
+  function openSend(){ document.getElementById('sendModal').classList.add('open'); }
+  function closeSend(){ document.getElementById('sendModal').classList.remove('open'); }
+
+  // ===== Export newslettera ako obrázok (funguje aj s fotkami z cudzej domény) =====
+  // Fotky z webu hotela/Accoru nemajú povolené priame vykreslenie do plátna,
+  // preto ich pred exportom načítame cez obrázkový proxy (CORS), čím sa do PNG zobrazia.
+  function toProxy(url){
+    var clean = url.replace(/^https?:\/\//, '');
+    return 'https://images.weserv.nl/?url=' + encodeURIComponent(clean) + '&output=png&n=-1';
+  }
+  function fetchDataURL(url){
+    return fetch(toProxy(url), {mode:'cors'})
+      .then(function(r){ if(!r.ok) throw new Error('proxy ' + r.status); return r.blob(); })
+      .then(function(b){ return new Promise(function(res, rej){
+        var fr = new FileReader();
+        fr.onload = function(){ res(fr.result); };
+        fr.onerror = rej;
+        fr.readAsDataURL(b);
+      }); });
+  }
+
+  function renderCanvas(cb){
+    if(window.scanBrand) scanBrand(false);
+    if (typeof html2canvas === 'undefined'){
+      alert('Knižnica na export sa nenačítala (skontrolujte internet) – použite tlačidlo „PDF“.');
+      return;
+    }
+    var btn = document.getElementById('pngBtn');
+    var orig = btn.textContent;
+    btn.textContent = '⏳ Vykresľujem…';
+    var wasEditing = document.body.classList.contains('editing');
+    if (wasEditing) toggleEdit();
+
+    var node = document.getElementById('newsletter');
+    var imgs = Array.prototype.slice.call(node.querySelectorAll('img'));
+    var originals = imgs.map(function(im){ return im.getAttribute('src'); });
+
+    var jobs = imgs.map(function(im){
+      var s = im.getAttribute('src');
+      if (!s || s.indexOf('data:') === 0) return Promise.resolve();
+      return fetchDataURL(s)
+        .then(function(d){ im.setAttribute('src', d); })
+        .catch(function(){ /* ponecháme pôvodný zdroj */ });
+    });
+
+    function finish(){
+      btn.textContent = orig;
+      if (wasEditing) toggleEdit();
+    }
+
+    Promise.all(jobs)
+      .then(function(){
+        return Promise.all(imgs.map(function(im){
+          return (im.decode ? im.decode().catch(function(){}) : Promise.resolve());
+        }));
+      })
+      .then(function(){
+        return html2canvas(node, {scale: 2, backgroundColor: '#ffffff', useCORS: true, logging: false});
+      })
+      .then(function(canvas){
+        imgs.forEach(function(im, i){ im.setAttribute('src', originals[i]); });
+        finish();
+        cb(canvas);
+      })
+      .catch(function(err){
+        imgs.forEach(function(im, i){ im.setAttribute('src', originals[i]); });
+        finish();
+        alert('Export obrázka zlyhal. Skúste znova, alebo použite tlačidlo „PDF“.\n(' + err.message + ')');
+        console.error(err);
+      });
+  }
+
+  function exportPNG(){
+    renderCanvas(function(canvas){
+      var a = document.createElement('a');
+      a.href = canvas.toDataURL('image/png');
+      a.download = 'Swissotel_Damian_Jasna_Newsletter.png';
+      document.body.appendChild(a); a.click(); a.remove();
+    });
+  }
+
+  function copyImage(){
+    renderCanvas(function(canvas){
+      canvas.toBlob(function(blob){
+        if (navigator.clipboard && window.ClipboardItem){
+          navigator.clipboard.write([new ClipboardItem({'image/png': blob})]).then(function(){
+            alert('Obrázok bol skopírovaný.\nV tele e-mailu v Outlooku stlačte Ctrl + V.');
+          }, function(){
+            alert('Kopírovanie zlyhalo – použite „Stiahnuť ako obrázok“.');
+          });
+        } else {
+          alert('Tento prehliadač nepodporuje kopírovanie obrázka – použite „Stiahnuť ako obrázok“.');
+        }
+      }, 'image/png');
+    });
+  }
+
+  // ===== Generovanie e-mailového HTML (tabuľkové, inline štýly) z aktuálneho stavu editora =====
+  function buildEmail(mode){
+    if(window.scanBrand) scanBrand(false);
+    var nl = document.getElementById('newsletter');
+    function esc(s){ return (s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;'); }
+    // XML parser doplnku (Postcards/Office.js) padá na pomenovaných entitách (&nbsp; a pod.).
+    // Necháme len XML-bezpečné (&amp; &lt; &gt; &quot;), zvyšok prevedieme na číselné entity.
+    function xmlSafe(s){
+      return (s||'')
+        .replace(/&nbsp;/g,'&#160;')
+        .replace(/&(?!#\d+;|#x[0-9a-fA-F]+;|amp;|lt;|gt;|quot;)([a-zA-Z]+);/g, function(m, name){
+          var map={copy:'169',reg:'174',trade:'8482',hellip:'8230',mdash:'8212',ndash:'8211',rsquo:'8217',lsquo:'8216',rdquo:'8221',ldquo:'8220',middot:'183',times:'215',euro:'8364',apos:'39'};
+          return map[name] ? '&#'+map[name]+';' : m.replace('&','&amp;');
+        });
+    }
+    function T(sel){ var e=nl.querySelector(sel); if(!e) return ''; var h=e.innerHTML.replace(/<br\s*\/?>/gi,' · '); var d=document.createElement('div'); d.innerHTML=h; return esc(d.textContent.trim().replace(/\s+/g,' ')); }
+    function SRC(sel){ var e=nl.querySelector(sel); return e ? e.getAttribute('src') : ''; }
+    // SVG logo prevedieme na PNG (Office.js/add-in sanitizér SVG často odmieta a zhodí insert)
+    function pngLogo(u){
+      if (!u) return u;
+      if (/\.svg(\?|#|$)/i.test(u)) return 'https://images.weserv.nl/?url='+encodeURIComponent(u.replace(/^https?:\/\//,''))+'&output=png';
+      return u;
+    }
+    // prenesie napasovanie (object-fit/position) konkrétneho obrázka do e-mailu
+    function fitStyle(sel){
+      var e=nl.querySelector(sel); if(!e) return 'object-fit:cover;object-position:50% 50%;';
+      var f=e.style.objectFit||'cover', p=e.style.objectPosition||'50% 50%';
+      return 'object-fit:'+f+';object-position:'+p+';';
+    }
+    function hidden(sel){ var e=nl.querySelector(sel); return !!(e && e.classList.contains('nl-hidden')); }
+    function HREF(sel){ var e=nl.querySelector(sel); return e ? (e.getAttribute('href')||'#') : '#'; }
+    function rich(sel){
+      var e=nl.querySelector(sel); if(!e) return '';
+      var h=e.innerHTML;
+      h=h.replace(/<em>/g,'<span style="font-style:italic;color:#b8a06a;">').replace(/<\/em>/g,'</span>');
+      h=h.replace(/ contenteditable="[^"]*"/g,'');
+      return h.trim();
+    }
+    var cs = getComputedStyle(document.documentElement);
+    function cssv(name, fb){ var v=cs.getPropertyValue(name).trim(); return v||fb; }
+    var GOLD=cssv('--gold','#b8a06a'), INK=cssv('--ink','#1a1a1a'), MID=cssv('--mid','#4a4a4a'),
+        MUT=cssv('--muted','#888888'), SAND=cssv('--sand','#f8f6f2'), GL=cssv('--gold-light','#e8dfc8'), BLACK=cssv('--black','#0e0e0e');
+    var SANS="Arial,Helvetica,sans-serif", SERIF="Georgia,'Times New Roman',serif";
+
+    // serializácia vlastných blokov do e-mailu
+    function extrasEmail(){
+      var box=nl.querySelector('#extraBlocks'); if(!box) return '';
+      var out='';
+      Array.prototype.forEach.call(box.children, function(b){
+        if(b.classList.contains('nl-hidden')) return;
+        var type=b.getAttribute('data-block');
+        if(type==='heading'){ var h=b.querySelector('[data-edit]'); out+='<tr><td class="px" style="padding:8px 36px 0;"><h2 style="font-family:'+SERIF+';font-weight:normal;font-size:24px;margin:14px 0 6px;color:'+INK+';">'+(h?esc(h.textContent.trim()):'')+'</h2></td></tr>\n'; }
+        else if(type==='text'){ var p=b.querySelector('[data-edit]'); out+='<tr><td class="px" style="padding:4px 36px;"><p class="sans" style="font-family:'+SANS+';font-size:13px;line-height:21px;color:'+MID+';margin:8px 0;">'+(p?esc(p.textContent.trim().replace(/\s+/g,' ')):'')+'</p></td></tr>\n'; }
+        else if(type==='image'){ var im=b.querySelector('img'); out+='<tr><td style="padding:10px 0;"><img src="'+(im?im.getAttribute('src'):'')+'" width="600" alt="" style="display:block;width:100%;max-width:600px;height:auto;"></td></tr>\n'; }
+        else if(type==='button'){ var a=b.querySelector('a'); out+='<tr><td class="px" align="center" style="padding:12px 36px;"><table role="presentation" cellpadding="0" cellspacing="0" border="0" align="center"><tr><td bgcolor="'+BLACK+'" style="background:'+BLACK+';"><a href="'+(a?a.getAttribute('href'):'#')+'" class="sans" style="display:inline-block;font-family:'+SANS+';font-size:11px;font-weight:bold;letter-spacing:2px;text-transform:uppercase;color:#ffffff;text-decoration:none;padding:13px 26px;">'+(a?esc(a.textContent.trim()):'')+'</a></td></tr></table></td></tr>\n'; }
+        else if(type==='divider'){ out+='<tr><td class="px" style="padding:8px 36px;"><div style="height:1px;background:'+GL+';line-height:1px;font-size:1px;">&nbsp;</div></td></tr>\n'; }
+        else if(type==='spacer'){ out+='<tr><td style="height:28px;line-height:28px;font-size:1px;">&nbsp;</td></tr>\n'; }
+        else if(type==='twocol'){ var cols=b.querySelectorAll('[data-col]'); var c1=cols[0]?esc(cols[0].textContent.trim().replace(/\s+/g,' ')):''; var c2=cols[1]?esc(cols[1].textContent.trim().replace(/\s+/g,' ')):''; out+='<tr><td class="px" style="padding:6px 36px;"><table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0"><tr><td class="col" width="50%" valign="top" style="padding-right:10px;font-family:'+SANS+';font-size:13px;line-height:21px;color:'+MID+';">'+c1+'</td><td class="col" width="50%" valign="top" style="padding-left:10px;font-family:'+SANS+';font-size:13px;line-height:21px;color:'+MID+';">'+c2+'</td></tr></table></td></tr>\n'; }
+        else if(type==='quote'){ var q=b.querySelector('[data-edit]'); var ci=b.querySelector('[data-cite]'); out+='<tr><td class="px" style="padding:10px 36px;"><table role="presentation" width="100%"><tr><td style="border-left:3px solid '+GOLD+';padding:6px 0 6px 16px;font-family:'+SERIF+';font-style:italic;font-size:19px;line-height:1.4;color:'+INK+';">'+(q?esc(q.textContent.trim()):'')+'<div style="font-family:'+SANS+';font-style:normal;font-size:11px;letter-spacing:1px;text-transform:uppercase;color:'+MUT+';margin-top:8px;">'+(ci?esc(ci.textContent.trim()):'')+'</div></td></tr></table></td></tr>\n'; }
+        else if(type==='list'){ var lis=b.querySelectorAll('li'); var rows=''; Array.prototype.forEach.call(lis,function(li){ rows+='<tr><td style="color:'+GOLD+';padding-right:8px;vertical-align:top;">—</td><td style="font-family:'+SANS+';font-size:13px;line-height:21px;color:'+MID+';padding-bottom:4px;">'+esc(li.textContent.trim())+'</td></tr>'; }); out+='<tr><td class="px" style="padding:6px 36px;"><table role="presentation" cellpadding="0" cellspacing="0" border="0">'+rows+'</table></td></tr>\n'; }
+        else if(type==='social'){ var as=b.querySelectorAll('a'); var s=''; Array.prototype.forEach.call(as,function(a,idx){ s+=(idx?' &nbsp;·&nbsp; ':'')+'<a href="'+(a.getAttribute('href')||'#')+'" style="color:'+GOLD+';text-decoration:none;">'+esc(a.textContent.trim())+'</a>'; }); out+='<tr><td class="px" align="center" style="padding:10px 36px;font-family:'+SANS+';font-size:11px;letter-spacing:1px;text-transform:uppercase;">'+s+'</td></tr>\n'; }
+        else if(type==='video'){ var im=b.querySelector('img'); var a=b.querySelector('a'); var href=a?a.getAttribute('href'):'#'; out+='<tr><td style="padding:10px 0;"><a href="'+href+'"><img src="'+(im?im.getAttribute('src'):'')+'" width="600" alt="Video" style="display:block;width:100%;max-width:600px;height:auto;"></a></td></tr>\n'; }
+        else if(type==='offer'){ var tag=b.querySelector('.xb-otag'),tit=b.querySelector('.xb-otitle'),tx=b.querySelector('.xb-otext'),btn=b.querySelector('a'); out+='<tr><td class="px" style="padding:10px 36px;"><table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="background:'+SAND+';border:1px solid '+GL+';"><tr><td style="padding:22px 24px;"><span style="font-family:'+SANS+';background:'+GOLD+';color:#fff;font-size:10px;font-weight:bold;letter-spacing:2px;text-transform:uppercase;padding:5px 12px;">'+(tag?esc(tag.textContent.trim()):'')+'</span><div style="font-family:'+SERIF+';font-size:26px;color:'+INK+';margin:12px 0 8px;">'+(tit?esc(tit.textContent.trim()):'')+'</div><div style="font-family:'+SANS+';font-size:13px;line-height:21px;color:'+MID+';margin-bottom:14px;">'+(tx?esc(tx.textContent.trim().replace(/\s+/g,' ')):'')+'</div><table role="presentation" cellpadding="0" cellspacing="0" border="0"><tr><td bgcolor="'+BLACK+'" style="background:'+BLACK+';"><a href="'+(btn?btn.getAttribute('href'):'#')+'" style="display:inline-block;font-family:'+SANS+';font-size:11px;font-weight:bold;letter-spacing:2px;text-transform:uppercase;color:#fff;text-decoration:none;padding:13px 26px;">'+(btn?esc(btn.textContent.trim()):'')+'</a></td></tr></table></td></tr></table></td></tr>\n'; }
+      });
+      return out;
+    }
+
+    var eys = nl.querySelectorAll('.eyebrow span[contenteditable]');
+    function ey(i){ if(!eys[i]) return ''; var h=eys[i].innerHTML.replace(/<br\s*\/?>/gi,' · '); var d=document.createElement('div'); d.innerHTML=h; return esc(d.textContent.trim().replace(/\s+/g,' ')); }
+
+    // karty
+    var cardEls = nl.querySelectorAll('.cards .card');
+    var cardsHTML='';
+    for (var i=0;i<cardEls.length;i+=2){
+      cardsHTML += '<tr>';
+      for (var j=i;j<i+2 && j<cardEls.length;j++){
+        var c=cardEls[j];
+        var imgEl=c.querySelector('img');
+        var img=imgEl.getAttribute('src');
+        var imgFit='object-fit:'+(imgEl.style.objectFit||'cover')+';object-position:'+(imgEl.style.objectPosition||'50% 50%')+';';
+        var tag=esc(c.querySelector('.ctag').textContent.trim());
+        var h3=esc(c.querySelector('h3').textContent.trim());
+        var p=esc(c.querySelector('p').textContent.trim().replace(/\s+/g,' '));
+        var lk=c.querySelector('.clink');
+        var lkt=esc(lk.textContent.trim()), lkh=lk.getAttribute('href')||'#';
+        var padL=(j%2===0)?'0 8px 16px 0':'0 0 16px 8px';
+        cardsHTML +=
+          '<td class="col" width="50%" valign="top" style="padding:'+padL+';">'+
+            '<table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="border:1px solid #e4e0d8;">'+
+              '<tr><td><img src="'+img+'" width="252" alt="'+h3+'" style="display:block;width:100%;height:140px;'+imgFit+'"></td></tr>'+
+              '<tr><td style="padding:16px 16px 18px;">'+
+                '<div style="font-family:'+SANS+';font-size:9px;letter-spacing:2px;text-transform:uppercase;color:'+GOLD+';font-weight:bold;margin-bottom:6px;">'+tag+'</div>'+
+                '<h3 style="font-family:'+SERIF+';font-weight:normal;font-size:20px;margin:0 0 8px;color:'+INK+';">'+h3+'</h3>'+
+                '<p style="font-family:'+SANS+';font-size:12px;line-height:18px;color:'+MID+';margin:0 0 12px;">'+p+'</p>'+
+                '<a href="'+lkh+'" style="font-family:'+SANS+';font-size:10px;font-weight:bold;letter-spacing:2px;text-transform:uppercase;color:'+GOLD+';text-decoration:none;">'+lkt+'</a>'+
+              '</td></tr>'+
+            '</table>'+
+          '</td>';
+      }
+      cardsHTML += '</tr>';
+    }
+
+    // feature zoznam
+    var lis = nl.querySelectorAll('.feature .flist li');
+    var liHTML='';
+    lis.forEach(function(li){
+      liHTML += '<tr><td style="color:'+GOLD+';padding-right:8px;">—</td><td>'+esc(li.textContent.trim())+'</td></tr>';
+    });
+
+    // badges
+    var badges = nl.querySelectorAll('.badges .badge');
+    var badgeCells='';
+    badges.forEach(function(b,idx){
+      var hl = b.classList.contains('hl');
+      var st = hl ? 'background:'+GOLD+';color:#ffffff;font-weight:bold;' : 'background:'+SAND+';border:1px solid '+GL+';';
+      badgeCells += '<td style="padding:0 6px 8px 0;"><span style="display:inline-block;font-family:'+SANS+';font-size:10px;letter-spacing:1px;text-transform:uppercase;color:'+MID+';'+st+'padding:8px 13px;">'+esc(b.textContent.trim())+'</span></td>';
+      if (idx%2===1) badgeCells += '</tr><tr>';
+    });
+
+    // CTA tlačidlá
+    var ctaBtns = nl.querySelectorAll('.cta .btn');
+    var ctaPrimary = ctaBtns[0] ? {t:esc(ctaBtns[0].textContent.trim()),h:ctaBtns[0].getAttribute('href')||'#'} : {t:'Rezervovať',h:'#'};
+    var ctaGhost = ctaBtns[1] ? {t:esc(ctaBtns[1].textContent.trim()),h:ctaBtns[1].getAttribute('href')||'#'} : null;
+
+    // footer
+    var fline = rich('.footer .fline').replace(/<a /g,'<a style="color:'+GOLD+';text-decoration:none;" ');
+    var socials = nl.querySelectorAll('.footer .socials a');
+    var socHTML='';
+    socials.forEach(function(a,idx){
+      socHTML += (idx?'&nbsp;&nbsp;·&nbsp;&nbsp;':'') + '<a href="'+(a.getAttribute('href')||'#')+'" style="color:'+MUT+';text-decoration:none;">'+esc(a.textContent.trim())+'</a>';
+    });
+    var fstrip = nl.querySelectorAll('.footer-strip span');
+    var legal = rich('.legal').replace(/<a /g,'<a style="color:#b9b3a6;text-decoration:none;" ');
+
+    var featBtn = nl.querySelector('.feature .btn');
+    var stripBtn = nl.querySelector('.strip .btn');
+
+    var docHead =
+'<!DOCTYPE html>\n<html lang="sk" xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office">\n<head>\n'+
+'<meta charset="UTF-8">\n<meta name="viewport" content="width=device-width, initial-scale=1">\n<meta http-equiv="X-UA-Compatible" content="IE=edge">\n<meta name="x-apple-disable-message-reformatting">\n'+
+'<title>Swissôtel Damian Jasna</title>\n'+
+'<!--[if mso]><style type="text/css">body,table,td,a,p,h1,h2,h3{font-family:Georgia,\'Times New Roman\',serif !important;} .sans{font-family:Arial,Helvetica,sans-serif !important;}</style><![endif]-->\n'+
+'<style type="text/css">\nbody{margin:0;padding:0;background:#edeae3;}\nimg{border:0;outline:none;-ms-interpolation-mode:bicubic;}\ntable{border-collapse:collapse;}\n@media only screen and (max-width:620px){.container{width:100% !important;}.col{display:block !important;width:100% !important;box-sizing:border-box;}.px{padding-left:22px !important;padding-right:22px !important;}.h1{font-size:32px !important;}}\n</style>\n</head>\n'+
+'<body style="margin:0;padding:0;background:#edeae3;">\n';
+
+    // ===== TELO (fragment) – plne inline, bez doctype/head/style/body =====
+    var bodyFragment =
+'<table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="background:#edeae3;"><tr><td align="center" style="padding:24px 12px;">\n'+
+'<table role="presentation" class="container" width="600" cellpadding="0" cellspacing="0" border="0" style="width:600px;max-width:600px;background:#ffffff;">\n'+
+
+// infobar
+(hidden('.infobar')?'':'<tr><td class="sans" align="center" style="background:'+BLACK+';color:#e8dfc8;font-family:'+SANS+';font-size:11px;letter-spacing:1px;line-height:16px;padding:9px 16px;">'+T('.infobar')+'</td></tr>\n')+
+
+
+// header
+'<tr><td class="px" style="padding:24px 36px 18px;border-bottom:1px solid '+GL+';"><table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0"><tr>'+
+'<td align="left" valign="middle"><img src="'+pngLogo(SRC('.nl-header .logo'))+'" width="150" alt="Swissôtel Damian Jasna" style="display:block;height:auto;"></td>'+
+'<td class="sans" align="right" valign="middle" style="font-family:'+SANS+';font-size:10px;line-height:15px;color:'+MUT+';"><span style="color:'+INK+';font-size:11px;letter-spacing:2px;text-transform:uppercase;">Swissôtel Damian Jasna</span><br>Demänovská Dolina 555, 031 01<br>+421 44 39 31 300</td>'+
+'</tr></table></td></tr>\n'+
+
+// hero
+'<tr><td class="px" style="padding:32px 36px 8px;">'+
+'<div class="sans" style="font-family:'+SANS+';font-size:10px;letter-spacing:3px;text-transform:uppercase;color:'+GOLD+';font-weight:bold;">— &nbsp;'+ey(0)+'</div>'+
+'<h1 class="h1" style="font-family:'+SERIF+';font-weight:normal;font-size:40px;line-height:1.1;margin:14px 0 14px;color:'+INK+';">'+rich('.hero h1')+'</h1>'+
+'<p class="sans" style="font-family:'+SANS+';font-size:14px;line-height:24px;color:'+MID+';margin:0 0 6px;">'+T('.hero .lead')+'</p>'+
+'</td></tr>\n'+
+(hidden('.hero-img')?'':'<tr><td style="padding:18px 0 0;"><img src="'+SRC('.hero-img')+'" width="600" alt="" style="display:block;width:100%;max-width:600px;height:300px;'+fitStyle('.hero-img')+'"></td></tr>\n'+
+'<tr><td class="px sans" align="right" style="font-family:'+SANS+';font-size:9px;letter-spacing:2px;text-transform:uppercase;color:'+MUT+';padding:9px 36px 0;">'+T('.hero-cap')+'</td></tr>\n')+
+
+// feature
+'<tr><td class="px" style="padding:30px 36px 0;"><div class="sans" style="font-family:'+SANS+';font-size:10px;letter-spacing:3px;text-transform:uppercase;color:'+GOLD+';font-weight:bold;">— &nbsp;'+ey(1)+'</div></td></tr>\n'+
+'<tr><td class="px" style="padding:14px 36px 0;"><table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="background:'+SAND+';border:1px solid '+GL+';">'+
+'<tr><td><img src="'+SRC('.feature img')+'" width="528" alt="" style="display:block;width:100%;height:220px;'+fitStyle('.feature img')+'"></td></tr>'+
+'<tr><td style="padding:22px 24px 24px;">'+
+'<span class="sans" style="font-family:'+SANS+';background:'+GOLD+';color:#ffffff;font-size:10px;font-weight:bold;letter-spacing:2px;text-transform:uppercase;padding:5px 12px;">'+T('.feature .ftag')+'</span>'+
+'<h2 style="font-family:'+SERIF+';font-weight:normal;font-size:28px;line-height:1.15;margin:14px 0 10px;color:'+INK+';">'+T('.feature h2')+'</h2>'+
+'<p class="sans" style="font-family:'+SANS+';font-size:13px;line-height:21px;color:'+MID+';margin:0 0 14px;">'+T('.feature p')+'</p>'+
+'<table role="presentation" cellpadding="0" cellspacing="0" border="0" class="sans" style="font-family:'+SANS+';font-size:12px;line-height:20px;color:'+MID+';">'+liHTML+'</table>'+
+'<table role="presentation" cellpadding="0" cellspacing="0" border="0" style="margin-top:18px;"><tr><td bgcolor="'+BLACK+'" style="background:'+BLACK+';"><a href="'+(featBtn?featBtn.getAttribute('href'):'#')+'" class="sans" style="display:inline-block;font-family:'+SANS+';font-size:11px;font-weight:bold;letter-spacing:2px;text-transform:uppercase;color:#ffffff;text-decoration:none;padding:13px 26px;">'+(featBtn?esc(featBtn.textContent.trim()):'Zobraziť ponuku')+'</a></td></tr></table>'+
+'</td></tr></table></td></tr>\n'+
+
+// divider
+'<tr><td class="px" style="padding:30px 36px;"><div style="height:1px;background:'+GL+';line-height:1px;font-size:1px;">&nbsp;</div></td></tr>\n'+
+
+// packages heading
+'<tr><td class="px" style="padding:0 36px;">'+
+'<div class="sans" style="font-family:'+SANS+';font-size:10px;letter-spacing:3px;text-transform:uppercase;color:'+GOLD+';font-weight:bold;">— &nbsp;'+ey(2)+'</div>'+
+'<h2 style="font-family:'+SERIF+';font-weight:normal;font-size:26px;margin:10px 0 6px;color:'+INK+';">'+T('.section-title')+'</h2>'+
+'<p class="sans" style="font-family:'+SANS+';font-size:12px;line-height:19px;color:'+MUT+';margin:0 0 18px;">'+T('.section-sub')+'</p>'+
+'</td></tr>\n'+
+'<tr><td class="px" style="padding:0 36px 8px;"><table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0">'+cardsHTML+'</table></td></tr>\n'+
+
+// badges
+(hidden('.badges')?'':'<tr><td class="px" style="padding:22px 36px 0;"><div class="sans" style="font-family:'+SANS+';font-size:10px;letter-spacing:3px;text-transform:uppercase;color:'+GOLD+';font-weight:bold;margin-bottom:12px;">— &nbsp;'+ey(3)+'</div>'+
+'<table role="presentation" cellpadding="0" cellspacing="0" border="0"><tr>'+badgeCells+'</tr></table></td></tr>\n')+
+
+// spa strip
+(hidden('.strip')?'':'<tr><td style="padding:28px 0 0;"><table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0"><tr>'+
+'<td class="col" width="50%" valign="top"><img src="'+SRC('.strip img')+'" width="300" alt="" style="display:block;width:100%;height:240px;'+fitStyle('.strip img')+'"></td>'+
+'<td class="col" width="50%" valign="middle" style="background:'+BLACK+';padding:30px 28px;">'+
+'<div class="sans" style="font-family:'+SANS+';font-size:10px;letter-spacing:3px;text-transform:uppercase;color:'+GOLD+';font-weight:bold;">— &nbsp;'+ey(4)+'</div>'+
+'<h3 style="font-family:'+SERIF+';font-weight:normal;font-size:24px;margin:12px 0 10px;color:#ffffff;">'+T('.strip h3')+'</h3>'+
+'<p class="sans" style="font-family:'+SANS+';font-size:12px;line-height:20px;color:#cfc9bb;margin:0 0 18px;">'+T('.strip p')+'</p>'+
+'<table role="presentation" cellpadding="0" cellspacing="0" border="0"><tr><td style="border:1px solid '+GOLD+';"><a href="'+(stripBtn?stripBtn.getAttribute('href'):'#')+'" class="sans" style="display:inline-block;font-family:'+SANS+';font-size:11px;font-weight:bold;letter-spacing:2px;text-transform:uppercase;color:'+GOLD+';text-decoration:none;padding:11px 22px;">'+(stripBtn?esc(stripBtn.textContent.trim()):'Objaviť viac')+'</a></td></tr></table>'+
+'</td></tr></table></td></tr>\n')+
+
+// VLASTNÉ BLOKY
+extrasEmail()+
+
+// CTA
+(hidden('.cta')?'':'<tr><td class="px" align="center" style="background:'+SAND+';border-top:1px solid '+GL+';border-bottom:1px solid '+GL+';padding:38px 36px;">'+
+'<div class="sans" style="font-family:'+SANS+';font-size:10px;letter-spacing:3px;text-transform:uppercase;color:'+GOLD+';font-weight:bold;">— &nbsp;'+ey(5)+'&nbsp; —</div>'+
+'<h2 style="font-family:'+SERIF+';font-weight:normal;font-size:28px;margin:12px 0 8px;color:'+INK+';">'+rich('.cta h2')+'</h2>'+
+'<p class="sans" style="font-family:'+SANS+';font-size:13px;line-height:21px;color:'+MID+';margin:0 0 22px;">'+T('.cta p')+'</p>'+
+'<table role="presentation" cellpadding="0" cellspacing="0" border="0" align="center"><tr>'+
+'<td bgcolor="'+BLACK+'" style="background:'+BLACK+';"><a href="'+ctaPrimary.h+'" class="sans" style="display:inline-block;font-family:'+SANS+';font-size:11px;font-weight:bold;letter-spacing:2px;text-transform:uppercase;color:#ffffff;text-decoration:none;padding:13px 26px;">'+ctaPrimary.t+'</a></td>'+
+(ctaGhost?'<td width="10">&nbsp;</td><td style="border:1px solid '+GOLD+';"><a href="'+ctaGhost.h+'" class="sans" style="display:inline-block;font-family:'+SANS+';font-size:11px;font-weight:bold;letter-spacing:2px;text-transform:uppercase;color:'+GOLD+';text-decoration:none;padding:12px 25px;">'+ctaGhost.t+'</a></td>':'')+
+'</tr></table></td></tr>\n')+
+
+// footer
+(hidden('.footer')?'':'<tr><td class="px" align="center" style="padding:28px 36px 12px;"><img src="'+pngLogo(SRC('.footer .flogo'))+'" width="120" alt="Swissôtel Damian Jasna" style="display:block;margin:0 auto 14px;height:auto;">'+
+'<p class="sans" style="font-family:'+SANS+';font-size:11px;line-height:18px;color:'+MUT+';margin:0;">'+fline+'</p>'+
+'<p class="sans" style="font-family:'+SANS+';font-size:10px;letter-spacing:2px;text-transform:uppercase;color:'+MUT+';margin:14px 0 0;">'+socHTML+'</p></td></tr>\n'+
+'<tr><td class="px" style="border-top:1px solid '+GL+';padding:14px 36px;"><table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" class="sans" style="font-family:'+SANS+';font-size:9px;letter-spacing:2px;text-transform:uppercase;color:'+GOLD+';"><tr><td align="left">'+(fstrip[0]?esc(fstrip[0].textContent.trim()):'')+'</td><td align="right">'+(fstrip[1]?esc(fstrip[1].textContent.trim()):'')+'</td></tr></table></td></tr>\n'+
+'<tr><td class="px sans" align="center" style="font-family:'+SANS+';font-size:10px;line-height:17px;color:#b9b3a6;padding:6px 36px 26px;">'+legal+'</td></tr>\n')+
+
+'</table>\n</td></tr></table>\n';
+
+    var fullDoc = docHead +
+      '<div style="display:none;max-height:0;overflow:hidden;mso-hide:all;font-size:1px;line-height:1px;color:#edeae3;">'+(window.getPreheader?esc(getPreheader()):T('.hero .lead'))+'</div>\n' +
+      bodyFragment + '</body>\n</html>';
+
+    bodyFragment = xmlSafe(bodyFragment);
+    fullDoc = xmlSafe(fullDoc);
+    if(mode==='return') return fullDoc;
+
+    if (mode === 'postcards'){
+      // Podľa oficiálneho návodu doplnok očakáva CELÝ HTML dokument (nie fragment).
+      if (navigator.clipboard && navigator.clipboard.writeText){
+        navigator.clipboard.writeText(fullDoc).then(function(){
+          alert('Hotovo! Celé HTML je skopírované v schránke.\n\n1. V Outlooku otvorte doplnok „Insert HTML by Designmodo“.\n2. Kliknite „Paste HTML“ a do poľa stlačte Ctrl + V.\n3. Kliknite „Insert HTML“.\n\n(Logo bolo prevedené zo SVG na PNG kvôli kompatibilite.)');
+        }, function(){
+          docDownload();
+        });
+      } else {
+        docDownload();
+      }
+      function docDownload(){
+        var b = new Blob([fullDoc], {type:'text/html;charset=utf-8'});
+        var a = document.createElement('a');
+        a.href = URL.createObjectURL(b);
+        a.download = 'Swissotel_Newsletter_POSTCARDS.html';
+        document.body.appendChild(a); a.click(); a.remove();
+        alert('Kopírovanie nebolo povolené – stiahol som HTML ako súbor.\nOtvorte ho, označte všetko (Ctrl+A), skopírujte (Ctrl+C) a vložte do poľa Postcards „Insert HTML“.');
+      }
+      return;
+    }
+
+    var blob = new Blob([fullDoc], {type:'text/html;charset=utf-8'});
+    var a = document.createElement('a');
+    a.href = URL.createObjectURL(blob);
+    a.download = 'Swissotel_Damian_Jasna_Newsletter_EMAIL.html';
+    document.body.appendChild(a); a.click(); a.remove();
+    alert('E-mailové HTML (celý dokument) bolo stiahnuté.\n\nVhodné pre Mailchimp/Ecomail alebo Outlook klasik\n(Vložiť → Priložiť súbor → Vložiť ako text).\n\nPre doplnok Postcards „Insert HTML“ použite tlačidlo „📋 Kopírovať pre Postcards“.');
+  }
+  // robustné okamžité kopírovanie (clipboard API + execCommand fallback, funguje aj lokálne)
+  function copyTextNow(text){
+    var ok=false;
+    try{
+      var ta=document.createElement('textarea');
+      ta.value=text; ta.setAttribute('readonly','');
+      ta.style.position='fixed'; ta.style.top='-3000px'; ta.style.left='-3000px';
+      document.body.appendChild(ta);
+      ta.focus(); ta.select(); try{ ta.setSelectionRange(0, text.length); }catch(e){}
+      ok=document.execCommand('copy');
+      document.body.removeChild(ta);
+    }catch(e){ ok=false; }
+    try{ if(navigator.clipboard && navigator.clipboard.writeText) navigator.clipboard.writeText(text); }catch(e){}
+    return ok;
+  }
+  function downloadText(text, filename, mime){
+    try{
+      var b=new Blob([text],{type:(mime||'text/plain')+';charset=utf-8'});
+      var url=URL.createObjectURL(b);
+      var a=document.createElement('a'); a.href=url; a.download=filename;
+      document.body.appendChild(a); a.click();
+      setTimeout(function(){ try{a.remove(); URL.revokeObjectURL(url);}catch(e){} },200);
+      return true;
+    }catch(e){ return false; }
+  }
+  function generateEmailHTML(){
+    try{
+      var html=buildEmail('return'); if(!html){ alert('Nepodarilo sa vytvoriť e-mail.'); return; }
+      copyTextNow(html);
+      showOutput('E-mailové HTML (toto vložte do e-mailu)', html, 'Swissotel_Damian_Jasna_Newsletter_EMAIL.html', 'text/html',
+        'Toto je správne e-mailové HTML – začína &lt;!DOCTYPE html&gt; a obsahuje &lt;table&gt;. Pokúsil som sa ho rovno skopírovať; ak treba, kliknite do poľa a Ctrl+C, alebo stiahnite. Vhodné pre Mailchimp / Ecomail / Brevo alebo Outlook.');
+    }catch(e){ alert('Chyba pri generovaní e-mailu: '+(e&&e.message?e.message:e)); }
+  }
+  function copyForPostcards(){
+    try{
+      var html=buildEmail('return'); if(!html){ alert('Nepodarilo sa vytvoriť e-mail.'); return; }
+      copyTextNow(html);
+      showOutput('HTML pre Designmodo Postcards (toto vložte)', html, 'Swissotel_Newsletter_POSTCARDS.html', 'text/html',
+        'Toto je správne HTML pre doplnok „Insert HTML by Designmodo“ – začína &lt;!DOCTYPE html&gt; a obsahuje &lt;table&gt; (NIE {"v":1,...}). Rovno som sa ho pokúsil skopírovať; v Outlooku: Insert HTML → Paste HTML → Ctrl+V → Insert HTML. Ak treba, kliknite do poľa a Ctrl+C.');
+    }catch(e){ alert('Chyba pri kopírovaní pre Postcards: '+(e&&e.message?e.message:e)); }
+  }
+</script>
+
+
+<!-- ===== NÁVOD: AKO POSLAŤ Z OUTLOOKU (len editor) ===== -->
+<div class="send-overlay" id="sendModal">
+  <div class="send-box">
+    <button class="closebtn" onclick="closeSend()">✕ Zavrieť</button>
+    <h2>Ako poslať newsletter z Outlook Web</h2>
+    <p class="sd-sub">Outlook na webe neumožňuje vložiť HTML kód. Najspoľahlivejšie je poslať newsletter ako <b>obrázok vložený do tela e-mailu</b> – dizajn ostane úplne zachovaný.</p>
+
+    <h3>Odporúčaný postup (obrázok v tele e-mailu)</h3>
+    <ol>
+      <li>Hore kliknite na <b>„🖼 Stiahnuť ako obrázok (pre Outlook)“</b> – stiahne sa PNG s celým newsletterom aj s fotkami.</li>
+      <li>V Outlook Web napíšte nový e-mail a kurzor dajte do tela správy.</li>
+      <li>Zvoľte <b>Vložiť → Obrázky vložené do textu</b> (ikona obrázka) a vyberte stiahnutý PNG. <i>Alebo</i> obrázok jednoducho myšou pretiahnite do tela e-mailu.</li>
+      <li>Pod obrázok pridajte riadok s klikateľným odkazom na rezerváciu, napr.: <b>Rezervovať: damianjasna.sk/booking</b></li>
+    </ol>
+    <div class="tip">Prečo obrázok? Outlook Web rozbíja zložité e-mailové HTML (rozloženie, fonty, farby). Obrázok zobrazí newsletter u každého príjemcu rovnako. Nevýhoda: odkazy v obrázku nie sú klikateľné – preto pridajte odkaz textom pod obrázok.</div>
+
+    <h3>Alternatíva – kopírovať obrázok do schránky</h3>
+    <ol>
+      <li>Kliknite <b>„📋 Kopírovať obrázok“</b> hore.</li>
+      <li>V tele e-mailu v Outlooku stlačte <b>Ctrl + V</b>.</li>
+    </ol>
+
+    <h3>Doplnok „Insert HTML by Designmodo“ (Postcards)</h3>
+    <ol>
+      <li>Hore kliknite <b>„📋 Kopírovať pre Postcards“</b> – do schránky sa skopíruje celé HTML (logo prevedené zo SVG na PNG kvôli kompatibilite).</li>
+      <li>V Outlooku otvorte doplnok <b>Insert HTML by Designmodo</b>, kliknite <b>Paste HTML</b>, do poľa stlačte <b>Ctrl + V</b> a kliknite <b>Insert HTML</b>.</li>
+      <li>Ak doplnok aj tak hlási „Failed to insert“: je stavaný hlavne pre šablóny z Postcards a vlastné HTML niekedy odmietne. Vtedy použite <b>„🖼 Stiahnuť ako obrázok“</b> a obrázok vložte do tela e-mailu – Designmodo to sám odporúča ako najspoľahlivejšiu cestu.</li>
+    </ol>
+
+    <h3>Pre hromadné rozosielanie (kampaň)</h3>
+    <ol>
+      <li>Pri stovkách príjemcov použite nástroj na e-mailové kampane (Mailchimp, Ecomail, Brevo) alebo CRM hotela – tam funguje plné HTML.</li>
+      <li>Kliknite <b>„💾 Uložiť (.html)“</b> a súbor do nástroja nahrajte / importujte.</li>
+    </ol>
+  </div>
+</div>
+<script>
+  document.getElementById('sendModal').addEventListener('click', function(e){ if(e.target===this) closeSend(); });
+
+  /* ============ FORMÁTOVANIE TEXTU (plávajúci panel) ============ */
+  var rtbar = document.getElementById('rtbar');
+  var savedSel = null;
+  function showRtbar(){
+    var sel = window.getSelection();
+    if(!document.body.classList.contains('editing') || !sel.rangeCount || sel.isCollapsed){ rtbar.classList.remove('show'); return; }
+    var node = sel.anchorNode;
+    var el = node && (node.nodeType===1?node:node.parentElement);
+    if(!el || !el.closest('#newsletter') || !el.closest('[contenteditable="true"]')){ rtbar.classList.remove('show'); return; }
+    var r = sel.getRangeAt(0).getBoundingClientRect();
+    rtbar.classList.add('show');
+    var bw = rtbar.offsetWidth, bh = rtbar.offsetHeight;
+    var left = Math.max(8, Math.min(r.left + r.width/2 - bw/2, window.innerWidth - bw - 8));
+    var top = r.top - bh - 8; if(top < 8) top = r.bottom + 8;
+    rtbar.style.left = left + 'px'; rtbar.style.top = top + 'px';
+  }
+  document.addEventListener('mouseup', function(){ setTimeout(showRtbar, 10); });
+  document.addEventListener('keyup', function(e){ if(e.shiftKey||['ArrowLeft','ArrowRight','ArrowUp','ArrowDown'].indexOf(e.key)>=0) setTimeout(showRtbar,10); });
+  document.addEventListener('selectionchange', function(){ if(window.getSelection().isCollapsed) rtbar.classList.remove('show'); });
+
+  function fmt(e, cmd, val){
+    e.preventDefault(); // nech sa nestratí výber
+    try{ document.execCommand('styleWithCSS', false, true); }catch(_){}
+    if(cmd==='color'){ document.execCommand('foreColor', false, val); }
+    else if(cmd==='link'){
+      var url = prompt('Adresa odkazu (https://…):','https://');
+      if(url) document.execCommand('createLink', false, url);
+    }
+    else if(cmd==='unlink'){ document.execCommand('unlink', false, null); }
+    else if(cmd==='fontup' || cmd==='fontdown'){
+      // zmena veľkosti cez obalenie výberu do span s relatívnou veľkosťou
+      var sel=window.getSelection(); if(!sel.rangeCount) return;
+      var span=document.createElement('span');
+      span.style.fontSize = (cmd==='fontup'?'1.18em':'0.85em');
+      try{ span.appendChild(sel.getRangeAt(0).extractContents()); sel.getRangeAt(0).insertNode(span); }catch(_){}
+    }
+    else { document.execCommand(cmd, false, val||null); }
+    snapshot();
+    setTimeout(showRtbar, 10);
+  }
+
+  /* ============ BOČNÝ PANEL DIZAJN ============ */
+  function toggleDrawer(){ document.getElementById('drawer').classList.toggle('open'); }
+  function setVar(name, value){ document.documentElement.style.setProperty(name, value); snapshotDebounced(); }
+  function setFont(name, value){ document.documentElement.style.setProperty(name, value); snapshot(); }
+
+  // mapovanie logických sekcií na uzly, ktoré sa skryjú/zobrazia
+  function sectionNodes(key){
+    var nl=document.getElementById('newsletter'), out=[];
+    if(key==='infobar'){ out=[nl.querySelector('.infobar')]; }
+    else if(key==='heroimg'){ out=[nl.querySelector('.hero-img'), nl.querySelector('.hero-cap')]; }
+    else if(key==='badges'){ var b=nl.querySelector('.badges'); out=[b, b&&b.previousElementSibling]; }
+    else if(key==='strip'){ out=[nl.querySelector('.strip')]; }
+    else if(key==='cta'){ out=[nl.querySelector('.cta')]; }
+    else if(key==='footer'){ out=[nl.querySelector('.footer'), nl.querySelector('.footer-strip'), nl.querySelector('.legal')]; }
+    return out.filter(Boolean);
+  }
+  function toggleSection(row, key){
+    var sw=row.querySelector('.switch'), on=sw.classList.toggle('on');
+    sectionNodes(key).forEach(function(n){ n.classList.toggle('nl-hidden', !on); });
+    snapshot();
+  }
+
+  /* ============ SPRÁVA KARIET ============ */
+  function addCardControls(){
+    document.querySelectorAll('#newsletter .cards .card').forEach(function(card){
+      if(card.querySelector('.card-ctrls')) return;
+      var c=document.createElement('div');
+      c.className='card-ctrls';
+      c.contentEditable='false';
+      c.innerHTML='<button title="Posunúť vľavo" onclick="moveCard(this,-1)">←</button>'+
+                  '<button title="Posunúť vpravo" onclick="moveCard(this,1)">→</button>'+
+                  '<button title="Duplikovať" onclick="dupCard(this)">⧉</button>'+
+                  '<button title="Zmazať" onclick="delCard(this)">✕</button>';
+      card.appendChild(c);
+    });
+  }
+  function cardOf(btn){ return btn.closest('.card'); }
+  function dupCard(btn){
+    var card=cardOf(btn), clone=card.cloneNode(true);
+    var ctr=clone.querySelector('.card-ctrls'); if(ctr) ctr.remove();
+    card.after(clone);
+    clone.querySelectorAll('img.swappable').forEach(function(i){ i._bound=false; });
+    bindImages(); addCardControls();
+    clone.querySelectorAll('[contenteditable]').forEach(function(el){ el.setAttribute('contenteditable','true'); });
+    snapshot();
+  }
+  function delCard(btn){
+    if(document.querySelectorAll('#newsletter .cards .card').length<=1){ alert('Musí ostať aspoň jedna karta.'); return; }
+    cardOf(btn).remove(); snapshot();
+  }
+  function moveCard(btn, dir){
+    var card=cardOf(btn);
+    if(dir<0 && card.previousElementSibling) card.parentNode.insertBefore(card, card.previousElementSibling);
+    if(dir>0 && card.nextElementSibling) card.parentNode.insertBefore(card.nextElementSibling, card);
+    snapshot();
+  }
+  function addCard(){
+    var cards=document.querySelector('#newsletter .cards');
+    var card=document.createElement('div');
+    card.className='card';
+    card.innerHTML=
+      '<img class="swappable" src="https://www.ahstatic.com/photos/c2f3_ho_10_p_1024x768.jpg" alt="Nová akcia">'+
+      '<div class="cbody">'+
+        '<div class="ctag" contenteditable="true">Štítok · Kategória</div>'+
+        '<h3 contenteditable="true">Názov novej akcie</h3>'+
+        '<p contenteditable="true">Krátky popis novej akcie alebo balíčka. Kliknite a upravte text podľa potreby.</p>'+
+        '<a class="clink" href="https://www.damianjasna.sk/" contenteditable="true">Viac info →</a>'+
+      '</div>';
+    cards.appendChild(card);
+    card.querySelectorAll('img.swappable').forEach(function(i){ i._bound=false; });
+    bindImages(); addCardControls();
+    snapshot();
+  }
+  addCardControls();
+
+  // ovládače kariet nech nezasahujú do histórie ako text
+  document.getElementById('newsletter').addEventListener('mousedown', function(e){
+    if(e.target.closest('.card-ctrls')) e.stopPropagation();
+  });
+
+  /* ============ ŠTANDARDY ZNAČKY (Brand book) ============ */
+  // Opraví Swissotel→Swissôtel a Purovel→Pürovel vo viditeľnom texte (nie v odkazoch/e-mailoch/URL)
+  function fixBrandText(s){
+    return s
+      .replace(/SWISSOTEL/g,'SWISSÔTEL').replace(/Swissotel/g,'Swissôtel').replace(/swissotel/g,'swissôtel')
+      .replace(/PUROVEL/g,'PÜROVEL').replace(/Purovel/g,'Pürovel').replace(/purovel/g,'pürovel');
+  }
+  function scanBrand(report){
+    var nl=document.getElementById('newsletter');
+    var walker=document.createTreeWalker(nl, NodeFilter.SHOW_TEXT, null);
+    var fixes=0, node;
+    var nodes=[];
+    while((node=walker.nextNode())){ nodes.push(node); }
+    nodes.forEach(function(t){
+      if(t.parentElement && t.parentElement.closest('a')) return; // preskoč odkazy/e-maily/URL
+      if(t.parentElement && t.parentElement.closest('.card-ctrls,.toolbar,.drawer,.rtbar')) return;
+      var fixed=fixBrandText(t.nodeValue);
+      if(fixed!==t.nodeValue){ fixes += 1; t.nodeValue=fixed; }
+    });
+    if(fixes>0) snapshot();
+    if(report){
+      alert(fixes>0 ? ('Opravené: '+fixes+' výskyt(ov) na správny tvar Swissôtel / Pürovel.') : 'Všetko je v poriadku – žiadne chyby v písaní názvu značky.');
+    }
+    return fixes;
+  }
+  // Živá oprava: po opustení editovaného poľa
+  var brandGuard = true;
+  function toggleBrandGuard(row){ brandGuard = row.querySelector('.switch').classList.toggle('on'); }
+  document.getElementById('newsletter').addEventListener('focusout', function(e){
+    if(!brandGuard) return;
+    var el=e.target;
+    if(!el || el.getAttribute && el.getAttribute('contenteditable')!=='true') return;
+    if(el.closest && el.closest('a')) return;
+    var before=el.innerHTML;
+    // oprav len textové uzly vo vnútri, nie v odkazoch
+    el.childNodes.forEach && Array.prototype.forEach.call(el.childNodes, function(n){
+      if(n.nodeType===3) n.nodeValue=fixBrandText(n.nodeValue);
+    });
+    if(el.innerHTML!==before) snapshot();
+  });
+
+  // Brandové farebné palety podľa estetiky brand booku
+  var PRESETS = {
+    gold: {'--gold':'#b8a06a','--gold-light':'#e8dfc8','--sand':'#f8f6f2','--black':'#0e0e0e','--ink':'#1a1a1a','--mid':'#4a4a4a'},
+    clay: {'--gold':'#b08968','--gold-light':'#e6d8c8','--sand':'#efe7dd','--black':'#3a3027','--ink':'#2e261f','--mid':'#5c5043'},
+    spa:  {'--gold':'#8c9a7b','--gold-light':'#dfe4d6','--sand':'#f1f0ea','--black':'#2f3a33','--ink':'#283129','--mid':'#4e574a'},
+    noir: {'--gold':'#c8a96a','--gold-light':'#e7dcc2','--sand':'#f4f1ea','--black':'#111111','--ink':'#171717','--mid':'#444444'}
+  };
+  function applyPreset(name){
+    var p=PRESETS[name]; if(!p) return;
+    Object.keys(p).forEach(function(k){ document.documentElement.style.setProperty(k, p[k]); });
+    // synchronizuj farebné inputy v paneli
+    var map={'--gold':0,'--gold-light':1,'--sand':2,'--black':3,'--ink':4};
+    var inputs=document.querySelectorAll('.drawer section:first-of-type input[type=color]');
+    if(inputs[0]) inputs[0].value=p['--gold'];
+    if(inputs[1]) inputs[1].value=p['--gold-light'];
+    if(inputs[2]) inputs[2].value=p['--sand'];
+    if(inputs[3]) inputs[3].value=p['--black'];
+    if(inputs[4]) inputs[4].value=p['--ink'];
+    snapshot();
+  }
+
+  // Vloženie brandového textu na pozíciu kurzora (alebo do schránky výberu)
+  var lastEditable=null;
+  document.getElementById('newsletter').addEventListener('focusin', function(e){
+    if(e.target.getAttribute && e.target.getAttribute('contenteditable')==='true') lastEditable=e.target;
+  });
+  function insertBrand(text){
+    var sel=window.getSelection();
+    var t=document.createElement('span'); t.innerHTML=text; var plain=t.textContent;
+    if(sel && sel.rangeCount && sel.anchorNode && sel.anchorNode.parentElement && sel.anchorNode.parentElement.closest('#newsletter [contenteditable="true"]')){
+      document.execCommand('insertText', false, plain);
+    } else if(lastEditable){
+      lastEditable.focus();
+      document.execCommand('insertText', false, plain);
+    } else {
+      navigator.clipboard && navigator.clipboard.writeText(plain);
+      alert('Text „'+plain+'“ skopírovaný do schránky – vložte ho kliknutím do textu a Ctrl+V.');
+      return;
+    }
+    snapshot();
+  }
+</script>
+
+
+<script>
+/* ============================================================
+   SWISSÔTEL NEWSLETTER STUDIO — segmentové verzie + jazyky
+   ============================================================ */
+var IMG = {
+  general: { hero:"https://www.ahstatic.com/photos/c2f3_ho_02_p_1024x768.jpg",
+             feat:"https://www.ahstatic.com/photos/c2f3_ho_04_p_1024x768.jpg",
+             cards:["https://www.damianjasna.sk/upload/images/Yoga%20grafika%20%281%29.png",
+                    "https://www.damianjasna.sk/img/rs/90.png",
+                    "https://www.damianjasna.sk/upload/images/bal%C3%B3n%20-%20hotel%20%281%29.png",
+                    "https://www.damianjasna.sk/img/voucher/3000003.jpg"],
+             strip:"https://www.damianjasna.sk/img/gallery/14-340.jpg" },
+  leisure: { hero:"https://www.ahstatic.com/photos/c2f3_ho_00_p_1024x768.jpg",
+             feat:"https://www.ahstatic.com/photos/c2f3_ho_04_p_1024x768.jpg",
+             cards:["https://www.ahstatic.com/photos/c2f3_ho_02_p_1024x768.jpg",
+                    "https://www.damianjasna.sk/img/gallery/13-498.webp",
+                    "https://www.damianjasna.sk/img/gallery/16-511.webp",
+                    "https://www.damianjasna.sk/img/gallery/14-340.jpg"],
+             strip:"https://www.damianjasna.sk/img/gallery/14-340.jpg" },
+  mice:    { hero:"https://www.ahstatic.com/photos/c2f3_ho_00_p_1024x768.jpg",
+             feat:"https://www.damianjasna.sk/img/gallery/4-32.webp",
+             cards:["https://www.damianjasna.sk/img/gallery/5-37.webp",
+                    "https://www.damianjasna.sk/img/gallery/4-32.webp",
+                    "https://www.damianjasna.sk/img/gallery/6-39.jpg",
+                    "https://www.ahstatic.com/photos/c2f3_ho_04_p_1024x768.jpg"],
+             strip:"https://www.damianjasna.sk/img/gallery/14-340.jpg" }
+};
+
+// Množina všetkých preset (default) obrázkov – aby sme vedeli, či používateľ obrázok vymenil.
+var _PRESET_IMGS=(function(){ var s={}; for(var k in IMG){ var g=IMG[k]; s[g.hero]=1; s[g.feat]=1; s[g.strip]=1; (g.cards||[]).forEach(function(u){ s[u]=1; }); } return s; })();
+function _isPresetImg(src){ if(!src) return true; src=String(src); if(_PRESET_IMGS[src]) return true; for(var u in _PRESET_IMGS){ if(src.indexOf(u)>=0) return true; } return false; }
+
+var C = {
+ general: {
+  sk:{ infobar:"UPOZORNENIE · 14. 6. od 12:00 do 16. 6. do 12:00 budú všetky hotelové prevádzky uzavreté",
+    ey:["Newsletter · Leto 2026","Akcia mesiaca","Aktuálne pobytové balíčky","Prečo Swissôtel Damian Jasna","Pürovel Spa &amp; Sport","Rezervácia"],
+    h1:"Leto v srdci hôr, <em>na úrovni Swissôtel.</em>",
+    lead:"Vitajte v unikátnom horskom rezorte v srdci Nízkych Tatier, kde sa wellness, gurmánske zážitky a zábava spájajú pod jednou strechou. Letný program je už v ponuke a deti do 12 rokov majú ubytovanie zadarmo.",
+    heroCap:"Demänovská Dolina · Jasná · Nízke Tatry",
+    ftag:"3 + 1 noc zadarmo", fH2:"Letná ponuka: 3+1 noc zadarmo",
+    fP:"Predĺžte si letný oddych pod Chopkom – pri pobyte na tri noci vám štvrtú noc darujeme. Viac času na Pürovel Spa &amp; Sport, turistiku aj gastronómiu.",
+    fList:["4. noc pobytu úplne zadarmo","Raňajky formou bohatého bufetu v cene","Neobmedzený vstup do Pürovel Spa &amp; Sport","Deti do 12 rokov ubytovanie zadarmo","Počet izieb v akcii je limitovaný"],
+    fBtn:"Zobraziť ponuku",
+    secTitle:"Vyberte si svoj zážitok", secSub:"Tri ďalšie akcie z našej aktuálnej ponuky – od jogy s výhľadom na hrebene až po romantiku nad Liptovom.",
+    cards:[["Vitality · Pohyb","Joga na horách","Lekcie jogy v inšpiratívnom prostredí Jasnej, čerstvý horský vzduch a regenerácia v Pürovel Spa."],
+           ["Wellness · Pre dvoch","Wellness balíček pre dvoch","Oddych vo dvojici – elegantná izba s výhľadom a neobmedzený vstup do panoramatického spa."],
+           ["Zážitok · Víkend","Pobyt s preletom v balóne","Nezabudnuteľný víkend zavŕšený letom balónom nad Liptovom z vtáčej perspektívy."],
+           ["Darček · Poukazy","Darčekové poukazy","Darujte zážitok – pobyt, wellness alebo gastronómiu v Swissôtel Damian Jasna."]],
+    badges:["Crafting Pure Living","Priame napojenie na svahy Jasnej","Panoramatický Pürovel Spa &amp; Sport","164 izieb, štúdií a apartmánov","Certifikát A0+ · ESG","Deti do 12 rokov zadarmo"],
+    stripH3:"Wellness s výhľadom na Chopok",
+    stripP:"Dvojpodlažné panoramatické wellness s bazénmi, saunovým svetom a fitness. K tomu fine dining a 24/7 ponuka.",
+    stripBtn:"Objaviť viac",
+    ctaH2:"Rezervujte si leto <em>ešte dnes.</em>",
+    ctaP:"Najnižšiu cenu garantujeme pri rezervácii online priamo u nás. Členovia Accor ALL získavajú dodatočné výhody.",
+    ctaBtn1:"Rezervovať pobyt", ctaBtn2:"Nezáväzný dopyt",
+    fstrip:["Swissôtel – Live it well","Crafting Pure Living in Jasná"] },
+  en:{ infobar:"NOTICE · From 14 June 12:00 to 16 June 12:00 all hotel facilities will be closed",
+    ey:["Newsletter · Summer 2026","Offer of the month","Current stay packages","Why Swissôtel Damian Jasna","Pürovel Spa &amp; Sport","Reservations"],
+    h1:"Summer in the mountains, <em>the Swissôtel way.</em>",
+    lead:"Welcome to a unique mountain resort in the heart of the Low Tatras, where wellness, fine dining and leisure meet under one roof. The summer programme is live and children under 12 stay free.",
+    heroCap:"Demänovská Valley · Jasná · Low Tatras",
+    ftag:"3 + 1 night free", fH2:"Summer offer: 3+1 night free",
+    fP:"Extend your summer escape below Chopok – book three nights and the fourth is on us. More time for Pürovel Spa &amp; Sport, hiking and dining.",
+    fList:["The 4th night completely free","Rich buffet breakfast included","Unlimited access to Pürovel Spa &amp; Sport","Children under 12 stay free","Limited number of rooms"],
+    fBtn:"View the offer",
+    secTitle:"Choose your experience", secSub:"Three more packages from our current selection – from mountain yoga to romance high above Liptov.",
+    cards:[["Vitality · Movement","Mountain Yoga","Yoga sessions in the inspiring setting of Jasná, fresh mountain air and recovery at Pürovel Spa."],
+           ["Wellness · For two","Wellness package for two","A retreat for two – an elegant room with a view and unlimited access to the panoramic spa."],
+           ["Experience · Weekend","Stay with a balloon flight","An unforgettable weekend crowned by a balloon flight over Liptov from a birds-eye view."],
+           ["Gift · Vouchers","Gift vouchers","Give an experience – a stay, wellness or dining at Swissôtel Damian Jasna."]],
+    badges:["Crafting Pure Living","Direct access to the Jasná slopes","Panoramic Pürovel Spa &amp; Sport","164 rooms, studios and apartments","Certificate A0+ · ESG","Children under 12 stay free"],
+    stripH3:"Wellness with a view of Chopok",
+    stripP:"A two-floor panoramic wellness with pools, a sauna world and fitness. Plus fine dining and a 24/7 offer.",
+    stripBtn:"Discover more",
+    ctaH2:"Book your summer <em>today.</em>",
+    ctaP:"We guarantee the lowest price when you book online directly with us. Accor ALL members enjoy additional benefits.",
+    ctaBtn1:"Book your stay", ctaBtn2:"Request a quote",
+    fstrip:["Swissôtel – Live it well","Crafting Pure Living in Jasná"] }
+ },
+ leisure: {
+  sk:{ infobar:"PRE CESTOVNÉ KANCELÁRIE A SKUPINY · Garantované alotmenty · Atraktívne provízie · Potvrdenie do 24 hodín",
+    ey:["Newsletter · Agentúry &amp; skupiny","Prečo nás predávať","Výhody pre vašich klientov","Prečo spolupracovať s nami","Pürovel Spa &amp; Sport","Kontakt pre agentúry"],
+    h1:"Skupiny, ktoré sa <em>radi vracajú.</em>",
+    lead:"Ponúknite klientom horský rezort, ktorý predáva sám seba – a vy na ňom zarobíte. Swissôtel Damian Jasna dáva cestovným kanceláriám a tour operátorom garantované alotmenty, atraktívne provízie a jeden kontakt pre bezstarostnú spoluprácu po celý rok.",
+    heroCap:"Cestovné kancelárie · Tour operátori · Skupiny · FIT",
+    ftag:"Pre partnerov", fH2:"Prečo predávať Swissôtel Damian Jasna",
+    fP:"Postaráme sa o vašich klientov tak, aby sa vracali k vám. Vy získate vyššiu maržu, istotu miest a minimum administratívy.",
+    fList:["Vyššia marža vďaka atraktívnym províziám","Garantované alotmenty – izby isté aj v špičke","Jeden kontakt a potvrdenie do 24 hodín","All-in balíky bez skrytých nákladov pre klienta","Spokojní klienti, ktorí sa vracajú a odporúčajú"],
+    fBtn:"Vyžiadať partnerské podmienky",
+    secTitle:"Čo z toho má váš klient – aj vy", secSub:"Predávate zážitok, ktorý drží slovo: hory, wellness a servis Swissôtel. My zariadime zvyšok.",
+    cards:[["Vyššia marža","Atraktívne provízie","Zarobte viac na každej rezervácii – jasné provízie pre cestovné kancelárie a transparentné podmienky."],
+           ["Istota miest","Garantované alotmenty","Majte izby isté aj počas sezóny. Sezónne alotmenty pre série a opakované zájazdy."],
+           ["Bez starostí","Programy na kľúč","Ubytovanie, gastronómia, wellness a aktivity v jednom balíku – vy predávate, my zariadime zvyšok."],
+           ["WOW pre klienta","Zážitok, čo predáva sám","164 izieb, Pürovel Spa a hory priamo za dverami. Klienti, ktorí sa vracajú a odporúčajú ďalej."]],
+    badges:["Provízie pre agentúry","Garantované alotmenty","Potvrdenie do 24 hodín","164 izieb + parkovanie pre busy","Priame napojenie na Jasnú","Jeden dedikovaný kontakt"],
+    stripH3:"O vašich klientov sa postaráme",
+    stripP:"Bufetové aj servírované menu pre skupiny, polpenzia či plná penzia a panoramatické Pürovel Spa &amp; Sport pre dokonalý relax po horách.",
+    stripBtn:"Možnosti pre skupiny",
+    ctaH2:"Začnime <em>spolupracovať.</em>",
+    ctaP:"Pošlite nám dopyt a do 24 hodín pripravíme partnerské podmienky, alotment a provízie na mieru. Tešíme sa na dlhodobú spoluprácu.",
+    ctaBtn1:"Vyžiadať ponuku", ctaBtn2:"Kontaktovať group sales",
+    fstrip:["Swissôtel – Live it well","Partner pre leisure skupiny"] },
+  en:{ infobar:"FOR TRAVEL AGENCIES AND GROUPS · Guaranteed allotments · Attractive commission · Confirmation within 24 hours",
+    ey:["Newsletter · Agencies &amp; groups","Why sell us","Benefits for your clients","Why partner with us","Pürovel Spa &amp; Sport","Agency contact"],
+    h1:"Groups that <em>love to return.</em>",
+    lead:"Offer your clients a mountain resort that sells itself – and earn on it. Swissôtel Damian Jasna gives travel agencies and tour operators guaranteed allotments, attractive commission and a single contact for hassle-free cooperation all year round.",
+    heroCap:"Travel agencies · Tour operators · Groups · FIT",
+    ftag:"For partners", fH2:"Why sell Swissôtel Damian Jasna",
+    fP:"We take care of your clients so they come back to you. You get a higher margin, guaranteed availability and minimal admin.",
+    fList:["Higher margin thanks to attractive commission","Guaranteed allotments – rooms secured even in peak","One contact and confirmation within 24 hours","All-in packages with no hidden costs for the client","Happy clients who return and recommend"],
+    fBtn:"Request partner terms",
+    secTitle:"What your client gains – and you too", secSub:"You sell an experience that delivers: mountains, wellness and Swissôtel service. We handle the rest.",
+    cards:[["Higher margin","Attractive commission","Earn more on every booking – clear commission for travel agencies and transparent terms."],
+           ["Secured space","Guaranteed allotments","Keep rooms secured even in season. Seasonal allotments for series and repeat tours."],
+           ["Hassle-free","Turnkey programmes","Accommodation, dining, wellness and activities in one package – you sell, we arrange the rest."],
+           ["WOW for clients","An experience that sells itself","164 rooms, Pürovel Spa and mountains at the doorstep. Clients who return and recommend."]],
+    badges:["Commission for agencies","Guaranteed allotments","Confirmation within 24 hours","164 rooms + coach parking","Direct access to Jasná","One dedicated contact"],
+    stripH3:"We take care of your clients",
+    stripP:"Buffet or plated menus for groups, half or full board and the panoramic Pürovel Spa &amp; Sport for the perfect relax after the mountains.",
+    stripBtn:"Options for groups",
+    ctaH2:"Let us <em>work together.</em>",
+    ctaP:"Send us an enquiry and within 24 hours we will prepare partner terms, an allotment and tailored commission. We look forward to a long-term cooperation.",
+    ctaBtn1:"Request a proposal", ctaBtn2:"Contact group sales",
+    fstrip:["Swissôtel – Live it well","Partner for leisure groups"] }
+ },
+ mice: {
+  sk:{ infobar:"MEETINGY, KONFERENCIE A FIREMNÉ EVENTY · Na kľúč a na jednom mieste · Ponuka na mieru do 24 hodín",
+    ey:["Newsletter · Corporate &amp; MICE","Prečo k nám na event","Výhody pre vaše podujatie","Prečo k nám na event","Pürovel Spa &amp; Sport","Dopyt"],
+    h1:"Eventy, na ktoré sa <em>nezabúda.</em>",
+    lead:"Spojte produktivitu s prostredím, ktoré inšpiruje. Moderné sály, špičková gastronómia a jeden tím, ktorý vyrieši celý váš event – od porady cez konferenciu až po galavečer. Bez starostí, s prémiovým servisom Swissôtel.",
+    heroCap:"Konferencie · Eventy · Teambuilding · Bleisure",
+    ftag:"Na kľúč", fH2:"Meeting balíček bez starostí",
+    fP:"Jedna cena, jeden kontakt a nula starostí. Vy sa sústredíte na obsah, my sa postaráme o priestor, techniku, catering aj ubytovanie.",
+    fList:["Jedna cena, jeden kontakt – nula starostí","Produktívne porady: denné svetlo, rýchle Wi-Fi, moderná technika","Inšpiratívne prostredie hôr namiesto sterilnej zasadačky","Bleisure: predĺžte event o wellness a relax","Flexibilné storno a ponuka na mieru do 24 hodín"],
+    fBtn:"Vyžiadať ponuku",
+    secTitle:"Čo z toho má vaše podujatie", secSub:"Od produktívnej porady po reprezentatívny galavečer – priestory a servis pre každý formát, ktoré spravia dojem.",
+    cards:[["Na kľúč","Meeting balíček bez starostí","Sála, technika, prestávky aj ubytovanie v jednej cene. Vy riešite obsah, my zvyšok."],
+           ["Reprezentatívne","Gala večere a bankety","Priestory a fine dining, ktoré spravia dojem – oceňovania, večere a galá až do 300 hostí."],
+           ["Tím bližšie","Teambuilding v horách","Lyžovačka, turistika, bowling či kino – aktivity, ktoré naozaj stmelia tím."],
+           ["Viac z cesty","Bleisure &amp; wellness","Predĺžte pracovný pobyt o Pürovel Spa a hory. Oddýchnutí a spokojnejší kolegovia."]],
+    badges:["Sály pre 10 – 300 hostí","Ponuka na mieru do 24 h","Jeden dedikovaný event manažér","Zvýhodnené firemné sadzby","Parkovanie a ľahká dostupnosť","Bleisure: spa po práci"],
+    stripH3:"Bleisure: oddych po výkone",
+    stripP:"Po konferencii čaká kolegov panoramatické Pürovel Spa &amp; Sport, fine dining a hory. Spojte výkon s regeneráciou – a event, na ktorý budú spomínať.",
+    stripBtn:"Pürovel pre firmy",
+    ctaH2:"Naplánujme váš event <em>spoločne.</em>",
+    ctaP:"Pošlite nám dopyt a do 24 hodín pripravíme ponuku na mieru. Firemné sadzby aj flexibilné storno podmienky.",
+    ctaBtn1:"Vyžiadať ponuku", ctaBtn2:"Kontaktovať MICE tím",
+    fstrip:["Swissôtel – Live it well","Meetings with mountain altitude"] },
+  en:{ infobar:"MEETINGS, CONFERENCES AND CORPORATE EVENTS · Turnkey, in one place · Tailored proposal within 24 hours",
+    ey:["Newsletter · Corporate &amp; MICE","Why host with us","Benefits for your event","Why host with us","Pürovel Spa &amp; Sport","Enquiry"],
+    h1:"Events to <em>remember.</em>",
+    lead:"Combine productivity with surroundings that inspire. Modern rooms, top-tier dining and one team that handles your whole event – from a board meeting to a conference to a gala. Stress-free, with premium Swissôtel service.",
+    heroCap:"Conferences · Events · Team-building · Bleisure",
+    ftag:"Turnkey", fH2:"A stress-free meeting package",
+    fP:"One price, one contact and zero hassle. You focus on the content, we handle the space, AV, catering and accommodation.",
+    fList:["One price, one contact – zero hassle","Productive meetings: daylight, fast Wi-Fi, modern AV","Inspiring mountain setting instead of a sterile boardroom","Bleisure: extend the event with wellness and downtime","Flexible cancellation and a tailored proposal within 24 hours"],
+    fBtn:"Request a proposal",
+    secTitle:"What your event gains", secSub:"From a productive meeting to a representative gala – spaces and service for every format that make an impression.",
+    cards:[["Turnkey","A stress-free meeting package","Room, AV, breaks and accommodation in one price. You handle the content, we handle the rest."],
+           ["Representative","Gala dinners and banquets","Spaces and fine dining that impress – awards, dinners and galas up to 300 guests."],
+           ["Team closer","Team-building in the mountains","Skiing, hiking, bowling or cinema – activities that truly bond the team."],
+           ["More from the trip","Bleisure &amp; wellness","Extend the business trip with Pürovel Spa and the mountains. Rested, happier colleagues."]],
+    badges:["Rooms for 10 – 300 guests","Tailored proposal within 24 h","One dedicated event manager","Preferential corporate rates","Parking and easy access","Bleisure: spa after work"],
+    stripH3:"Bleisure: unwind after the work",
+    stripP:"After the conference, the panoramic Pürovel Spa &amp; Sport, fine dining and mountains await. Pair performance with recovery – and an event to remember.",
+    stripBtn:"Pürovel for business",
+    ctaH2:"Let us plan your event <em>together.</em>",
+    ctaP:"Send us an enquiry and within 24 hours we will prepare a tailored proposal. Corporate rates and flexible cancellation.",
+    ctaBtn1:"Request a proposal", ctaBtn2:"Contact the MICE team",
+    fstrip:["Swissôtel – Live it well","Meetings with mountain altitude"] }
+ }
+};
+
+var curSeg="general", curLang="sk";
+
+function _set(el, sk, en, inline){
+  if(!el) return;
+  if(el.getAttribute && el.getAttribute('data-edited')) return; // používateľom upravený text nechaj tak
+  if(curLang==="sk") el.innerHTML = sk;
+  else if(curLang==="en") el.innerHTML = en;
+  else el.innerHTML = inline ? (sk + ' · ' + en) : (sk + '<br><span class="en">' + en + '</span>');
+}
+function setSeg(s){ curSeg=s; markBar(); applyVersion(); }
+function setLang(l){ curLang=l; markBar(); applyVersion(); }
+function markBar(){
+  document.querySelectorAll('#segSeg button').forEach(function(b){ b.classList.toggle('on', b.getAttribute('data-seg')===curSeg); });
+  document.querySelectorAll('#segLang button').forEach(function(b){ b.classList.toggle('on', b.getAttribute('data-lang')===curLang); });
+}
+function applyVersion(){
+  var nl=document.getElementById('newsletter');
+  var sk=C[curSeg].sk, en=C[curSeg].en;
+  _set(nl.querySelector('.infobar'), sk.infobar, en.infobar, true);
+  var eys=nl.querySelectorAll('.eyebrow span[contenteditable]');
+  for(var i=0;i<eys.length && i<6;i++) _set(eys[i], sk.ey[i], en.ey[i], true);
+  _set(nl.querySelector('.hero h1'), sk.h1, en.h1, false);
+  _set(nl.querySelector('.hero .lead'), sk.lead, en.lead, false);
+  _set(nl.querySelector('.hero-cap'), sk.heroCap, en.heroCap, true);
+  _set(nl.querySelector('.feature .ftag'), sk.ftag, en.ftag, true);
+  _set(nl.querySelector('.feature h2'), sk.fH2, en.fH2, false);
+  _set(nl.querySelector('.feature p'), sk.fP, en.fP, false);
+  var lis=nl.querySelectorAll('.feature .flist li');
+  for(var i=0;i<lis.length && i<sk.fList.length;i++) _set(lis[i], sk.fList[i], en.fList[i], true);
+  _set(nl.querySelector('.feature .btn'), sk.fBtn, en.fBtn, true);
+  _set(nl.querySelector('.section-title'), sk.secTitle, en.secTitle, false);
+  _set(nl.querySelector('.section-sub'), sk.secSub, en.secSub, false);
+  var cards=nl.querySelectorAll('.cards .card');
+  for(var i=0;i<cards.length && i<sk.cards.length;i++){
+    _set(cards[i].querySelector('.ctag'), sk.cards[i][0], en.cards[i][0], true);
+    _set(cards[i].querySelector('h3'), sk.cards[i][1], en.cards[i][1], false);
+    _set(cards[i].querySelector('p'), sk.cards[i][2], en.cards[i][2], false);
+    var cl=cards[i].querySelector('.clink'); if(cl) cl.innerHTML = (curLang==="en"?"Learn more →":(curLang==="bi"?"Viac · More →":"Viac info →"));
+  }
+  var badges=nl.querySelectorAll('.badges .badge');
+  for(var i=0;i<badges.length && i<sk.badges.length;i++) _set(badges[i], sk.badges[i], en.badges[i], true);
+  _set(nl.querySelector('.strip h3'), sk.stripH3, en.stripH3, false);
+  _set(nl.querySelector('.strip p'), sk.stripP, en.stripP, false);
+  _set(nl.querySelector('.strip .btn'), sk.stripBtn, en.stripBtn, true);
+  _set(nl.querySelector('.cta h2'), sk.ctaH2, en.ctaH2, false);
+  _set(nl.querySelector('.cta p'), sk.ctaP, en.ctaP, false);
+  var cb=nl.querySelectorAll('.cta .btn');
+  if(cb[0]) _set(cb[0], sk.ctaBtn1, en.ctaBtn1, true);
+  if(cb[1]) _set(cb[1], sk.ctaBtn2, en.ctaBtn2, true);
+  var fs=nl.querySelectorAll('.footer-strip span');
+  if(fs[0]) _set(fs[0], sk.fstrip[0], en.fstrip[0], true);
+  if(fs[1]) _set(fs[1], sk.fstrip[1], en.fstrip[1], true);
+  // obrázky podľa segmentu – ale NIKDY neprepisuj obrázok, ktorý si používateľ vymenil
+  var im=IMG[curSeg];
+  function _setImg(el, url){ if(el && !(el.getAttribute && el.getAttribute('data-edited')) && _isPresetImg(el.getAttribute('src')||'')) el.src=url; }
+  _setImg(nl.querySelector('.hero-img'), im.hero);
+  _setImg(nl.querySelector('.feature img'), im.feat);
+  for(var i=0;i<cards.length && i<im.cards.length;i++){ _setImg(cards[i].querySelector('img'), im.cards[i]); }
+  _setImg(nl.querySelector('.strip img'), im.strip);
+  if(window.bindImages) bindImages();
+  if(window.scanBrand) scanBrand(false);
+  if(window.snapshot) snapshot();
+}
+</script>
+
+
+<!-- ===== Studio modály ===== -->
+<div class="blkmenu" id="blkMenu">
+  <button onclick="addBlock('heading')">🅷 Nadpis</button>
+  <button onclick="addBlock('text')">¶ Textový odsek</button>
+  <button onclick="addBlock('image')">🖼 Obrázok</button>
+  <button onclick="addBlock('button')">🔘 Tlačidlo</button>
+  <button onclick="addBlock('divider')">— Oddeľovač</button>
+  <button onclick="addBlock('spacer')">␣ Medzera</button>
+  <button onclick="addBlock('twocol')">▥ Dva stĺpce</button>
+  <button onclick="addBlock('list')">☰ Zoznam</button>
+  <button onclick="addBlock('quote')">❝ Citát</button>
+  <button onclick="addBlock('offer')">🏷 Ponuka (karta)</button>
+  <button onclick="addBlock('social')">♺ Sociálne siete</button>
+  <button onclick="addBlock('video')">▶ Video (odkaz)</button>
+</div>
+
+<div class="umodal" id="preModal"><div class="ubox">
+  <h2>Kontrola pred odoslaním <span class="x" onclick="closeU('preModal')">✕ Zavrieť</span></h2>
+  <div id="preList"></div>
+</div></div>
+
+<div class="umodal" id="findModal"><div class="ubox">
+  <h2>Nájsť a nahradiť <span class="x" onclick="closeU('findModal')">✕ Zavrieť</span></h2>
+  <div class="row"><span style="flex:0 0 70px;">Nájsť</span><input type="text" id="findTxt"></div>
+  <div class="row"><span style="flex:0 0 70px;">Nahradiť</span><input type="text" id="replTxt"></div>
+  <div class="row"><button class="act" onclick="doReplace(false)">Nahradiť prvé</button><button class="act" onclick="doReplace(true)">Nahradiť všetko</button><span id="findInfo" style="color:var(--muted);"></span></div>
+</div></div>
+
+<div class="umodal" id="outModal"><div class="ubox" style="max-width:760px;">
+  <h2 id="outTitle">Výstup <span class="x" onclick="closeU('outModal')">✕ Zavrieť</span></h2>
+  <div style="background:var(--sand);border:1px solid var(--gold);border-radius:8px;padding:10px 14px;margin:6px 0 10px;font-family:var(--sans);font-size:13px;color:var(--ink);">
+    👉 <b>Skopírovanie:</b> kliknite do poľa a stlačte <b>Ctrl+C</b> (Mac: <b>⌘+C</b>). Text je už označený. Tlačidlo „Skopírovať" funguje len ak to prehliadač povolí (v náhľade v chate býva schránka blokovaná — vtedy použite Ctrl+C alebo otvorte stiahnutý súbor lokálne).
+  </div>
+  <p id="outNote" style="font-family:var(--sans);font-size:12.5px;color:var(--mid);line-height:1.6;margin:6px 0 12px;"></p>
+  <textarea id="outArea" spellcheck="false" onclick="this.focus();this.select();" onfocus="this.select();" style="width:100%;height:300px;border:1px solid var(--border);border-radius:8px;padding:12px;font-family:monospace;font-size:11px;line-height:1.5;resize:vertical;"></textarea>
+  <div class="row" style="justify-content:flex-end;margin-top:12px;">
+    <button class="act" onclick="outSelectAll()" style="background:var(--gold);">✦ Označiť text (potom Ctrl+C)</button>
+    <button class="act" onclick="outCopy()">📋 Skopírovať všetko</button>
+    <button class="act" onclick="outDownload()">⬇ Stiahnuť súbor</button>
+  </div>
+  <p id="outDone" style="font-family:var(--sans);font-size:12px;color:#3a7d44;margin-top:8px;display:none;">✅ Skopírované do schránky.</p>
+</div></div>
+
+<div class="umodal" id="draftsModal"><div class="ubox">
+  <h2>Koncepty <span class="x" onclick="closeU('draftsModal')">✕ Zavrieť</span></h2>
+  <div class="row"><input type="text" id="draftName" placeholder="Názov konceptu…"><button class="act" onclick="saveDraft()">💾 Uložiť koncept</button></div>
+  <div id="draftList"></div>
+</div></div>
+
+<div class="umodal" id="linksModal"><div class="ubox">
+  <h2>Odkazy <span class="x" onclick="closeU('linksModal')">✕ Zavrieť</span></h2>
+  <div id="linkList"></div>
+</div></div>
+
+<div class="umodal" id="helpModal"><div class="ubox">
+  <h2>Klávesové skratky <span class="x" onclick="closeU('helpModal')">✕ Zavrieť</span></h2>
+  <table>
+    <tr><td><kbd>Ctrl/⌘ + Z</kbd></td><td>Späť</td></tr>
+    <tr><td><kbd>Ctrl/⌘ + Y</kbd> / <kbd>Ctrl+Shift+Z</kbd></td><td>Dopredu</td></tr>
+    <tr><td><kbd>Ctrl/⌘ + B / I / U</kbd></td><td>Tučné / Kurzíva / Podčiarknuté (po označení)</td></tr>
+    <tr><td><kbd>Ctrl/⌘ + S</kbd></td><td>Uložiť koncept</td></tr>
+  </table>
+  <p style="font-family:var(--sans);font-size:12px;color:var(--muted);line-height:1.6;margin-top:14px;">
+    Tip: označ text pre formátovací panel, klikni na fotku pre galériu a napasovanie,
+    🎨 Dizajn mení farby/fonty/sekcie, ➕ Blok pridáva vlastné prvky a 📨 .eml stiahne správu otvoriteľnú v Outlooku.</p>
+</div></div>
+
+<script>
+/* ===================== STUDIO MODULE ===================== */
+function openU(id){document.getElementById(id).classList.add('open');}
+function closeU(id){document.getElementById(id).classList.remove('open');}
+['draftsModal','linksModal','helpModal','preModal','findModal','outModal'].forEach(function(id){
+  var m=document.getElementById(id); if(m) m.addEventListener('click',function(e){if(e.target===this)closeU(id);});
+});
+function openHelp(){openU('helpModal');}
+
+/* --- Preheader getter (used by email generator) --- */
+function getPreheader(){
+  var p=document.getElementById('emailPreheader'); var v=p?p.value.trim():'';
+  if(v) return v;
+  var lead=document.querySelector('#newsletter .lead'); return lead?lead.textContent.trim().slice(0,140):'';
+}
+
+/* --- Upload image from computer --- */
+function uploadImg(input){
+  var f=input.files&&input.files[0]; if(!f) return;
+  var r=new FileReader();
+  r.onload=function(){ if(window.applyPhoto) applyPhoto(r.result); };
+  r.readAsDataURL(f); input.value='';
+}
+
+/* --- Word count / reading time --- */
+function updateStats(){
+  var t=document.getElementById('newsletter'); if(!t) return;
+  var words=(t.innerText.trim().match(/\S+/g)||[]).length;
+  var mins=Math.max(1,Math.round(words/200));
+  var s=document.getElementById('statline');
+  if(s) s.textContent=words+' slov · ~'+mins+' min čítania';
+}
+
+/* --- Preview desktop / mobile --- */
+var prevMobile=false;
+function togglePreview(){
+  prevMobile=!prevMobile;
+  document.body.classList.toggle('preview-mobile',prevMobile);
+  document.getElementById('prevBtn').textContent = prevMobile?'🖥 Náhľad':'📱 Náhľad';
+}
+
+/* --- Layout / button styles --- */
+function setWidth(v){ document.querySelectorAll('#newsletter,.mail').forEach(function(){}); document.getElementById('newsletter').style.maxWidth=v+'px'; snapshot&&snapshot(); }
+function setScale(v){ document.getElementById('newsletter').style.fontSize=(v*100)+'%'; snapshot&&snapshot(); }
+function setBtnStyle(v){ document.body.classList.remove('btn-round','btn-pill'); if(v==='round')document.body.classList.add('btn-round'); if(v==='pill')document.body.classList.add('btn-pill'); snapshot&&snapshot(); }
+function toggleParagraphBg(row){ var on=row.querySelector('.switch').classList.toggle('on'); document.body.classList.toggle('paragraph-bg',on); snapshot&&snapshot(); }
+
+/* --- Block menu + add custom blocks --- */
+function toggleBlockMenu(e){
+  e.stopPropagation();
+  var m=document.getElementById('blkMenu'); var r=e.currentTarget.getBoundingClientRect();
+  m.style.left=Math.min(r.left,window.innerWidth-200)+'px'; m.style.top=(r.bottom+6)+'px';
+  m.classList.toggle('open');
+}
+document.addEventListener('click',function(e){
+  var m=document.getElementById('blkMenu');
+  if(m&&m.classList.contains('open')&&!e.target.closest('#blkMenu')&&e.target.id!=='blkBtn') m.classList.remove('open');
+});
+function xctrlsHTML(){ return '<div class="xctrls" contenteditable="false"><button title="Hore" onclick="moveBlock(this,-1)">↑</button><button title="Dole" onclick="moveBlock(this,1)">↓</button><button title="Zmazať" onclick="delBlock(this)">✕</button></div>'; }
+function addBlock(type){
+  document.getElementById('blkMenu').classList.remove('open');
+  var box=document.getElementById('extraBlocks'); if(!box) return;
+  var b=document.createElement('div'); b.className='xblock'; b.setAttribute('data-block',type);
+  var inner='';
+  if(type==='heading') inner='<div class="xb-heading" data-edit contenteditable="true">Nový nadpis</div>';
+  else if(type==='text') inner='<div class="xb-text" data-edit contenteditable="true">Nový textový odsek – kliknite a píšte. Môžete použiť formátovací panel po označení textu.</div>';
+  else if(type==='image') inner='<img class="xb-img swappable" src="https://www.ahstatic.com/photos/c2f3_ho_02_p_1024x768.jpg" alt="Obrázok">';
+  else if(type==='button') inner='<div class="xb-btnwrap"><a class="btn" href="https://www.damianjasna.sk/" contenteditable="true">Tlačidlo</a></div>';
+  else if(type==='twocol') inner='<div class="xb-2col"><div class="xb-text" data-col contenteditable="true">Ľavý stĺpec – kliknite a píšte.</div><div class="xb-text" data-col contenteditable="true">Pravý stĺpec – kliknite a píšte.</div></div>';
+  else if(type==='list') inner='<ul class="xb-list" contenteditable="true"><li>Prvá položka</li><li>Druhá položka</li><li>Tretia položka</li></ul>';
+  else if(type==='quote') inner='<blockquote class="xb-quote"><div data-edit contenteditable="true">„Nezabudnuteľný pobyt v srdci hôr."</div><cite data-cite contenteditable="true">— Spokojný hosť</cite></blockquote>';
+  else if(type==='offer') inner='<div class="xb-offer"><span class="xb-otag" contenteditable="true">Akcia</span><div class="xb-otitle" data-edit contenteditable="true">Názov ponuky</div><div class="xb-otext" contenteditable="true">Stručný popis ponuky alebo balíčka. Kliknite a upravte text.</div><a class="btn" href="https://www.damianjasna.sk/" contenteditable="true">Zobraziť ponuku</a></div>';
+  else if(type==='social') inner='<div class="xb-social"><a href="https://www.facebook.com/damianjasna" contenteditable="true">Facebook</a> · <a href="https://www.instagram.com/swissoteldamianjasna/" contenteditable="true">Instagram</a> · <a href="https://www.linkedin.com/company/swissotel-damian-jasna/" contenteditable="true">LinkedIn</a></div>';
+  else if(type==='video') inner='<div class="xb-video"><a href="https://www.damianjasna.sk/" contenteditable="false"><img class="xb-img swappable" src="https://www.ahstatic.com/photos/c2f3_ho_02_p_1024x768.jpg" alt="Video"><span class="xb-play">▶</span></a></div>';
+  else if(type==='divider') inner='<div class="xb-divider"></div>';
+  else if(type==='spacer') inner='<div class="xb-spacer"></div>';
+  b.innerHTML=inner+xctrlsHTML();
+  box.appendChild(b);
+  if(window.bindImages){ b.querySelectorAll('img.swappable').forEach(function(i){i._bound=false;}); bindImages(); }
+  enableDnD&&enableDnD();
+  snapshot&&snapshot();
+}
+function moveBlock(btn,dir){
+  var b=btn.closest('.xblock');
+  if(dir<0&&b.previousElementSibling) b.parentNode.insertBefore(b,b.previousElementSibling);
+  if(dir>0&&b.nextElementSibling) b.parentNode.insertBefore(b.nextElementSibling,b);
+  snapshot&&snapshot();
+}
+function delBlock(btn){ btn.closest('.xblock').remove(); snapshot&&snapshot(); }
+
+/* --- Link manager --- */
+function openLinks(){
+  var list=document.getElementById('linkList'); list.innerHTML='';
+  var links=document.querySelectorAll('#newsletter a');
+  if(!links.length){ list.innerHTML='<p style="font-family:var(--sans);font-size:13px;color:var(--muted);">Žiadne odkazy.</p>'; openU('linksModal'); return; }
+  links.forEach(function(a,i){
+    var label=(a.textContent.trim()||a.getAttribute('href')||'odkaz').slice(0,32);
+    var row=document.createElement('div'); row.className='row';
+    row.innerHTML='<span style="flex:0 0 130px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;">'+label+'</span><input type="url" value="'+(a.getAttribute('href')||'')+'">';
+    var inp=row.querySelector('input');
+    inp.addEventListener('input',function(){ a.setAttribute('href',inp.value); });
+    inp.addEventListener('change',function(){ snapshot&&snapshot(); });
+    list.appendChild(row);
+  });
+  openU('linksModal');
+}
+
+/* --- .eml download (opens in Outlook) --- */
+
+/* --- Drag & drop poradie (karty + vlastné bloky) --- */
+var dragEl=null;
+function enableDnD(){
+  var groups=[document.querySelector('#newsletter .cards'), document.getElementById('extraBlocks')];
+  groups.forEach(function(g){ if(!g) return;
+    Array.prototype.forEach.call(g.children, function(item){
+      if(item._dnd) return; item._dnd=true;
+      item.setAttribute('draggable','true');
+      item.addEventListener('dragstart',function(e){ if(!document.body.classList.contains('editing')){e.preventDefault();return;} dragEl=item; item.style.opacity=.4; e.dataTransfer.effectAllowed='move'; });
+      item.addEventListener('dragend',function(){ item.style.opacity=''; dragEl=null; snapshot&&snapshot(); });
+      item.addEventListener('dragover',function(e){ e.preventDefault(); if(!dragEl||dragEl===item||dragEl.parentNode!==item.parentNode) return; var r=item.getBoundingClientRect(); var after=(e.clientY-r.top)/r.height>0.5; item.parentNode.insertBefore(dragEl, after?item.nextSibling:item); });
+    });
+  });
+}
+
+function downloadEML(){
+  var html=buildEmail('return'); if(!html){ alert('Nepodarilo sa vytvoriť e-mail.'); return; }
+  var subj=(document.getElementById('emailSubject')||{}).value||'Swissôtel Damian Jasna';
+  var eml;
+  try{
+    var subjEnc='=?UTF-8?B?'+btoa(unescape(encodeURIComponent(subj)))+'?=';
+    var b64=btoa(unescape(encodeURIComponent(html))).replace(/(.{76})/g,'$1\r\n');
+    eml='From: Swissotel Damian Jasna <reservations.damianjasna@swissotel.com>\r\n'+
+        'To: \r\n'+
+        'Subject: '+subjEnc+'\r\n'+
+        'Date: '+new Date().toUTCString()+'\r\n'+
+        'MIME-Version: 1.0\r\n'+
+        'Content-Type: text/html; charset=UTF-8\r\n'+
+        'Content-Transfer-Encoding: base64\r\n\r\n'+b64+'\r\n';
+  }catch(e){ alert('Nepodarilo sa zostaviť .eml: '+e.message); return; }
+  var dl=(typeof downloadText==='function') ? downloadText(eml,'Swissotel_Newsletter.eml','message/rfc822') : false;
+  if(dl){ alert('Súbor Swissotel_Newsletter.eml bol stiahnutý.\nDvojklikom sa otvorí v Outlooku ako pripravená správa (predmet aj telo).'); }
+  else { showOutput('E-mail .eml (otvoriteľný v Outlooku)', eml, 'Swissotel_Newsletter.eml', 'message/rfc822',
+    'Sťahovanie tu nie je povolené – stiahnite ho tlačidlom nižšie alebo otvorte súbor lokálne. Dvojklikom sa .eml otvorí v Outlooku.'); }
+}
+
+/* --- Drafts + autosave (localStorage) --- */
+var LSK='swissotel_nl_drafts';
+function lsGet(){ try{ return JSON.parse(localStorage.getItem(LSK)||'{}'); }catch(e){ return {}; } }
+function lsSet(o){ try{ localStorage.setItem(LSK,JSON.stringify(o)); return true; }catch(e){ return false; } }
+function snapshotState(){
+  return JSON.stringify({ html:document.getElementById('newsletter').innerHTML,
+    subject:(document.getElementById('emailSubject')||{}).value||'',
+    preheader:(document.getElementById('emailPreheader')||{}).value||'',
+    vars:document.getElementById('newsletter').getAttribute('style')||'' });
+}
+function restoreState(s){
+  try{ var o=JSON.parse(s); document.getElementById('newsletter').innerHTML=o.html;
+    if(o.subject!==undefined)document.getElementById('emailSubject').value=o.subject;
+    if(o.preheader!==undefined)document.getElementById('emailPreheader').value=o.preheader;
+    if(o.vars)document.getElementById('newsletter').setAttribute('style',o.vars);
+    document.querySelectorAll('#newsletter img.swappable').forEach(function(i){i._bound=false;});
+    bindImages&&bindImages();
+    var on=document.body.classList.contains('editing');
+    document.querySelectorAll('#newsletter [contenteditable]').forEach(function(el){el.setAttribute('contenteditable',on?'true':'false');});
+    addCardControls&&addCardControls(); updateStats();
+  }catch(e){ alert('Koncept sa nepodarilo načítať.'); }
+}
+function saveDraft(){
+  var n=(document.getElementById('draftName').value||'').trim()||('Koncept '+new Date().toLocaleString('sk-SK'));
+  var d=lsGet(); d[n]={t:Date.now(),s:snapshotState()};
+  if(lsSet(d)){ document.getElementById('draftName').value=''; renderDrafts(); }
+  else alert('Uloženie do prehliadača zlyhalo (súkromný režim?). Použite 💾 Uložiť (.html).');
+}
+function renderDrafts(){
+  var d=lsGet(), list=document.getElementById('draftList'), keys=Object.keys(d).sort(function(a,b){return d[b].t-d[a].t;});
+  if(!keys.length){ list.innerHTML='<p style="font-family:var(--sans);font-size:13px;color:var(--muted);">Zatiaľ žiadne uložené koncepty. Autosave beží automaticky a nájdete ho hore.</p>'; }
+  else { list.innerHTML=''; keys.forEach(function(k){
+    var row=document.createElement('div'); row.className='row';
+    row.innerHTML='<span style="flex:1;">'+k+'</span><button class="act" onclick="loadDraft(\''+k.replace(/'/g,"\\'")+'\')">Načítať</button><button class="act" style="background:#b23b3b" onclick="delDraft(\''+k.replace(/'/g,"\\'")+'\')">Zmazať</button>';
+    list.appendChild(row); }); }
+}
+function loadDraft(k){ var d=lsGet(); if(d[k]){ restoreState(d[k].s); snapshot&&snapshot(); closeU('draftsModal'); } }
+function delDraft(k){ var d=lsGet(); delete d[k]; lsSet(d); renderDrafts(); }
+function openDrafts(){ renderDrafts(); openU('draftsModal'); }
+// autosave
+var autoT=null;
+function autosave(){ clearTimeout(autoT); autoT=setTimeout(function(){ var d=lsGet(); d['⟳ Auto-uložené']={t:Date.now(),s:snapshotState()}; lsSet(d); },1200); }
+document.getElementById('newsletter').addEventListener('input',function(e){ try{ var ed=(e.target&&e.target.closest)?e.target.closest('[contenteditable]'):null; if(ed && ed.id!=='newsletter') ed.setAttribute('data-edited','1'); }catch(_){ } updateStats(); autosave(); });
+document.addEventListener('keydown',function(e){
+  if((e.ctrlKey||e.metaKey)&&e.key.toLowerCase()==='s'){ e.preventDefault(); openDrafts(); }
+});
+
+/* --- Global styles --- */
+function setPageBg(v){ document.body.style.background=v; }
+function setContentBg(v){ var m=document.querySelector('#newsletter'); if(m) m.style.background=v; snapshot&&snapshot(); }
+function setRadius(v){ document.documentElement.style.setProperty('--radius', v+'px'); document.querySelectorAll('#newsletter .card, #newsletter .feature, #newsletter .badge').forEach(function(el){ el.style.borderRadius=v+'px'; }); snapshot&&snapshot(); }
+
+/* --- Zoom --- */
+var zoom=1;
+function zoomStep(d){ zoom=Math.min(1.4,Math.max(0.5,zoom+d*0.1)); var m=document.querySelector('.mail'); if(m){ m.style.transform='scale('+zoom+')'; m.style.transformOrigin='top center'; } }
+
+/* --- Dark preview --- */
+var darkOn=false;
+function toggleDark(){ darkOn=!darkOn; document.body.style.background = darkOn?'#15171b':''; var m=document.querySelector('.mail'); if(m) m.style.filter = darkOn?'invert(1) hue-rotate(180deg)':''; document.getElementById('darkBtn').textContent = darkOn?'☀ Light':'🌙 Dark'; }
+
+/* --- Sample data preview (merge tags) --- */
+var sampleOn=false, sampleMap={'{{first_name}}':'Mária','{{last_name}}':'Nováková','{{hotel}}':'Swissôtel Damian Jasna','{{offer}}':'Letná ponuka 3+1'};
+var sampleBackup=null;
+function toggleSample(){
+  var nl=document.getElementById('newsletter');
+  if(!sampleOn){ sampleBackup=nl.innerHTML; var h=nl.innerHTML; Object.keys(sampleMap).forEach(function(k){ h=h.split(k).join(sampleMap[k]); }); nl.innerHTML=h; sampleOn=true; document.getElementById('sampleBtn').textContent='🔤 Tagy';
+    document.querySelectorAll('#newsletter [contenteditable]').forEach(function(el){el.setAttribute('contenteditable','false');}); bindImages&&bindImages(); }
+  else { if(sampleBackup!=null) nl.innerHTML=sampleBackup; sampleOn=false; document.getElementById('sampleBtn').textContent='👤 Ukážka';
+    var on=document.body.classList.contains('editing'); document.querySelectorAll('#newsletter [contenteditable]').forEach(function(el){el.setAttribute('contenteditable',on?'true':'false');}); bindImages&&bindImages(); addCardControls&&addCardControls(); }
+}
+
+/* --- Plain text export --- */
+function copyPlainText(){
+  var nl=document.getElementById('newsletter').cloneNode(true);
+  nl.querySelectorAll('.card-ctrls,.xctrls').forEach(function(e){e.remove();});
+  var lines=[]; 
+  nl.querySelectorAll('h1,h2,h3,p,li,.ctag,.ftag,.badge,.fline,a.btn,a.clink,.section-title,.section-sub,.infobar').forEach(function(el){
+    var t=el.innerText.replace(/\s+/g,' ').trim(); if(t) lines.push(t);
+  });
+  var subj=(document.getElementById('emailSubject')||{}).value||'';
+  var txt=(subj?subj+'\n\n':'')+lines.join('\n');
+  showOutput('Čistý text (plain-text verzia)', txt, 'Swissotel_Newsletter.txt', 'text/plain',
+    'Textová verzia newslettera – vhodná ako alternatíva k HTML e-mailu. Skopírujte alebo stiahnite.');
+}
+
+/* --- Project export / import (.json) --- */
+function exportProject(){
+  var data={ v:1, html:document.getElementById('newsletter').innerHTML,
+    style:document.getElementById('newsletter').getAttribute('style')||'',
+    rootStyle:document.documentElement.getAttribute('style')||'',
+    subject:(document.getElementById('emailSubject')||{}).value||'',
+    preheader:(document.getElementById('emailPreheader')||{}).value||'' };
+  showOutput('Projekt (.json) – ZÁLOHA, NIE pre e-mail', JSON.stringify(data,null,2), 'Swissotel_Newsletter_projekt.json', 'application/json',
+    'POZOR: toto je len záloha pre editor (načítate ju cez ⬆ Import). Do e-mailu ani do Postcards ju NEVKLADAJTE – na to slúži „📋 Kopírovať pre Postcards“ alebo „📧 Generovať e-mailové HTML“.');
+}
+function importProject(input){
+  var f=input.files&&input.files[0]; if(!f) return; var r=new FileReader();
+  r.onload=function(){ try{ var o=JSON.parse(r.result);
+      if(o.rootStyle) document.documentElement.setAttribute('style',o.rootStyle);
+      document.getElementById('newsletter').innerHTML=o.html;
+      if(o.style) document.getElementById('newsletter').setAttribute('style',o.style);
+      if(o.subject!==undefined) document.getElementById('emailSubject').value=o.subject;
+      if(o.preheader!==undefined) document.getElementById('emailPreheader').value=o.preheader;
+      document.querySelectorAll('#newsletter img.swappable').forEach(function(i){i._bound=false;}); bindImages&&bindImages();
+      var on=document.body.classList.contains('editing'); document.querySelectorAll('#newsletter [contenteditable]').forEach(function(el){el.setAttribute('contenteditable',on?'true':'false');});
+      addCardControls&&addCardControls(); enableDnD&&enableDnD(); updateStats(); snapshot&&snapshot();
+      alert('Projekt načítaný.');
+    }catch(e){ alert('Neplatný súbor projektu.'); } };
+  r.readAsText(f); input.value='';
+}
+
+/* --- Find & replace --- */
+function openFind(){ document.getElementById('findInfo').textContent=''; openU('findModal'); }
+function doReplace(all){
+  var f=document.getElementById('findTxt').value, rep=document.getElementById('replTxt').value;
+  if(!f){ document.getElementById('findInfo').textContent='Zadajte hľadaný text.'; return; }
+  var nl=document.getElementById('newsletter'); var n=0;
+  var walker=document.createTreeWalker(nl,NodeFilter.SHOW_TEXT,null); var nodes=[],node;
+  while((node=walker.nextNode())) nodes.push(node);
+  for(var i=0;i<nodes.length;i++){ var t=nodes[i]; if(t.parentElement&&t.parentElement.closest('.card-ctrls,.xctrls')) continue;
+    if(t.nodeValue.indexOf(f)>=0){ if(all){ var c=t.nodeValue.split(f).length-1; n+=c; t.nodeValue=t.nodeValue.split(f).join(rep); } else { t.nodeValue=t.nodeValue.replace(f,rep); n=1; break; } } }
+  document.getElementById('findInfo').textContent= n>0?('Nahradené: '+n):'Nenašlo sa.';
+  if(n>0) snapshot&&snapshot();
+}
+
+/* --- Preflight check --- */
+function preflight(){
+  var issues=[]; var nl=document.getElementById('newsletter');
+  nl.querySelectorAll('a').forEach(function(a){ var h=(a.getAttribute('href')||'').trim(); if(!h||h==='#') issues.push('Odkaz bez cieľa: „'+(a.textContent.trim().slice(0,30)||'odkaz')+'“'); });
+  nl.querySelectorAll('img').forEach(function(im){ if(!(im.getAttribute('alt')||'').trim()) issues.push('Obrázok bez ALT textu ('+(im.src.split('/').pop()||'').slice(0,24)+')'); });
+  var subj=(document.getElementById('emailSubject')||{}).value||''; if(!subj.trim()) issues.push('Chýba predmet e-mailu'); else if(subj.length>70) issues.push('Predmet je dlhý ('+subj.length+' znakov, odporúčané do 70)');
+  if(!(document.getElementById('emailPreheader')||{}).value.trim()) issues.push('Chýba preheader (text v náhľade schránky)');
+  var bodytxt=nl.innerText;
+  if(/lorem|kliknite a píšte|nový textový odsek|nový nadpis|názov ponuky/i.test(bodytxt)) issues.push('Zostal zástupný text – skontrolujte obsah blokov');
+  var tokens=bodytxt.match(/{{[^}]+}}/g); if(tokens) issues.push('Nenahradené merge tagy: '+Array.from(new Set(tokens)).join(', '));
+  if(window.scanBrand){ var f=scanBrand(false); if(f>0) issues.push('Opravený pravopis značky: '+f+'×'); }
+  var list=document.getElementById('preList');
+  if(!issues.length) list.innerHTML='<p style="font-family:var(--sans);font-size:14px;color:#3a7d44;">✅ Všetko vyzerá v poriadku – newsletter je pripravený na odoslanie.</p>';
+  else { list.innerHTML='<p style="font-family:var(--sans);font-size:13px;color:var(--mid);margin-bottom:8px;">Našli sme '+issues.length+' upozornení:</p><ul style="font-family:var(--sans);font-size:13px;color:var(--mid);line-height:1.7;margin:0;padding-left:18px;">'+issues.map(function(i){return '<li>'+i+'</li>';}).join('')+'</ul>'; }
+  openU('preModal');
+}
+
+/* --- Univerzálny výstup: kopírovanie + sťahovanie (funguje aj v sandboxe) --- */
+var _outFile={name:'subor.txt',mime:'text/plain'};
+function showOutput(title, text, filename, mime, note){
+  var ttl=document.getElementById('outTitle');
+  if(ttl){ if(ttl.firstChild) ttl.firstChild.nodeValue=title+' '; else ttl.insertBefore(document.createTextNode(title+' '), ttl.firstChild); }
+  document.getElementById('outNote').innerHTML = (note||'Skopírujte obsah alebo ho stiahnite ako súbor.')+' <b>Text je už označený — stačí stlačiť Ctrl+C (Mac: ⌘+C).</b>';
+  var ta=document.getElementById('outArea'); ta.value=text;
+  _outFile={name:filename||'subor.txt', mime:mime||'text/plain'};
+  var done=document.getElementById('outDone'); done.style.display='none';
+  openU('outModal');
+  setTimeout(function(){
+    ta.focus(); ta.setSelectionRange(0, ta.value.length);
+    var copied=false;
+    try{ copied=document.execCommand('copy'); }catch(e){}
+    if(!copied){ try{ if(navigator.clipboard&&navigator.clipboard.writeText){ navigator.clipboard.writeText(text).then(function(){ done.textContent='✅ Automaticky skopírované do schránky.'; done.style.display=''; },function(){}); } }catch(e){} }
+    else { done.textContent='✅ Automaticky skopírované do schránky.'; done.style.display=''; }
+    ta.focus(); ta.setSelectionRange(0, ta.value.length);
+  },80);
+}
+function outCopy(){
+  var ta=document.getElementById('outArea'); var done=document.getElementById('outDone');
+  ta.focus(); ta.setSelectionRange(0, ta.value.length);
+  var ok=false;
+  try{ ok=document.execCommand('copy'); }catch(e){}
+  if(!ok){ try{ if(navigator.clipboard&&navigator.clipboard.writeText){ navigator.clipboard.writeText(ta.value); ok=true; } }catch(e){} }
+  ta.focus(); ta.setSelectionRange(0, ta.value.length);
+  done.style.display='';
+  done.textContent = ok ? '✅ Skopírované do schránky.' : 'Text je označený — stlačte teraz Ctrl+C (Mac: ⌘+C). V náhľade v chate býva schránka blokovaná; spoľahlivo to funguje v stiahnutom súbore otvorenom lokálne.';
+}
+function outSelectAll(){
+  var ta=document.getElementById('outArea'); ta.focus();
+  try{ ta.setSelectionRange(0, ta.value.length); }catch(e){ ta.select(); }
+  document.getElementById('outDone').style.display='';
+  document.getElementById('outDone').textContent='Text je označený – teraz stlačte Ctrl+C (Mac: ⌘+C).';
+}
+function outDownload(){
+  var ta=document.getElementById('outArea');
+  try{
+    var b=new Blob([ta.value],{type:_outFile.mime+';charset=utf-8'});
+    var a=document.createElement('a'); a.href=URL.createObjectURL(b); a.download=_outFile.name;
+    document.body.appendChild(a); a.click(); setTimeout(function(){a.remove();},100);
+  }catch(e){ alert('Sťahovanie v tomto prostredí nie je povolené. Otvorte súbor lokálne (dvojklik na .html) alebo skopírujte text ručne (Ctrl+A, Ctrl+C).'); }
+}
+
+updateStats();
+enableDnD();
+</script>
+
+</body></html>
